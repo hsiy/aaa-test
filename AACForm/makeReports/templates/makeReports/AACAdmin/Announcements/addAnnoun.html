@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Add Announcement</h3>
+This announcement will be displayed on the home page of all users until the expiration date.
+<form method="post" class="form col-6" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

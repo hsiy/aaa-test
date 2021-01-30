@@ -1,0 +1,7 @@
+<!--requires rpt object in context-->
+{% if reqTodo > 0 or sugTodo > 0 %}
+<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+        To-Do List
+</button>
+{% include 'makeReports/todoSansButton.html' %}
+{% endif %}

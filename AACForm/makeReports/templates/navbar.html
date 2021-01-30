@@ -1,0 +1,44 @@
+<nav id="main-nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Academic Assessment</a>
+            <button class="navbar-toggler"  role="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                {% if user and user.profile %}
+                {% if user.profile.department %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:rpt-list-dept' %}">Your Reports <span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+                {% if user.profile.aac %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:admin-home' %}">Administration Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'makeReports:dept-list' %}?college=&name=">Departments & Degree Programs <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'makeReports:report-list' %}">AAC Reports <span class="sr-only">(current)</span></a>
+                  </li>
+                  {% endif %}
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{user.username}}
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/accounts/logout/">Logout</a>
+                          <a  class="dropdown-item" href="{% url 'makeReports:modify-acct' %}">Update Profile</a>
+                          <a class="dropdown-item" href="/accounts/password_change/">Change Password</a>
+                          <a class="dropdown-item" href="/help/">Help</a>
+                      </div>
+                  </li>
+                {% endif %}
+            </div>
+          </nav>
+</nav>

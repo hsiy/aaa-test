@@ -1,0 +1,200 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block in_scripts %}
+<style>
+    .italics{
+        font-style: italic;
+    }
+    .italics p{
+            margin:2pt;
+    }
+</style>
+{% endblock %}
+{% block inner_content %}
+<h3>Assessment Summary</h3>
+<div class="container" style="max-width: 95%">
+        <div class="row">
+                <div class="col">
+                    {% include 'makeReports/toDoList.html' %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:add-assessment' report=rpt.pk %}">Add Assessment</a>
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:import-assessment' report=rpt.pk %}?dp={{rpt.degreeProgram.pk}}&year={{rpt.year}}&slo=-1">Import Assessment</a>                    
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+            {% for assessment in assessment_list %}
+            <div class="row mt-3">
+                    <div class="col">
+            <table class="table-responsive table-bordered" style="border:0px;">
+            <tbody>
+            <tr>
+                <td style="background-color:#E0E0E0;" colspan="2">
+                    <b>SLO {{assessment.slo.number}}: </b><div class="italics">{{assessment.slo.goalText}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>1. Title of Measure: </b><i>{{assessment.assessment.title}}</i>
+                </td>
+            </tr>
+            {% if assessment.threshold != "Ignore - Accredited Form" %}
+            <tr>
+                <td colspan="2">
+                    <b>2. Description of How the Measure Aligns to the SLO </b>
+                    <p>{{assessment.description|safe}}</p>
+                </td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td>
+                    {% if assessment.threshold != "Ignore - Accredited Form" %}
+                    <b>3. Domain</b>
+                    {% else %}
+                    <b>2. Domain</b>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if assessment.assessment.domainProduct %}
+                        Product{% if assessment.assessment.domainPerformance or assessment.assessment.domainExamination %},
+                        {% endif %}
+                    {% endif %}
+                    {% if assessment.assessment.domainPerformance %}
+                        Performance{% if assessment.assessment.domainExamination %},
+                        {% endif %}
+                    {% endif %}
+                    {% if assessment.assessment.domainExamination %}
+                        Examination
+                    {% endif %}
+                </td>
+            </tr>
+            {% if assessment.threshold != "Ignore - Accredited Form" %}
+            <tr>
+                <td>
+                    <b>4. Type</b>
+                </td>
+                <td>
+                    {% if assessment.assessment.directMeasure %}
+                        Direct Measure
+                    {% else %}
+                        Indirect Measure
+                    {% endif %}
+                </td>
+            <tr>
+                <td>
+                    <b><p>5. Point in Program </p>
+                        Assessment is Administered</b>
+                </td>
+                <td>
+                    {% if assessment.finalTerm %}
+                            In Final Term of Program
+                    {% else %}
+                            In Final Year of Program
+                    {% endif %}
+                    <p>Where does the assessment occur: <i>{{assessment.where|safe}}</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>6. Population Measured</b>
+                </td>
+                <td>
+                    {% if assessment.allStudents %}
+                            All Students
+                    {% else %}
+                            <p>Sample of Students</p>
+                            <p><i>{{assessment.sampleDescription|safe}}</i></p>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endif %}
+            <tr>
+                {% if assessment.threshold != "Ignore - Accredited Form" %}
+                <td><b>7. Frequency of Data Collection</b></td>
+                {% else %}
+                <td><b>3. Frequency of Data Collection</b></td>
+                {% endif %}
+                <td>
+                    {% if assessment.frequencyChoice == "O" %}
+                    {{assessment.frequency|safe}}
+                    {% else %}
+                    {{assessment.get_frequencyChoice_display}}
+                    {% endif %}
+                </td>
+            </tr>
+            {% if assessment.threshold != "Ignore - Accredited Form" %}
+            <tr>
+                <td>
+                    <b>8. Proficiency Threshold</b>
+                </td>
+                <td>
+                    <i>{{assessment.threshold}}</i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>9. Program Proficiency Target</b>
+                </td>
+                <td>
+                    <i>{{assessment.target}}%</i>
+                </td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td><b>Supplements</b></td>
+                <td>
+                    {% for sup in assessment.supplements.all %}
+                           <p> <a href="{{sup.supplement.url}}">{{sup.supplement}}</a> <a  role="button" class="btn btn-primary" href="{% url 'makeReports:delete-supplement' report=rpt.pk assessIR=assessment.pk pk=sup.pk%}">Delete Supplement</a></p>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td><b>Options</b></td>
+                <td>    
+                        {% if assessment.assessment.numberOfUses is 1 %}
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:edit-new-assessment' report=rpt.pk assessIR=assessment.pk %}">Edit Assessment</a>
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:delete-new-assessment' report=rpt.pk pk=assessment.pk %}">Delete Assessment</a>
+                        {% else %}
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:edit-impt-assessment' report=rpt.pk assessIR=assessment.pk %}">Edit Assessment</a>
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:delete-impt-assessment' report=rpt.pk pk=assessment.pk %}">Delete Assessment</a>
+                        {% endif %}
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:assessment-supplement-upload' report=rpt.pk assessIR=assessment.pk %}">Upload Supplement</a>
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:assessment-supplement-import' report=rpt.pk assessIR=assessment.pk %}?year={{rpt.year}}&dp={{rpt.degreeProgram.pk}}">Import Supplement</a>
+                        {% if assessment.threshold != "Ignore - Accredited Form" %}
+                        <a  role="button" class="btn btn-primary" href="{% url 'makeReports:add-data-collection-assess' report=rpt.pk assessment=assessment.pk %}">Add Data</a>
+                        {% endif %}
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+        </div>
+        {% empty %}
+            No assessments.
+            {% endfor %}
+        </div>
+        <!--<div class="col-3">
+                <h4>Section II.</h4>
+                1. Assessments<br>
+                2. <a href="{% url 'makeReports:assessment-comment' report=rpt.pk %}">Additional Comments</a>
+            </div>-->
+        </div>
+        <div class="row mt-5">
+            <div class="col-7">
+                <h4>Additional Comments</h4>
+                {{rpt.section2Comment|safe}}
+            </div>
+            <div class="col-2">
+                    <a  role="button" class="btn btn-primary" href="{% url 'makeReports:assessment-comment' report=rpt.pk %}">Edit</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                    <a  role="button" class="btn btn-primary" href="{% url 'makeReports:data-summary' report=rpt.pk %}">Next</a>
+            </div>
+        </div>
+</div>
+{% endblock %}

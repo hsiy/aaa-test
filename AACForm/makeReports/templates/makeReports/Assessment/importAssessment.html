@@ -1,0 +1,114 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block in_scripts %}
+{{form.media}}
+
+{% endblock %}
+{% block inner_content %}
+<style>
+    #hide-sam{
+        display: inherit;
+    }
+    #hide-freq{
+        display: inherit;
+    }
+    </style>
+<h3>Import Assessment</h3>
+<h5>Search For Assessments</h5>
+<form action="{% url 'makeReports:import-assessment' report=rpt.pk %}" type="get" class="col-6">
+        <!--<input id="name" type="text" name="name"></div>-->
+        <div> 
+            <label>Degree Program: </label>
+             <select id = "dp" name="dp" required onchange="updateYears()">
+                 <option value = "-1">Any</option>
+                {% for degPro in degPro_list %}
+                    <option value = "{{degPro.pk}}" {% if degPro.pk == currentDPpk %}selected{% endif %}>{{degPro.name}}</option>
+               {% endfor %}
+             </select>
+        </div>
+        <div style="max-width:200px"><label>Year:</label> 
+            <select id="year" name="year" required onchange="updateSLOs()">
+            </select>
+        </div>
+        <div>
+            <label>SLO: </label>
+            <select id = "slo" name="slo" required>
+                <option value = "-1">Any</option>
+            </select>
+        </div>
+        {% buttons %}
+        <button type="submit" class="btn btn-primary">Search for Assessments</button>
+        {% endbuttons %}
+</form>
+<h5>Select Assessments to Import</h5>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add Assessments</button>
+    {% endbuttons %}
+</form>
+{% endblock %}
+{% block in_endscripts %}
+<script type='text/javascript'>
+    /**
+     * Creates the drop-down for the year and the SLO in the search
+     * @class importAssessment
+     */
+    var chYear = null;
+    var ch2 = null;
+    /**
+     * Upon DOM existing, create the drop down for the SLO and Years and updateYears
+     * @method onLoad
+     */
+    document.addEventListener("DOMContentLoaded", function() {
+        ch2 = new Choices(document.getElementById('slo'),{shouldSort:false});
+
+        chYear = new Choices(document.getElementById('year'),{shouldSort:false, removeItemButton:true});
+        updateYears();    
+    });
+    /**
+     * Calls the API to update the year choices for the search,
+     * based upon the currently selected degree program
+     * @method updateYears
+     */
+    function updateYears(){
+        chYear.clearChoices()
+        chYear.setChoices(async () => {
+        try {
+            var e = document.getElementById("dp");
+            var dP = e.options[e.selectedIndex].value;
+            const items = await fetch('{% url 'makeReports:api-impt-years' %}'+'?pk='+dP);
+            return items.json();
+        } catch (err) {
+            console.error(err);
+        }
+        });
+        updateSLOs();
+    }
+    /**
+     * Calls the API to update the list of SLOs that match the year and degree program
+     * @method updateSLOs
+     */
+    function updateSLOs(){
+        ch2.clearChoices()
+        var e = document.getElementById("dp");
+        var dP = e.options[e.selectedIndex].value;
+        var e2 = document.getElementById("year")
+        var y = e2.options[e2.selectedIndex].value;
+        if (dP == -1){
+            //this is any degree program option
+            dP = ""
+        }
+        ch2.clearChoices()
+        ch2.setChoices(async () =>{
+            try {
+                const items = await fetch('{% url 'makeReports:api-slo-by-dp' %}'+'?report__degreeProgram='+dP+'&report__year__gte='+y+"&report__year__lte="+y);
+                return items.json();
+            } catch (err) {
+                console.error(err);
+            }
+        },"pk","goalText")
+    }
+</script>
+{% endblock %}

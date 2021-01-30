@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Delete Rubric Item</h3>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    This will delete this item from all instances of this rubric: <b>reviewed</b> and not-reviewed.
+    Are you sure you want to delete {{object}}?
+    Alternatively, consider duplicating this rubric and changing the copy.
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Delete</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

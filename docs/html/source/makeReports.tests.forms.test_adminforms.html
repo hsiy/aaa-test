@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.tests.forms.test_adminforms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.tests.forms.test_adminforms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.tests.forms.test_adminforms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.tests.forms.test_adminforms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.tests.forms.test_adminforms">
+<span id="makereports-tests-forms-test-adminforms-module"></span><h1>makeReports.tests.forms.test_adminforms module<a class="headerlink" href="#module-makeReports.tests.forms.test_adminforms" title="Permalink to this headline">¶</a></h1>
+<p>This tests that the AAC admin forms work</p>
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.AnnouncementFormTest">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">AnnouncementFormTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.AnnouncementFormTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Test forms relating to announcements</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.AnnouncementFormTest.test_toolong">
+<code class="sig-name descname">test_toolong</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.AnnouncementFormTest.test_toolong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that announcements that are too long are rejected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.AnnouncementFormTest.test_valid_data">
+<code class="sig-name descname">test_valid_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.AnnouncementFormTest.test_valid_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the AnnouncementForm accepts valid data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.DepartmentFormTest">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">DepartmentFormTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.DepartmentFormTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests relating to managing department forms</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.DepartmentFormTest.test_create_inactive_college">
+<code class="sig-name descname">test_create_inactive_college</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.DepartmentFormTest.test_create_inactive_college" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the CreateDepartmentForms rejects invalid data where the college is inactive</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.DepartmentFormTest.test_create_valid">
+<code class="sig-name descname">test_create_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.DepartmentFormTest.test_create_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the CreateDepartmentForm accepts valid data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.GenerateReportsTests">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">GenerateReportsTests</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GenerateReportsTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests forms related to generating reports</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_invalid_data_no_rub">
+<code class="sig-name descname">test_invalid_data_no_rub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_invalid_data_no_rub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the form rejects form missing rubric</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_invalid_notPK">
+<code class="sig-name descname">test_invalid_notPK</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_invalid_notPK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the form rejects a form where rubric is not an integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_valid_data">
+<code class="sig-name descname">test_valid_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GenerateReportsTests.test_valid_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the form accepts valid data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.GradGoalFormTests">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">GradGoalFormTests</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GradGoalFormTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests GradGoal related forms</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_edit_valid">
+<code class="sig-name descname">test_edit_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_edit_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the GradGoalEditForm accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_goal_toolong">
+<code class="sig-name descname">test_goal_toolong</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_goal_toolong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the GradGoalForm rejects invalid, too long data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_goal_valid">
+<code class="sig-name descname">test_goal_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.GradGoalFormTests.test_goal_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the GradGoalForm accepts valid data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.ReportFormTests">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">ReportFormTests</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.ReportFormTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests forms related to the report management</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_by_DP_norubric">
+<code class="sig-name descname">test_create_by_DP_norubric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_by_DP_norubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the CreateReportByDPForm requires the rubric field</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_by_DP_valid">
+<code class="sig-name descname">test_create_by_DP_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_by_DP_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that CreateReportByDPForm accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_valid">
+<code class="sig-name descname">test_create_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.ReportFormTests.test_create_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests CreateReportByDept correctly accepts valid data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_adminforms.</code><code class="sig-name descname">UserFormsTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests the user forms work as expected</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_make_account">
+<code class="sig-name descname">test_make_account</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_make_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the MakeNewAccount form accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_make_account_password_doesnt_match">
+<code class="sig-name descname">test_make_account_password_doesnt_match</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_make_account_password_doesnt_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the MakeNewAccount form fails when the passwords don’t match</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_noname_invalid">
+<code class="sig-name descname">test_update_noname_invalid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_noname_invalid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests UpdateUserForm requires the first name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_valid_data">
+<code class="sig-name descname">test_update_valid_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_valid_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests valid data is valid with the UpdateUserForm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_valid_data_no_dep">
+<code class="sig-name descname">test_update_valid_data_no_dep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_update_valid_data_no_dep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the UpdateUserForm accepts no department</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_users_own_form">
+<code class="sig-name descname">test_users_own_form</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_users_own_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the UserUpdateUserForm accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_adminforms.UserFormsTest.test_users_own_form_requires_email">
+<code class="sig-name descname">test_users_own_form_requires_email</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_adminforms.UserFormsTest.test_users_own_form_requires_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the the UserUpdateUserForm rejects forms without an email</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

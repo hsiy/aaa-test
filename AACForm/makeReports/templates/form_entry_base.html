@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block scripts %}
+  {% block in_scripts %}
+  {% endblock %}
+{% endblock %}
+{% block styles %}
+{% block in_styles %}
+{% endblock %}
+{% endblock %}
+{% block content %}
+<nav id="sub-nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Form Entry</a>
+            <button class="navbar-toggler"  role="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle form navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'makeReports:rpt-first-page' pk=rpt.pk %}">Beginning <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:slo-summary' report=rpt.pk %}">Section I. SLOs </a>
+                  </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:assessment-summary' report=rpt.pk %}">Section II. Assessments </a>
+                  </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:data-summary' report=rpt.pk %}">Section III. Data </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:decisions-actions-summary' report=rpt.pk %}">Section IV. Decisions and Actions </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:rpt-sup-list' report=rpt.pk %}">Report Supplements </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'makeReports:submit-report' report=rpt.pk %}">Preview & Submit </a>
+                  </li>
+                  {% if rpt.rubric %}
+                  <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'makeReports:dept-view-rubric' report=rpt.pk pk=rpt.rubric.rubricVersion.pk %}">View Rubric </a>
+                    </li>
+                  {% endif %}
+            </div>
+          </nav>
+</nav>
+    {% block inner_content %}
+    {% endblock %}
+{% endblock %}
+{% block endscripts %}
+  {% block in_endscripts %}
+  {% endblock %}
+{% endblock %}

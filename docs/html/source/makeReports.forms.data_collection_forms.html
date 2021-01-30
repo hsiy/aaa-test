@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.forms.data_collection_forms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.forms.data_collection_forms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.forms.data_collection_forms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.forms.data_collection_forms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.forms.data_collection_forms">
+<span id="makereports-forms-data-collection-forms-module"></span><h1>makeReports.forms.data_collection_forms module<a class="headerlink" href="#module-makeReports.forms.data_collection_forms" title="Permalink to this headline">¶</a></h1>
+<p>File contains forms related to inputting data points</p>
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.AddDataCollection">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">AddDataCollection</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddDataCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add data</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataRange</span></code>: Data Collection Range (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberStudents</span></code>: Number of Students Sampled (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overallProficient</span></code>: Percentage of Students who Met/Exceeded Threshold Proficiency (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.AddDataCollection.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddDataCollection.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">AssessmentAggregateForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aggregate_proficiency</span></code>: Aggregate proficiency percentage (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model, fields, and widgets for the ModelForm superclass
+to use to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['aggregate_proficiency']</em><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.AssessmentAggregate" title="makeReports.models.data_models.AssessmentAggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.data_models.AssessmentAggregate</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'aggregate_proficiency': &lt;django.forms.widgets.NumberInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.AssessmentAggregateForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AssessmentAggregateForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">ResultCommunicationForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.forms.cleaners.html#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add how results are communicated</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Describe how results are communicated within the program. Address each SLO. (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 3000</em><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.SLOStatusForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">SLOStatusForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.SLOStatusForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update SLO status</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: SLO Status:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.SLOStatusForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.SLOStatusForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

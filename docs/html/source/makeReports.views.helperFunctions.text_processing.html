@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.helperFunctions.text_processing module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.helperFunctions.text_processing module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.helperFunctions.text_processing module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.helperFunctions.text_processing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.helperFunctions.text_processing">
+<span id="makereports-views-helperfunctions-text-processing-module"></span><h1>makeReports.views.helperFunctions.text_processing module<a class="headerlink" href="#module-makeReports.views.helperFunctions.text_processing" title="Permalink to this headline">¶</a></h1>
+<p>This file contains helper functions for text processing.</p>
+<dl class="function">
+<dt id="makeReports.views.helperFunctions.text_processing.blooms_suggestion">
+<code class="sig-prename descclassname">makeReports.views.helperFunctions.text_processing.</code><code class="sig-name descname">blooms_suggestion</code><span class="sig-paren">(</span><em class="sig-param">in_string</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.text_processing.blooms_suggestion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates suggestion of Bloom’s taxonomy level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>in_string</strong> (<em>str</em>) – input string to generate suggestions from</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>suggested level</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.helperFunctions.text_processing.blooms_words">
+<code class="sig-prename descclassname">makeReports.views.helperFunctions.text_processing.</code><code class="sig-name descname">blooms_words</code><span class="sig-paren">(</span><em class="sig-param">level</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.text_processing.blooms_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns words indicative of certain level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>str</em>) – Bloom’s level to get words for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary of words matching level</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.helperFunctions.text_processing.count_level_score">
+<code class="sig-prename descclassname">makeReports.views.helperFunctions.text_processing.</code><code class="sig-name descname">count_level_score</code><span class="sig-paren">(</span><em class="sig-param">rootSet</em>, <em class="sig-param">in_string</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.text_processing.count_level_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Counts how many key-root words appear within the string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rootSet</strong> (<em>str</em>) – set of root words to count</p></li>
+<li><p><strong>in_string</strong> (<em>str</em>) – string to count instances of</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of key roots</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.helperFunctions.text_processing.create_suggestions_dict">
+<code class="sig-prename descclassname">makeReports.views.helperFunctions.text_processing.</code><code class="sig-name descname">create_suggestions_dict</code><span class="sig-paren">(</span><em class="sig-param">in_string</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.text_processing.create_suggestions_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates suggestion dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>in_string</strong> (<em>str</em>) – string to create suggestions for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary containing Blooms and Complexity suggestion</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.helperFunctions.text_processing.is_complex">
+<code class="sig-prename descclassname">makeReports.views.helperFunctions.text_processing.</code><code class="sig-name descname">is_complex</code><span class="sig-paren">(</span><em class="sig-param">in_string</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.text_processing.is_complex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a boolean stating whether the given phrase is complex
+complexity is measured by having more than 3 words belonging to
+the following set: and, or, but</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>in_string</strong> (<em>str</em>) – string to evaluate complexity of</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>whether the string should be considered complex</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

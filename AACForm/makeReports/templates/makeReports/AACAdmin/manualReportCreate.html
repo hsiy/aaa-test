@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Assign Report (Manual)</h3>
+<form method="post" class="form col-5" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Assign</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

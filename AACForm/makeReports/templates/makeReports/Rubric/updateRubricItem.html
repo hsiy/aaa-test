@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Update Rubric Item</h3>
+Warning: This is will change this rubric item in all instances of this rubric, past and present.
+If you wish to modify this for only future instances, duplicate the entire rubric and edit the new copy.
+<form method="post" class="form" enctype="multipart/form-data" style="max-width: 500px">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Update</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

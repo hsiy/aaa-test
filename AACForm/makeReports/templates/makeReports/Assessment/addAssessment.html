@@ -1,0 +1,44 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block in_scripts %}
+{{form.media}}
+{% endblock %}
+{% block in_styles %}
+<style>
+        #hide-sam{
+            display: inherit;
+        }
+        #hide-freq{
+            display: inherit;
+        }
+        </style>
+{% endblock %}
+{% block inner_content %}
+<h3>Add New Assessment</h3>
+{% bootstrap_form_errors form layout='inline' %}
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!--{% bootstrap_form form %} -->
+    {% bootstrap_field form.slo %}
+    {% bootstrap_field form.title %}
+    {% bootstrap_field form.description %}
+    {% bootstrap_field form.domain %}
+    {% bootstrap_field form.directMeasure %}
+    {% bootstrap_field form.finalTerm %}
+    {% bootstrap_field form.where %}
+    {% bootstrap_field form.allStudents %}
+    <div id="hide-sam">{% bootstrap_field form.sampleDescription %}</div>
+    {% bootstrap_field form.frequencyChoice %}
+    <div id="hide-freq">{% bootstrap_field form.frequency %}</div>
+    {% bootstrap_field form.threshold %}
+    {% bootstrap_field form.target %}
+
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add Assessment</button>
+    {% endbuttons %}
+</form>
+{% endblock %}
+{% block in_endscripts %}
+<script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }} /static/js/assessmentEntryBoxes.js"></script> 
+{% endblock %}

@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.AAC.aac_report_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.AAC.aac_report_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.AAC.aac_report_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.AAC.aac_report_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.AAC.aac_report_views">
+<span id="makereports-views-aac-aac-report-views-module"></span><h1>makeReports.views.AAC.aac_report_views module<a class="headerlink" href="#module-makeReports.views.AAC.aac_report_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains views directly related to creating, editing, and viewing reports done by the AAC</p>
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">CreateReport</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to create report by department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>dept</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">Department</span></code></a> to create report for</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.CreateReportByDept" title="makeReports.forms.admin_forms.CreateReportByDept"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.admin_forms.CreateReportByDept</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves model based upon form, along with setting submitted to false,
+and attaching a new graded rubric based upon the chosen rubric version
+to the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.CreateReportByDept" title="makeReports.forms.admin_forms.CreateReportByDept"><em>CreateReportByDept</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the keyword arguments for the form, appending the <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">Department</span></code></a> primary key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>form keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses success url as hook to set the graded rubric of the report,
+also returns administrative home as success URL</p>
+<p class="rubric">Notes</p>
+<p>The graded rubric was created during form_valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>success url of the administrative home (<code class="xref py py-class docutils literal notranslate"><span class="pre">AdminHome</span></code>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReport.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/manualReportCreate.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReport.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">CreateReportByDP</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to create report by degree program</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.DegreeProgram" title="makeReports.models.aac_models.DegreeProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">DegreeProgram</span></code></a></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.CreateReportByDPForm" title="makeReports.forms.admin_forms.CreateReportByDPForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.admin_forms.CreateReportByDPForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the degree program, sets submitted to False, creates graded rubric based
+upon the chosen rubric version, and creates Report from form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.CreateReportByDPForm" title="makeReports.forms.admin_forms.CreateReportByDPForm"><em>CreateReportByDPForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses success_url as hook to attach graded rubric to object, and also gets the success URL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>success url of administrative home (<code class="xref py py-class docutils literal notranslate"><span class="pre">AdminHome</span></code>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.CreateReportByDP.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/manualReportCreate.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.CreateReportByDP.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.DeleteReport">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">DeleteReport</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.DeleteReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.DeleteReport.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.DeleteReport.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.DeleteReport.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/report/list/'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.DeleteReport.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.DeleteReport.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/deleteReport.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.DeleteReport.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.ListActiveGradGoals">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">ListActiveGradGoals</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListActiveGradGoals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list all active graduate-level goals</p>
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.ListActiveGradGoals.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListActiveGradGoals.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets only the active grad goals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradGoal</span></code></a> objects that are active</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ListActiveGradGoals.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListActiveGradGoals.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.GradGoal</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ListActiveGradGoals.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/GG/GGlist.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListActiveGradGoals.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.ListInactiveGradGoals">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">ListInactiveGradGoals</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListInactiveGradGoals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list all inactive graduate-level goals</p>
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets inactive grad goals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradGoal</span></code></a> objects that are inactive</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.GradGoal</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/GG/oldGGlist.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ListInactiveGradGoals.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.MakeGradGoal">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">MakeGradGoal</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.MakeGradGoal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to create a new graduate-level goal</p>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.MakeGradGoal.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.MakeGradGoal.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.GradGoalForm" title="makeReports.forms.admin_forms.GradGoalForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.admin_forms.GradGoalForm</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.MakeGradGoal.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/gg/list/'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.MakeGradGoal.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.MakeGradGoal.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/GG/addGG.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.MakeGradGoal.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.ManualReportSubmit">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">ManualReportSubmit</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ManualReportSubmit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to manually submitting a report, overriding checks</p>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ManualReportSubmit.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['submitted']</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ManualReportSubmit.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ManualReportSubmit.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ManualReportSubmit.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ManualReportSubmit.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/report/list/'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ManualReportSubmit.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ManualReportSubmit.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/manualSubmit.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ManualReportSubmit.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.ReportList">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">ReportList</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list reports of active degree programs from this year</p>
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.ReportList.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportList.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets reports from this year and active degree programs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>reports (<a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>) from this year</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ReportList.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportList.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ReportList.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/reportList.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportList.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.ReportListSearched">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">ReportListSearched</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportListSearched" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list reports meeting search parameters</p>
+<p class="rubric">Notes</p>
+<p>Search parameters passed through GET request,
+‘year’,’submitted’, ‘graded’, ‘dP’ for degree program primary key,
+‘dept’ for department by primary key, and ‘college’ by primary key</p>
+<dl class="method">
+<dt id="makeReports.views.AAC.aac_report_views.ReportListSearched.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportListSearched.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets filtered QuerySet based upon parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>reports (<a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>) meeting search criteria</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ReportListSearched.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportListSearched.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.ReportListSearched.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/reportList.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.ReportListSearched.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.AAC.aac_report_views.UpdateGradGoal">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.AAC.aac_report_views.</code><code class="sig-name descname">UpdateGradGoal</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.UpdateGradGoal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to change the text of a graduate-level goal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradGoal</span></code></a> to update</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.UpdateGradGoal.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.UpdateGradGoal.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.admin_forms.html#makeReports.forms.admin_forms.GradGoalEditForm" title="makeReports.forms.admin_forms.GradGoalEditForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.admin_forms.GradGoalEditForm</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.UpdateGradGoal.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.UpdateGradGoal.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.GradGoal</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.UpdateGradGoal.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/gg/list/'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.UpdateGradGoal.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.AAC.aac_report_views.UpdateGradGoal.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/AACAdmin/GG/updateGG.html'</em><a class="headerlink" href="#makeReports.views.AAC.aac_report_views.UpdateGradGoal.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+                {% block scripts %}{% endblock %}
+                {% load static %}
+                <title>Academic Assessment Reports</title>
+                {# Load the tag library #}
+                {% load bootstrap4 %}
+            
+                {# Load CSS and JavaScript #}
+                {% block styles %}
+                <style>
+                p{
+                    display: inline;
+                }
+                </style>
+                {% endblock %}
+            </head>
+    <body>
+<div class="padd bT">
+<table class="table" style="border: 1px solid black;width:100%">
+    <thead>
+        <th scope="col">Category</th>
+        <th scope="col" class="table-danger" style="width:24%;text-align:center;">Red<br>(Did not meet/<br>Did not include)</th>
+        <th scope="col" class="table-warning" style="width:24%;text-align:center;">Yellow<br>(Meets with Concerns)</th>
+        <th scope="col" class="table-success" style="width:24%;text-align:center">Green<br>(Meets)</th>
+    </thead>
+    <tr class="table-secondary" style="background-color:E0E0E0;">
+        <td colspan="5">
+            <b>I. Student Learning Outcomes</b>
+        </td>
+    </tr>
+    {% for r in GRIs1 %}
+    <tr class="justify-content-center">
+        <td>
+            {{r.item.text|safe}}
+        </td>
+        <td class="table-danger ">
+                {% if r.grade == 'DNM' %}☒{% else %}☐{% endif %} {{r.item.DMEtext|safe}}
+        </td>
+        <td class="table-warning" >
+            {% if r.grade == 'MC' %}☒{% else %}☐{% endif %} {{r.item.MEtext|safe}}
+        </td>
+        <td class="table-success">
+            {% if r.grade == 'ME' %}☒{% else %}☐{% endif %} {{r.item.EEtext|safe}}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr class="table-secondary">
+        <td colspan="5">
+            <b>II. Measures Used</b>
+        </td>
+    </tr>
+    {% for r in GRIs2 %}
+    <tr>
+        <td>
+            {{r.item.text|safe}}
+        </td>
+        <td class="table-danger ">
+                {% if r.grade == 'DNM' %}☒{% else %}☐{% endif %} {{r.item.DMEtext|safe}}
+        </td>
+        <td class="table-warning" >
+            {% if r.grade == 'MC' %}☒{% else %}☐{% endif %} {{r.item.MEtext|safe}}
+        </td>
+        <td class="table-success">
+            {% if r.grade == 'ME' %}☒{% else %}☐{% endif %} {{r.item.EEtext|safe}}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr class="table-secondary">
+            <td colspan="5">
+                <b>III. Results Reported</b>
+            </td>
+        </tr>
+        {% for r in GRIs3 %}
+        <tr>
+            <td>
+                {{r.item.text|safe}}
+            </td>
+            <td class="table-danger ">
+                    {% if r.grade == 'DNM' %}☒{% else %}☐{% endif %} {{r.item.DMEtext|safe}}
+            </td>
+            <td class="table-warning" >
+                {% if r.grade == 'MC' %}☒{% else %}☐{% endif %} {{r.item.MEtext|safe}}
+            </td>
+            <td class="table-success">
+                {% if r.grade == 'ME' %}☒{% else %}☐{% endif %} {{r.item.EEtext|safe}}
+            </td>
+        </tr>
+        {% endfor %}
+    <tr class="table-secondary">
+        <td colspan="5">
+            <b>IV. Decisions and Actions based on Results</b>
+        </td>
+    </tr>
+    {% for r in GRIs4 %}
+    <tr>
+        <td>
+            {{r.item.text|safe}}
+        </td>
+        <td class="table-danger ">
+                {% if r.grade == 'DNM' %}☒{% else %}☐{% endif %} {{r.item.DMEtext|safe}}
+        </td>
+        <td class="table-warning" >
+            {% if r.grade == 'MC' %}☒{% else %}☐{% endif %} {{r.item.MEtext|safe}}
+        </td>
+        <td class="table-success">
+            {% if r.grade == 'ME' %}☒{% else %}☐{% endif %} {{r.item.EEtext|safe}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<table style="border: 1px solid black;width:100%">
+    <tr class='table-secondary'>
+        <td colspan="4" ><b>Comments</b></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <b>Student Learning Outcomes (SLOs): </b> {{rubric.section1Comment|safe}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <b>Measures: </b>{{rubric.section2Comment|safe}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <b>Results Reported / Data Collection and Analysis: </b> {{rubric.section3Comment|safe}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <b>Decisions and Actions: </b>{{rubric.section4Comment|safe}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <b>Overall: </b>{{rubric.generalComment|safe}}
+        </td>
+    </tr>
+
+
+
+</table>
+</div>
+</body>
+</html>

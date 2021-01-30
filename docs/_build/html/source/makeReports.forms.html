@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>makeReports.forms package &#8212; AAC Application Form 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="makereports-forms-package">
+<h1>makeReports.forms package<a class="headerlink" href="#makereports-forms-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-makeReports.forms.admin_forms">
+<span id="makereports-forms-admin-forms-module"></span><h2>makeReports.forms.admin_forms module<a class="headerlink" href="#module-makeReports.forms.admin_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">AnnouncementForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create announcement by AAC</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 2000</em><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateDPByDept</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create degree program where department is given</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateDepartmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new department</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateReportByDPForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create report where degree program is already picked</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and sets rubric options</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateReportByDept</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new report via a link that already gives department (but not degree program)</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, sets the degree program options by the keyword argument and sets rubric options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>dept</strong> (<a class="reference internal" href="makeReports.models.html#makeReports.models.report_models.Department" title="makeReports.models.report_models.Department"><em>Department</em></a>) – department object to pick degree programs from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GenerateReports">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">GenerateReports</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.GenerateReports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to generate reports</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rubric</span></code>: Rubric (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.GenerateReports.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.GenerateReports.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GradGoalForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">GradGoalForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new graduate goal</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 600</em><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">MakeNewAccount</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.forms.UserCreationForm</span></code></p>
+<p>Form for AAC to make new account</p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">commit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upon creating a new user, both the Django User type and custom profile type must be created</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.UpdateUserForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">UpdateUserForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.UpdateUserForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update a pre-existing user by the AAC</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aac</span></code>: AAC member (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">department</span></code>: Department (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first_name</span></code>: First Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last_name</span></code>: Last Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>: Email (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.UpdateUserForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.UpdateUserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.UserUpdateUserForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">UserUpdateUserForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.UserUpdateUserForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update a user by the user themselves (fewer permissions)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">first_name</span></code>: First Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last_name</span></code>: Last Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>: Email (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.UserUpdateUserForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.UserUpdateUserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.assessment_forms">
+<span id="makereports-forms-assessment-forms-module"></span><h2>makeReports.forms.assessment_forms module<a class="headerlink" href="#module-makeReports.forms.assessment_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">CreateNewAssessment</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to create new assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code>: Domain (<code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">directMeasure</span></code>: Direct measure (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: % of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, including setting SLO options to passed QuerySet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloQS</strong> (<em>QuerySet</em>) – SLOs to be picked from (generally those within report)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_description">
+<code class="sig-name descname">clean_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_frequency">
+<code class="sig-name descname">clean_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the frequency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_sampleDescription">
+<code class="sig-name descname">clean_sampleDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_sampleDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the sample description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_where">
+<code class="sig-name descname">clean_where</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_where" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the where field</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">EditImportedAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="makeReports.forms.assessment_forms.EditNewAssessmentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.EditNewAssessmentForm</span></code></a></p>
+<p>Edit imported assessment form (cannot change title, domain, or direct measure)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: % of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.directMeasure">
+<code class="sig-name descname">directMeasure</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.directMeasure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.domain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.title">
+<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">EditNewAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.assessment_forms.CreateNewAssessment" title="makeReports.forms.assessment_forms.CreateNewAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.CreateNewAssessment</span></code></a></p>
+<p>Form to edit new assessment (no restrictions)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code>: Domain (<code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">directMeasure</span></code>: Direct measure (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: % of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets SLOs choices to passed set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloQS</strong> (<em>QuerySet</em>) – set of SLOs to choose from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">ImportAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to import pre-existing assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assessment</span></code>: Assessment (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, sets assessment and SLO choices to passed sets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>assessChoices</strong> (<em>QuerySet</em>) – assessment choices</p></li>
+<li><p><strong>sloChoices</strong> (<em>QuerySet</em>) – SLO choices</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">ImportSupplementsForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Import supplement for assessment form</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sup</span></code>: Supplement Upload (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize form, with setting the supplement choices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>supChoices</strong> (<em>QuerySet</em>) – supplements to choose from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.cleaners">
+<span id="makereports-forms-cleaners-module"></span><h2>makeReports.forms.cleaners module<a class="headerlink" href="#module-makeReports.forms.cleaners" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.cleaners.CleanSummer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.cleaners.</code><code class="sig-name descname">CleanSummer</code><a class="headerlink" href="#makeReports.forms.cleaners.CleanSummer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Assumes the plugin Summernote is being used as a widget for a field called text,
+which this class then implements the cleaning method for</p>
+<dl class="method">
+<dt id="makeReports.forms.cleaners.CleanSummer.clean_text">
+<code class="sig-name descname">clean_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.cleaners.CleanSummer.clean_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the user input on the text field, and checks maximum length</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.forms.cleaners.cleanText">
+<code class="sig-prename descclassname">makeReports.forms.cleaners.</code><code class="sig-name descname">cleanText</code><span class="sig-paren">(</span><em class="sig-param">txt</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.cleaners.cleanText" title="Permalink to this definition">¶</a></dt>
+<dd><p>This code removes unnecessary markup from rich text, primarily from malicious purposes such as
+adding scripts or from copying pasting (e.g. Word adds thousands of lines of markup)</p>
+<p class="rubric">Notes</p>
+<p>This code was adapted from the Javascript plugin summernote-cleaner (also part of project)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>txt</strong> (<em>str</em>) – text to be cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.data_collection_forms">
+<span id="makereports-forms-data-collection-forms-module"></span><h2>makeReports.forms.data_collection_forms module<a class="headerlink" href="#module-makeReports.forms.data_collection_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.AddDataCollection">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">AddDataCollection</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddDataCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add data</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataRange</span></code>: Data Collection Range (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberStudents</span></code>: Number of Students Sampled (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overallProficient</span></code>: Percentage of Students Met/Exceeded Threshold Proficiency (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.AddDataCollection.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddDataCollection.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.AddSubassessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">AddSubassessment</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddSubassessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add sub-assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Subassessment Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">proficient</span></code>: Subassessment Percentage of Students Met/Exceeded Threshold Proficiency (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.AddSubassessment.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.AddSubassessment.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.EditDataCollection">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">EditDataCollection</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.EditDataCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to edit pre-existing data</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataRange</span></code>: Data Collection Range (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberStudents</span></code>: Number of Students Sampled (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overallProficient</span></code>: Percentage of Students Met/Exceeded Threshold Proficiency (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.EditDataCollection.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.EditDataCollection.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.EditSubassessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">EditSubassessment</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.EditSubassessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to edit sub-assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Subassessment Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">proficient</span></code>: Subassessment Percentage of Students Met/Exceeded Threshold Proficiency (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.EditSubassessment.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.EditSubassessment.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">ResultCommunicationForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add how results are communicated</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Describe how results are communicated within the program. Address each SLO. (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.data_collection_forms.ResultCommunicationForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 3000</em><a class="headerlink" href="#makeReports.forms.data_collection_forms.ResultCommunicationForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.data_collection_forms.SLOStatusForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.data_collection_forms.</code><code class="sig-name descname">SLOStatusForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.data_collection_forms.SLOStatusForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update SLO status</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: SLO Status:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.data_collection_forms.SLOStatusForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.data_collection_forms.SLOStatusForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.decisions_actions_forms">
+<span id="makereports-forms-decisions-actions-forms-module"></span><h2>makeReports.forms.decisions_actions_forms module<a class="headerlink" href="#module-makeReports.forms.decisions_actions_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.decisions_actions_forms.DecActForm1Box">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.decisions_actions_forms.</code><code class="sig-name descname">DecActForm1Box</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.decisions_actions_forms.DecActForm1Box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to add/edit decision/actions without sub-boxes</p>
+<dl class="method">
+<dt id="makeReports.forms.decisions_actions_forms.DecActForm1Box.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.decisions_actions_forms.DecActForm1Box.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.decisions_actions_forms.DecActForm1Box.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 3000</em><a class="headerlink" href="#makeReports.forms.decisions_actions_forms.DecActForm1Box.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.decisions_actions_forms.DecisionsActionsForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.decisions_actions_forms.</code><code class="sig-name descname">DecisionsActionsForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.decisions_actions_forms.DecisionsActionsForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to add or edit decisions/actions with 5 sub text boxes</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">decisionProcess</span></code>: Decision Process (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decisionMakers</span></code>: Decision Makers (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decisionTimeline</span></code>: Decision Timeline (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataUsed</span></code>: Data Used (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionTimeline</span></code>: Action Timeline (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.decisions_actions_forms.DecisionsActionsForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.decisions_actions_forms.DecisionsActionsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.grading_forms">
+<span id="makereports-forms-grading-forms-module"></span><h2>makeReports.forms.grading_forms module<a class="headerlink" href="#module-makeReports.forms.grading_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.DuplicateRubricForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">DuplicateRubricForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.DuplicateRubricForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to duplicate a rubric (given the rubric) and set the new name</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">new_name</span></code>: New Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.DuplicateRubricForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.DuplicateRubricForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.RubricItemForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">RubricItemForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create a new rubric item</p>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_DMEtext">
+<code class="sig-name descname">clean_DMEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_DMEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field DMEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_EEtext">
+<code class="sig-name descname">clean_EEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_EEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field EEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_MEtext">
+<code class="sig-name descname">clean_MEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_MEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field MEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_text">
+<code class="sig-name descname">clean_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">SectionRubricForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to grade one section of a report based upon a rubric</p>
+<p><strong>Form fields:</strong></p>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form with fields for each rubric item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>rubricItems</strong> (<em>QuerySet</em>) – rubric items for the section</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.clean_section_comment">
+<code class="sig-name descname">clean_section_comment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.clean_section_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the markup of the comment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.SubmitGrade">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">SubmitGrade</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Dummy form to submit rubric</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code>: Hidden (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and sets valid on the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>valid</strong> (<em>Boolean</em>) – the grading is complete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans form and raises validation error if not valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.other_forms">
+<span id="makereports-forms-other-forms-module"></span><h2>makeReports.forms.other_forms module<a class="headerlink" href="#module-makeReports.forms.other_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.other_forms.SubmitReportForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.other_forms.</code><code class="sig-name descname">SubmitReportForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.other_forms.SubmitReportForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Dummy form to submit report</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code>: Hidden (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.other_forms.SubmitReportForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.other_forms.SubmitReportForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and sets the valid and error message on the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>valid</strong> (<em>Boolean</em>) – if report is valid to be submitted</p></li>
+<li><p><strong>eMsg</strong> (<em>str</em>) – error message</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.other_forms.SubmitReportForm.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.other_forms.SubmitReportForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans form and checks if valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.other_forms.SubmitReportForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.other_forms.SubmitReportForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.slo_forms">
+<span id="makereports-forms-slo-forms-module"></span><h2>makeReports.forms.slo_forms module<a class="headerlink" href="#module-makeReports.forms.slo_forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.CreateNewSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">CreateNewSLO</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.CreateNewSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to create a new SLO</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: SLO:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blooms</span></code>: Highest Bloom’s Taxonomy Level:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gradGoals</span></code>: Graduate-level Goals:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.CreateNewSLO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.CreateNewSLO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and deletes grad field if undergraduate level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>grad</strong> (<em>Boolean</em>) – whether it is a graduate level program</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.CreateNewSLO.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.CreateNewSLO.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.slo_forms.CreateNewSLO.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 1000</em><a class="headerlink" href="#makeReports.forms.slo_forms.CreateNewSLO.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.EditImportedSLOForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">EditImportedSLOForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.EditImportedSLOForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to edit imported SLO (restricted)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: SLO:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.EditImportedSLOForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.EditImportedSLOForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.slo_forms.EditImportedSLOForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 1000</em><a class="headerlink" href="#makeReports.forms.slo_forms.EditImportedSLOForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.EditNewSLOForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">EditNewSLOForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.EditNewSLOForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to edit a new SLO (no restrictions)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: SLO:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blooms</span></code>: Highest Bloom’s Taxonomy Level:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gradGoals</span></code>: Graduate-level Goals:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.EditNewSLOForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.EditNewSLOForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and deletes grad if undergraduate program</p>
+<dl class="simple">
+<dt>Keyword Args;</dt><dd><p>grad (Boolean): whether graduate level program</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.EditNewSLOForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.EditNewSLOForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.slo_forms.EditNewSLOForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 1000</em><a class="headerlink" href="#makeReports.forms.slo_forms.EditNewSLOForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.ImportSLOForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">ImportSLOForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.ImportSLOForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to import pre-existing SLO</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLOs to Import:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">importAssessments</span></code>: Also import assessments? (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.ImportSLOForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.ImportSLOForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, including setting SLO choices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloChoices</strong> (<em>QuerySet</em>) – SLO choices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.ImportSLOForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.ImportSLOForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.ImportStakeholderForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">ImportStakeholderForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.ImportStakeholderForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to import pre-existing stakeholder communication text</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stk</span></code>: Stakeholder Communication Methods (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.ImportStakeholderForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.ImportStakeholderForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, including setting choices for stakeholder communication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>stkChoice</strong> (<em>QuerySet</em>) – stakeholder communication text choices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.ImportStakeholderForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.ImportStakeholderForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.slo_forms.Single2000Textbox">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.slo_forms.</code><code class="sig-name descname">Single2000Textbox</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.slo_forms.Single2000Textbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form for a single 2000 character textbox</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.slo_forms.Single2000Textbox.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.slo_forms.Single2000Textbox.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.slo_forms.Single2000Textbox.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 2000</em><a class="headerlink" href="#makeReports.forms.slo_forms.Single2000Textbox.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms.widgets">
+<span id="makereports-forms-widgets-module"></span><h2>makeReports.forms.widgets module<a class="headerlink" href="#module-makeReports.forms.widgets" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.widgets.</code><code class="sig-name descname">SLOChoicesJSWidget</code><span class="sig-paren">(</span><em class="sig-param">attrs=None</em>, <em class="sig-param">choices=()</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.widgets.Select</span></code></p>
+<p>Widget that uses the Choices Javascript plugin for a drop-down</p>
+<dl class="class">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.Media">
+<em class="property">class </em><code class="sig-name descname">Media</code><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.Media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.Media.css">
+<code class="sig-name descname">css</code><em class="property"> = {'all': ('https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css', '/static/css/slo_choices.css')}</em><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.Media.css" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.Media.js">
+<code class="sig-name descname">js</code><em class="property"> = ('https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js', '/static/extPlugin/choices-widget.js')</em><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.Media.js" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.option_template_name">
+<code class="sig-name descname">option_template_name</code><em class="property"> = 'widgets/option.html'</em><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.option_template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.widgets.SLOChoicesJSWidget.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'widgets/select.html'</em><a class="headerlink" href="#makeReports.forms.widgets.SLOChoicesJSWidget.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.forms">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-makeReports.forms" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">AAC Application Form</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emma Dargy, Sarah McCarty, and David Ream.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/makeReports.forms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

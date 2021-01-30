@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Archived Degree Program List for {{dept.name}}
+</h3>
+<ul class="list-group">
+{% for dp in object_list %}
+    <li class = "list-group-item">{{dp.name}}, {{dp.level}} in {{dp.department.college.name}}
+            <a  role="button" class="btn btn-primary" href="{% url 'makeReports:recover-dp' dept=dp.department.pk pk=dp.pk %}">Recover Degree Program</a>
+    </li>
+{% empty %}
+No archived degree programs.
+{% endfor %}
+</ul>
+{% endblock %}

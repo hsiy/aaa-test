@@ -1,0 +1,884 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.slo_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.slo_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.slo_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.slo_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.slo_views">
+<span id="makereports-views-slo-views-module"></span><h1>makeReports.views.slo_views module<a class="headerlink" href="#module-makeReports.views.slo_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains all view related to inputting SLOs into the form</p>
+<dl class="class">
+<dt id="makeReports.views.slo_views.AddNewSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">AddNewSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add a new SLO</p>
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.AddNewSLO.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.CreateNewSLO" title="makeReports.forms.slo_forms.CreateNewSLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.CreateNewSLO</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.AddNewSLO.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates SLO from form, updates report’s field numberOrSLOs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.CreateNewSLO" title="makeReports.forms.slo_forms.CreateNewSLO"><em>CreateNewSLO</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.AddNewSLO.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns keyword arguments for form, including whether the degree program is graduate level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments for form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.AddNewSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.AddNewSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/addSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.AddNewSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.DeleteImportedSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">DeleteImportedSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteImportedSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete imported SLO (does not delete super SLO)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.slo_views.DeleteImportedSLO.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param">queryset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteImportedSLO.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook to ensure it is an imported SLO</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.DeleteImportedSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteImportedSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the success URL (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.DeleteImportedSLO.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.slo_views.DeleteImportedSLO.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.DeleteImportedSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/deleteSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.DeleteImportedSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.DeleteNewSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">DeleteNewSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteNewSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete new SLO (deletes the super SLO as well)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.slo_views.DeleteNewSLO.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param">queryset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteNewSLO.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook to ensure it is a new SLO</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.DeleteNewSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.DeleteNewSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets success URL (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.DeleteNewSLO.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.slo_views.DeleteNewSLO.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.DeleteNewSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/deleteSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.DeleteNewSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.EditImportedSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">EditImportedSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to edit imported SLO (more restricted than new SLO)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to edit</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditImportedSLO.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>sloIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to edit</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.EditImportedSLO.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.EditImportedSLOForm" title="makeReports.forms.slo_forms.EditImportedSLOForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.EditImportedSLOForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditImportedSLO.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edits SLO from form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.EditImportedSLOForm" title="makeReports.forms.slo_forms.EditImportedSLOForm"><em>EditImportedSLOForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditImportedSLO.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial form values, including goal text from current values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditImportedSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.EditImportedSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/editImportedSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.EditImportedSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.EditNewSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">EditNewSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to edit new SLO (not-restricted)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to edit</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditNewSLO.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>sloIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to edit</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.EditNewSLO.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.CreateNewSLO" title="makeReports.forms.slo_forms.CreateNewSLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.CreateNewSLO</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditNewSLO.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update SLO based upon the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.CreateNewSLO" title="makeReports.forms.slo_forms.CreateNewSLO"><em>CreateNewSLO</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditNewSLO.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets keyword arguments for form, including whether it is graduate-level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>form keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditNewSLO.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial values for the form based upon current values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.EditNewSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.EditNewSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/editNewSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.EditNewSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.ImportSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">ImportSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to import pre-existing SLO</p>
+<p class="rubric">Notes</p>
+<p>Search parameters ‘year’ and ‘dp’ (primary key of degree program) passed in get request</p>
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.ImportSLO.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.ImportSLOForm" title="makeReports.forms.slo_forms.ImportSLOForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.ImportSLOForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportSLO.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import SLO and assessments based upon form, also updates numberOfSLOs field in report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.ImportSLOForm" title="makeReports.forms.slo_forms.ImportSLOForm"><em>ImportSLOForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportSLO.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns context for template, including the current degree program and those within the department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportSLO.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get keyword arguments for form, including SLOs meeting search parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments for form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.ImportSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/importSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.ImportSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">ImportStakeholderEntry</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to import stakeholder communication from within department</p>
+<p class="rubric">Notes</p>
+<p>Search parameters ‘dp’ for degree program primary key and ‘year’ sent through get request</p>
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.ImportStakeholderForm" title="makeReports.forms.slo_forms.ImportStakeholderForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.ImportStakeholderForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports stakeholder communication or creates new one in case of error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.ImportStakeholderForm" title="makeReports.forms.slo_forms.ImportStakeholderForm"><em>ImportStakeholderForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for template, including current degree program and all degree programs within department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get keyword arguments for form, including stakeholder communications that match search parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>form keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (Communicating to Stakeholders)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of communicating to stakeholders page (<a class="reference internal" href="#makeReports.views.slo_views.StakeholderEntry" title="makeReports.views.slo_views.StakeholderEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">StakeholderEntry</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.ImportStakeholderEntry.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/importStakeholderComm.html'</em><a class="headerlink" href="#makeReports.views.slo_views.ImportStakeholderEntry.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.SLOSummary">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">SLOSummary</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to summarize SLO while entering information</p>
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.SLOSummary.context_object_name">
+<code class="sig-name descname">context_object_name</code><em class="property"> = 'slo_list'</em><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.SLOSummary.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets template context, including the stakeholder communication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.SLOSummary.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets SLOs in report ordered by number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>SLOs (<a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a>) in report</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.SLOSummary.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.SLOSummary.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/sloSummary.html'</em><a class="headerlink" href="#makeReports.views.slo_views.SLOSummary.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.Section1Comment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">Section1Comment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to enter comment for section 1 of the report</p>
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.Section1Comment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.Single2000Textbox</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.Section1Comment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves comment to report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><em>Single2000Textbox</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.Section1Comment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the form with “No Commment”
+:returns: initial values for form
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.Section1Comment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.Section1Comment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/sloComment.html'</em><a class="headerlink" href="#makeReports.views.slo_views.Section1Comment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.slo_views.StakeholderEntry">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.slo_views.</code><code class="sig-name descname">StakeholderEntry</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to enter how SLOs are communicated to stakeholders</p>
+<dl class="method">
+<dt id="makeReports.views.slo_views.StakeholderEntry.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Dispatches view and attaches</dt><dd><p>current stakeholder communication (<a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOsToStakeholder" title="makeReports.models.slo_models.SLOsToStakeholder"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOsToStakeholder</span></code></a>) to instance</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>report</strong> (<em>str</em>) – primary key of report</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.StakeholderEntry.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.Single2000Textbox</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.StakeholderEntry.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates or creates stakeholder communication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><em>Single2000Textbox</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.StakeholderEntry.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form value based upon current values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.slo_views.StakeholderEntry.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.slo_views.StakeholderEntry.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/SLO/stakeholdersSLO.html'</em><a class="headerlink" href="#makeReports.views.slo_views.StakeholderEntry.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

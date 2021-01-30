@@ -1,0 +1,15 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Add Assessment Collection Data</h3>
+<b>SLO: </b> {{assess.slo}}<br>
+<b>Assessment: </b> {{assess}}<br>
+<b>Threshold: </b> {{assess.threshold}}<br>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add Data</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.pdf_generators module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.pdf_generators module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.pdf_generators module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.pdf_generators.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.pdf_generators">
+<span id="makereports-views-pdf-generators-module"></span><h1>makeReports.views.pdf_generators module<a class="headerlink" href="#module-makeReports.views.pdf_generators" title="Permalink to this headline">¶</a></h1>
+<p>This file contains views and methods needed to generate PDFs throughout the application</p>
+<dl class="class">
+<dt id="makeReports.views.pdf_generators.GradedRubricPDFGen">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">GradedRubricPDFGen</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.GradedRubricPDFGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django_weasyprint.views.WeasyTemplateView</span></code>, <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptAACMixin" title="makeReports.views.helperFunctions.mixins.DeptAACMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptAACMixin</span></code></a></p>
+<p>View to generate a graded rubric PDF
+:keyword report: primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>
+:kwtype report: str</p>
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.GradedRubricPDFGen.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.GradedRubricPDFGen.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to the view
+:param request: request to view PDF page
+:type request: HttpRequest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.GradedRubricPDFGen.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.GradedRubricPDFGen.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the rubric and graded rubric items for the report,
+separated by section
+:returns: template context
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.pdf_generators.GradedRubricPDFGen.pdf_stylesheets">
+<code class="sig-name descname">pdf_stylesheets</code><em class="property"> = ['D:\\School Work\\Senior\\Capstone\\Project\\AACForm\\staticfiles\\css\\report.css', 'D:\\School Work\\Senior\\Capstone\\Project\\AACForm\\staticfiles\\css\\landscape.css']</em><a class="headerlink" href="#makeReports.views.pdf_generators.GradedRubricPDFGen.pdf_stylesheets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.pdf_generators.GradedRubricPDFGen.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/feedbackPDF.html'</em><a class="headerlink" href="#makeReports.views.pdf_generators.GradedRubricPDFGen.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.pdf_generators.PDFPreview">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">PDFPreview</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.PDFPreview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View to preview a PDF in HTML form, not intended for end-users, but is useful for the development future extensions
+:param report: primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>
+:type report: str</p>
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.PDFPreview.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.PDFPreview.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to the view
+:param request: request to view PDF page
+:type request: HttpRequest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.PDFPreview.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.PDFPreview.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the rubric and graded rubric items for the report,
+separated by section
+:returns: template context
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.pdf_generators.PDFPreview.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DisplayReport/pdf.html'</em><a class="headerlink" href="#makeReports.views.pdf_generators.PDFPreview.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.pdf_generators.ReportPDFGen">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">ReportPDFGen</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.ReportPDFGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django_weasyprint.views.WeasyTemplateView</span></code>, <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptAACMixin" title="makeReports.views.helperFunctions.mixins.DeptAACMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptAACMixin</span></code></a></p>
+<p>View to generate PDF of report, without supplements
+:keyword report: primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>
+:kwtype report: str</p>
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.ReportPDFGen.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.ReportPDFGen.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to instance
+:param request: request to view page
+:type request: HttpRequest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.pdf_generators.ReportPDFGen.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.ReportPDFGen.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the report and context
+needed for each section
+:returns: context for template
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.pdf_generators.ReportPDFGen.pdf_stylesheets">
+<code class="sig-name descname">pdf_stylesheets</code><em class="property"> = ['D:\\School Work\\Senior\\Capstone\\Project\\AACForm\\staticfiles\\css\\report.css', 'D:\\School Work\\Senior\\Capstone\\Project\\AACForm\\staticfiles\\css\\shelves.css']</em><a class="headerlink" href="#makeReports.views.pdf_generators.ReportPDFGen.pdf_stylesheets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.pdf_generators.ReportPDFGen.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DisplayReport/pdf.html'</em><a class="headerlink" href="#makeReports.views.pdf_generators.ReportPDFGen.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.UngradedRubric">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">UngradedRubric</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">rubric</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.UngradedRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>View to generate ungraded rubric PDF
+:param request: request for page
+:type request: HttpRequest
+:param rubric: primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a>
+:type rubric: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the PDF</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.addSupplements">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">addSupplements</code><span class="sig-paren">(</span><em class="sig-param">sups</em>, <em class="sig-param">merged</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.addSupplements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds supplements to the merged PDF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sups</strong> – QuerySet of supplements to merge</p></li>
+<li><p><strong>merged</strong> – PdfFileMerger to add to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>with supplements integrated</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PdfFileMerger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.reportPDF">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">reportPDF</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">report</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.reportPDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>View to generate report PDF with supplements
+:param request: request to view page
+:type request: HttpRequest
+:param report: primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>
+:type report: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the PDF</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>A function instead of class due to limitations of class based views</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.test_aac">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">test_aac</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.test_aac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures the user accessing page is in the AAC
+:returns: whether user passes test
+:rtype: boolean</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.test_aac_or_dept">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">test_aac_or_dept</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.test_aac_or_dept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures the user accessing the page is in the AAC or right department
+:keyword report: primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>
+:kwtype report: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>whether user passes test</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.pdf_generators.user_passes_test">
+<code class="sig-prename descclassname">makeReports.views.pdf_generators.</code><code class="sig-name descname">user_passes_test</code><span class="sig-paren">(</span><em class="sig-param">test_func</em>, <em class="sig-param">login_url=None</em>, <em class="sig-param">redirect_field_name='next'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.pdf_generators.user_passes_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for views that checks that the user passes the given test,
+redirecting to the log-in page if necessary. The test should be a callable
+that takes the user object and returns True if the user passes.</p>
+<p>This function is very slightly modified from Django source code in order to allow args and
+kwargs to be passed to the test function
+:param test_func: function that user must return tru
+:type test_func: method
+:param login_url: URL to login page
+:type login_url: str
+:param redirect_field_name: field name of where to put redirect URL
+:type redirect_field_name: str</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

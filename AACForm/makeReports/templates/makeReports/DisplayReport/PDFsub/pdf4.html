@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+                {% block scripts %}{% endblock %}
+                <title>Academic Assessment Reports</title>
+                {% load static %}
+                <link href="{% static 'css/report.css' %}" rel="stylesheet">
+            </head>
+    <body>
+        {% include 'makeReports/DisplayReport/PDFsub/dAndAs.html' %}
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!--things needed in context: assessment_data_dict,report-->
+<!--when included, the shelves css must also be included-->
+<h3>III. Data Collection and Analysis</h3>
+{% if not assessment_data_dict.useaccform %}
+<div class="row-sh mb-5">
+    <div class="column-15">
+        <div class="row-sh">
+            <div class="column-15">
+                <h4>Data Table</h4>
+            </div>
+        </div>
+        <div class="row-sh">
+            <div class="column-15">
+                <div class="row-sh border-bottom">
+                    <div class="column-6">Measure</div>
+                    <div class="column-3">Date</div>
+                    <div class="column-2">Number of Students</div>
+                    <div class="column-2">Students Meeting Threshold</div>
+                    <div class="column-2">Aggregate</div>
+                </div>
+                {% for assessment in assessment_data_dict.assessments %}
+                <div class="row-sh align-items-center border-bottom pt-3 pb-3" {% if not assessment.slo_obj.number|divisibleby:2 %} style="background-color:rgb(228, 238, 253);" {% endif %}>
+                    <div class="column-6">
+                            <b>SLO {{assessment.slo_obj.number}} -
+                                Measure {{assessment.assessment_obj.number}}, {{assessment.assessment_text}}</b>
+                    </div>
+                    <div class="column-7">
+                    {% for d in assessment.assess_data %}
+                    <div class="row-sh align-items-center">
+                        <div class="column-3">
+                            {{d.dataRange}}
+                        </div>
+
+                        <div class="column-2">
+                            {{d.numberStudents}}
+                        </div>
+
+                        <div class="column-2">
+                            {{d.overallProficient}}%
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>                    
+
+                    <div class="column-2">
+                        {% if assessment.agg %}
+                        {{assessment.agg}}%
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<div class="row-sh mt-5">
+    <div class="column">
+        <h4>Supplements</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Supplement</td>
+                    <td>Comment</td>
+                </tr>
+                {% for sup in supplement_list %}
+                <tr>
+                    <td>
+                        <a href="{{sup.supplement.url}}">{{sup}}</a>
+                    </td>
+                    <td>
+                        {{sup.comment}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row-sh mt-5">
+    <div class="column">
+
+        <table class="table">
+            <tbody>
+                <thead>
+                    <h4>SLO Status</h4>
+                </thead>
+                <tr>
+                    <td>SLO</td>
+                    <td>Status</td>
+                </tr>
+                {% for slo_status in assessment_data_dict.slo_statuses %}
+                <tr>
+                    <td>SLO {{slo_status.slo_obj.number}}: {{ slo_status.slo_text }}</td>
+                    {% if slo_status.slo_status_pk == None %}
+                    <td>(Status Not Reported)</td>
+                    {% else %}
+                    <td>{{ slo_status.slo_status }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% if not assessment_data_dict.useaccform %}
+<div class="row-sh mt-5">
+    <div class="column">
+        <h4>Describe how results are communicated within the program</h4>
+        {{ assessment_data_dict.result_communication_text|safe }}
+    </div>
+</div>
+{% endif %}
+<!--<div class="col-3">
+        <h4>Section III.</h4>
+        1. Data Collection<br>
+        2. <a href="">Additional Comments</a>
+    </div>
+</div>-->
+<div class="row-sh mt-5">
+    <div class="col-7">
+        <h4>Additional Comments</h4>
+        {{rpt.section3Comment|safe}}
+    </div>
+</div>

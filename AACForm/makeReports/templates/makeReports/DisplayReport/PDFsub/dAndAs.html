@@ -1,0 +1,23 @@
+<!--things needed in context: decision_actions_list,report-->
+<h3>IV. Decisions and Actions</h3>
+<div class="subsection">A. Table</div>
+<div class="bT">
+<table class='table' style="width: 100%">
+    <tbody>
+        {% for SLO_decisions in decisions_actions_list %}
+            <tr>
+                <td style="width:10%"><b>SLO {{ SLO_decisions.slo_obj.number }}</b></td>
+                {% if SLO_decisions.decisions_obj == None %}
+                    <td>(No Information)</td>
+                {% else %}
+                    <td>
+                        {{SLO_decisions.decisions_obj.text|safe}}
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<div class="subsection">B. Comment</div>
+{{rpt.section4Comment|safe}}

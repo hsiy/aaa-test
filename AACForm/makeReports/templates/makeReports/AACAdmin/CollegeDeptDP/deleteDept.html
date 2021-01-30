@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Archive Department</h3>
+Uncheck the box to archive the department. The department will no longer appear most places. 
+If necessary, the department may be restored.
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Archive Department</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

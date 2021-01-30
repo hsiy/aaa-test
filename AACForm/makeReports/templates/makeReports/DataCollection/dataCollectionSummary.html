@@ -1,0 +1,244 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block in_styles %}
+<!--this page use shelves css to make the table, because Bootstrap grid system was insufficient-->
+<link href="{% static 'css/shelves.css' %}" rel="stylesheet">
+{% endblock %}
+{% block inner_content %}
+<h3>Data Collection and Analysis Summary</h3>
+<div class="row-sh">
+        <div class="col">
+            {% include 'makeReports/toDoList.html' %}
+        </div>
+    </div>
+{% if not assessment_data_dict.useaccform %}
+<div class="row-sh mb-5">
+    <div class="column-15">
+        <div class="row-sh">
+            <div class="column-15">
+                <h4>Data Table</h4>
+                <p>
+                    Aggregate values and SLO statuses in bold have been manually changed and will not update automatically.
+                    <button type="submit" class="btn btn-primary" onclick="clearOver()">Clear Overrides</button>
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="row-sh">
+            <div class="column-15">
+                <div class="row-sh border-bottom">
+                    <div class="column-5">Measure</div>
+                    <div class="column-2">Date</div>
+                    <div class="column-1">Number of Students</div>
+                    <div class="column-1">Students Meeting Threshold</div>
+                    <div class="column-2">Data Options</div>
+                    <div class="column-1">Aggregate</div>
+                    <div class="column-2">Overall Options</div>
+                </div>
+                {% for assessment in assessment_data_dict.assessments %}
+                <div class="row-sh align-items-center border-bottom pt-3 pb-3" {% if not assessment.slo_obj.number|divisibleby:2 %} style="background-color:rgb(228, 238, 253);" {% endif %}>
+                    <div class="column-5">
+                        <b>SLO {{assessment.slo_obj.number}}: </b>{{assessment.slo_text}}<br>
+                        <b>Measure {{assessment.assessment_obj.number}}: </b>{{assessment.assessment_text}}
+                    </div>
+                    <div class="column-6">
+                    {% for d in assessment.assess_data %}
+                    <div class="row-sh align-items-center">
+                        <div class="column-2">
+                            {{d.dataRange}}
+                        </div>
+
+                        <div class="column-1">
+                            {{d.numberStudents}}
+                        </div>
+
+                        <div class="column-1">
+                            {{d.overallProficient}}%
+                        </div>
+                        <div class="column-2">
+                            <div class="row-sh">
+                            <a role="button" title="Edit data for measure" class="btn btn-primary"
+                                href="{% url 'makeReports:edit-data-collection' report=rpt.pk dataCollection=d.pk%}">Edit</a>
+                            <a role="button" title="Delete data for measure" class="btn btn-primary"
+                                href="{% url 'makeReports:delete-data-collection' report=rpt.pk pk=d.pk %}">Delete</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>                    
+
+                    <div class="column-1">
+                        {% if assessment.agg %}
+                        <div {% if assessment.agg.override %} style="font-weight: bold;" {% endif %}>
+                            {{assessment.agg}}%
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="column-2">
+                        <a role="button" class="btn btn-primary"
+                            href="{% url 'makeReports:add-data-collection' report=rpt.pk assessment=assessment.assessment_id %}">
+                            Add Data</a>
+                        {% if assessment.agg %}
+                        <a role="button" class="btn btn-primary"
+                            href="{% url 'makeReports:data-agg-edit' report=rpt.pk assessment=assessment.assessment_id pk=assessment.agg.pk %}">
+                            Edit Aggregate</a>
+                        {% else %}
+                        <a role="button" class="btn btn-primary"
+                            href="{% url 'makeReports:data-agg-create' report=rpt.pk assessment=assessment.assessment_id %}">
+                            Add Aggregate</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<div class="row-sh mt-5">
+    <div class="column">
+        <h4>Supplements</h4>
+        <a role="button" title="Continue" class="btn btn-primary"
+            href="{% url 'makeReports:add-data-sup' report=rpt.pk %}">Add Supplement</a>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Supplement</td>
+                    <td>Comment</td>
+                    <td>Options</td>
+                </tr>
+                {% for sup in supplement_list %}
+                <tr>
+                    <td>
+                        <a href="{{sup.supplement.url}}">{{sup}}</a>
+                    </td>
+                    <td>
+                        {{sup.comment}}
+                    </td>
+                    <td>
+                        <a role="button" title="Continue" class="btn btn-primary"
+                            href="{% url 'makeReports:update-data-sup' pk=sup.pk report=rpt.pk %}">Edit
+                            Comment</a>
+                        <a role="button" title="Continue" class="btn btn-primary"
+                            href="{% url 'makeReports:delete-data-sup' pk=sup.pk report=rpt.pk %}">Delete
+                            Supplement</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row-sh mt-5">
+    <div class="column">
+
+        <table class="table">
+            <tbody>
+                <thead>
+                    <h4>SLO Status</h4>
+                </thead>
+                <tr>
+                    <td>SLO</td>
+                    <td>Status</td>
+                    <td>Options</td>
+                </tr>
+                {% for slo_status in assessment_data_dict.slo_statuses %}
+                <tr>
+                    <td>SLO {{slo_status.slo_obj.number}}: {{ slo_status.slo_text }}</td>
+                    {% if slo_status.slo_status_pk == None %}
+                    <td>(Status Not Reported)</td>
+                    <td>
+                        <a role="button" title="Edit Status" class="btn btn-primary"
+                            href="{% url 'makeReports:add-slo-status' report=rpt.pk slopk=slo_status.slo_pk %}">Edit</a>
+                    </td>
+                    {% else %}
+                    <td {% if slo_status.slo_status_ovr %} style="font-weight:bold" {% endif %}>
+                        {{ slo_status.slo_status }}
+                    </td>
+                    <td>
+                        <a role="button" title="Edit Status" class="btn btn-primary"
+                            href="{% url 'makeReports:edit-slo-status' report=rpt.pk slopk=slo_status.slo_pk statuspk=slo_status.slo_status_pk %}">Edit</a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% if not assessment_data_dict.useaccform %}
+<div class="row-sh mt-5">
+    <div class="column">
+
+        <table class='table'>
+            <thead>
+                <h4>Describe how results are communicated within the program</h4>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text</td>
+                    <td>Options</td>
+                </tr>
+                <tr>
+                    {% if assessment_data_dict.result_communication_id == None %}
+                    <td>Describe how results are communicated within the program. Address each SLO.</td>
+                    <td>
+                        <a role="button" title="Add Result Communication" class="btn btn-primary"
+                            href="{% url 'makeReports:add-result-communication' report=rpt.pk %}">Edit</a>
+                    </td>
+                    {% else %}
+                    <td>{{ assessment_data_dict.result_communication_text|safe }}</td>
+                    <td>
+                        <a role="button" title="Edit Result Communication" class="btn btn-primary"
+                            href="{% url 'makeReports:edit-result-communication' report=rpt.pk resultpk=assessment_data_dict.result_communication_id %}">Edit</a>
+                    </td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+<!--<div class="col-3">
+        <h4>Section III.</h4>
+        1. Data Collection<br>
+        2. <a href="{% url 'makeReports:data-comment' report=rpt.pk %}">Additional Comments</a>
+    </div>
+</div>-->
+<div class="row-sh mt-5">
+    <div class="col-7">
+        <h4>Additional Comments</h4>
+        {{rpt.section3Comment|safe}}
+    </div>
+    <div class="col-2">
+        <a role="button" class="btn btn-primary" href="{% url 'makeReports:data-comment' report=rpt.pk %}">Edit</a>
+    </div>
+</div>
+<div class="row-sh mt-5">
+    <div class="column">
+        <a role="button" title="Continue" class="btn btn-primary"
+            href="{% url 'makeReports:decisions-actions-summary' report=rpt.pk %}">Next</a>
+    </div>
+</div>
+{% endblock %}
+{% block in_endscripts %}
+<script type='text/javascript'>
+/**
+ * Handles calling the API to clear overrides
+ * @class dataCollectionSummary
+ */
+
+/**
+ * Calls API to clear overrides on statuses and aggregates, 
+ * then refreshes page
+ * @method clearOver
+ */
+ const clearOver = async() =>{
+    const response = await fetch("{% url 'makeReports:api-clear-ovr' %}?pk={{rpt.pk}}");
+    window.location.reload();
+}
+</script>
+{% endblock %}

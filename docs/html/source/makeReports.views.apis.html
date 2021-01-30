@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.apis module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.apis module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.apis module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.apis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.apis">
+<span id="makereports-views-apis-module"></span><h1>makeReports.views.apis module<a class="headerlink" href="#module-makeReports.views.apis" title="Permalink to this headline">¶</a></h1>
+<p>This file contains the JSON APIs used</p>
+<dl class="class">
+<dt id="makeReports.views.apis.AssessmentBySLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">AssessmentBySLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>Filters AssessmentVersion to get the most recent assessment version for each parent assessment</p>
+<p class="rubric">Notes</p>
+<p>‘slo__slo’ (parent SLO pk), ‘report__year__gte’ (min year), ‘report__year__lte’ (max year)
+are the GET parameters</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.AssessmentBySLO.filter_backends">
+<code class="sig-name descname">filter_backends</code><em class="property"> = (&lt;class 'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;,)</em><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO.filter_backends" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.AssessmentBySLO.filterset_fields">
+<code class="sig-name descname">filterset_fields</code><em class="property"> = {'report__year': ['gte', 'lte'], 'slo__slo': ['exact']}</em><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO.filterset_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.apis.AssessmentBySLO.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the filtered queryset, and picks the most recent AssessmentVersion for each parent Assessment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>queryset of assessments that match parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>.order_by(…).distinct(…) is only supported by PostgreSQL</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.AssessmentBySLO.queryset">
+<code class="sig-name descname">queryset</code><em class="property"> = QuerySet</em><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.AssessmentBySLO.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#makeReports.views.apis.AssessmentBySLO.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#makeReports.views.apis.AssessmentSerializer" title="makeReports.views.apis.AssessmentSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.AssessmentParentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">AssessmentParentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.AssessmentParentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes parent assessments (<code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code>) into its primary key and title</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.AssessmentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">AssessmentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.AssessmentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes assessments (<code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code>) to JSON with the primary key and and title</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.BloomsSuggestionsAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">BloomsSuggestionsAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.BloomsSuggestionsAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.views.APIView</span></code></p>
+<p>Returns suggested words based upon Bloom’s level</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.BloomsSuggestionsAPI.authentication_classes">
+<code class="sig-name descname">authentication_classes</code><em class="property"> = [&lt;class 'rest_framework.authentication.SessionAuthentication'&gt;, &lt;class 'rest_framework.authentication.BasicAuthentication'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.BloomsSuggestionsAPI.authentication_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.BloomsSuggestionsAPI.permission_classes">
+<code class="sig-name descname">permission_classes</code><em class="property"> = [&lt;class 'rest_framework.permissions.IsAuthenticated'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.BloomsSuggestionsAPI.permission_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.apis.BloomsSuggestionsAPI.post">
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.BloomsSuggestionsAPI.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>When API is posted to return dictonary of suggestions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary of suggestions relating to SLO</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.BloomsSuggestionsAPI.renderer_classes">
+<code class="sig-name descname">renderer_classes</code><em class="property"> = [&lt;class 'rest_framework.renderers.JSONRenderer'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.BloomsSuggestionsAPI.renderer_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.DeptByColListAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">DeptByColListAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.DeptByColListAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>JSON API to gets active departments within specified college</p>
+<p class="rubric">Notes</p>
+<p>‘college’ is GET parameter to filter college primary key</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.DeptByColListAPI.filter_backends">
+<code class="sig-name descname">filter_backends</code><em class="property"> = (&lt;class 'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;,)</em><a class="headerlink" href="#makeReports.views.apis.DeptByColListAPI.filter_backends" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.DeptByColListAPI.filterset_fields">
+<code class="sig-name descname">filterset_fields</code><em class="property"> = ['college']</em><a class="headerlink" href="#makeReports.views.apis.DeptByColListAPI.filterset_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.DeptByColListAPI.queryset">
+<code class="sig-name descname">queryset</code><em class="property"> = QuerySet</em><a class="headerlink" href="#makeReports.views.apis.DeptByColListAPI.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.DeptByColListAPI.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#makeReports.views.apis.DeptByColListAPI.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#makeReports.views.apis.DeptSerializer" title="makeReports.views.apis.DeptSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeptSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.DeptSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">DeptSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.DeptSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes departments to JSON with the primary key and name</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.FileSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">FileSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.FileSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes graphs to JSON with all fields</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.ProgByDeptListAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">ProgByDeptListAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.ProgByDeptListAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>JSON API to gets active degree programs within specified department</p>
+<p class="rubric">Notes</p>
+<p>‘department’ is GET parameter to filter by department primary key</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.ProgByDeptListAPI.filter_backends">
+<code class="sig-name descname">filter_backends</code><em class="property"> = (&lt;class 'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;,)</em><a class="headerlink" href="#makeReports.views.apis.ProgByDeptListAPI.filter_backends" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.ProgByDeptListAPI.filterset_fields">
+<code class="sig-name descname">filterset_fields</code><em class="property"> = ['department']</em><a class="headerlink" href="#makeReports.views.apis.ProgByDeptListAPI.filterset_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.ProgByDeptListAPI.queryset">
+<code class="sig-name descname">queryset</code><em class="property"> = QuerySet</em><a class="headerlink" href="#makeReports.views.apis.ProgByDeptListAPI.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.ProgByDeptListAPI.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#makeReports.views.apis.ProgByDeptListAPI.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#makeReports.views.apis.ProgSerializer" title="makeReports.views.apis.ProgSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProgSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.ProgSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">ProgSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.ProgSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes degree programs to JSON with the primary key, name, and level</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.SLOParentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">SLOParentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SLOParentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes <code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code> into just its primary key</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.SLOSerializerWithParent">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">SLOSerializerWithParent</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SLOSerializerWithParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes SLOs (<code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code>) to JSON with the primary key and name and primary key of SLO</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.SLOSuggestionsAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">SLOSuggestionsAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SLOSuggestionsAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.views.APIView</span></code></p>
+<p>Generates suggestions for SLOs based upon goal text</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.SLOSuggestionsAPI.authentication_classes">
+<code class="sig-name descname">authentication_classes</code><em class="property"> = [&lt;class 'rest_framework.authentication.SessionAuthentication'&gt;, &lt;class 'rest_framework.authentication.BasicAuthentication'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.SLOSuggestionsAPI.authentication_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.SLOSuggestionsAPI.permission_classes">
+<code class="sig-name descname">permission_classes</code><em class="property"> = [&lt;class 'rest_framework.permissions.IsAuthenticated'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.SLOSuggestionsAPI.permission_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.apis.SLOSuggestionsAPI.post">
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SLOSuggestionsAPI.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>When API is posted to return dictonary of suggestions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary of suggestions relating to SLO</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.SLOSuggestionsAPI.renderer_classes">
+<code class="sig-name descname">renderer_classes</code><em class="property"> = [&lt;class 'rest_framework.renderers.JSONRenderer'&gt;]</em><a class="headerlink" href="#makeReports.views.apis.SLOSuggestionsAPI.renderer_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.SLOserializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">SLOserializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SLOserializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes SLOs to JSON with the primary key and name</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.SloByDPListAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">SloByDPListAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>JSON API to gets past SLOs <code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code> within specified degree program</p>
+<p class="rubric">Notes</p>
+<p>‘report__degreeProgram’ (degreeProgram primary key), ‘report__year__gte’ (min year),
+‘report__year__lte’ (max year) are the GET request parameters</p>
+<dl class="attribute">
+<dt id="makeReports.views.apis.SloByDPListAPI.filter_backends">
+<code class="sig-name descname">filter_backends</code><em class="property"> = (&lt;class 'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;,)</em><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI.filter_backends" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.SloByDPListAPI.filterset_fields">
+<code class="sig-name descname">filterset_fields</code><em class="property"> = {'report__degreeProgram': ['exact'], 'report__year': ['gte', 'lte']}</em><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI.filterset_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.apis.SloByDPListAPI.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the filtered queryset, and picks the most recent SLOInReport for each parent SLO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>queryset of SLOs that match parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>.order_by(…).distinct(…) is only supported by PostgreSQL</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.SloByDPListAPI.queryset">
+<code class="sig-name descname">queryset</code><em class="property"> = QuerySet</em><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.apis.SloByDPListAPI.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#makeReports.views.apis.SloByDPListAPI.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#makeReports.views.apis.SLOSerializerWithParent" title="makeReports.views.apis.SLOSerializerWithParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSerializerWithParent</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.apis.createGraphAPI">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">createGraphAPI</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.createGraphAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.views.APIView</span></code></p>
+<p>JSON API to get url of graph on file server with specified college,
+department, degree program, start and end dates, specific graph choice,
+and maybe SLO to be graphed</p>
+<dl class="method">
+<dt id="makeReports.views.apis.createGraphAPI.post">
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.createGraphAPI.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns URL to graph on file server upon get request to API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – POST request to API</p></li>
+<li><p><strong>format</strong> (<em>None</em>) – format of request (not used here)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.apis.get_degreeProgramSuccess_graph">
+<code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">get_degreeProgramSuccess_graph</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.get_degreeProgramSuccess_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates graph of percentage of SLOs being met by degree programs within department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>figure, i.e. the graph</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>matplotlib.figure.Figure</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Uses POST data ‘report__year__gte’ (min year), ‘report__year__lte’ (max year),
+‘report__degreeProgram__department’ (department pk)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.apis.get_numberSLOs_graph">
+<code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">get_numberSLOs_graph</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.get_numberSLOs_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the figure that graphs number of each SLO status within a degree program</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – contains the GET parameters</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>figure, i.e. the graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.figure.Figure</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Uses POST parameters ‘report__year__gte’ (min year), ‘report__year__lte’ (max year),
+‘report__degreeProgram’ (degree program pk), and sloWeights (weights of SLOs)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.apis.get_specificSLO_graph">
+<code class="sig-prename descclassname">makeReports.views.apis.</code><code class="sig-name descname">get_specificSLO_graph</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.apis.get_specificSLO_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphs a specific SLO/Assessment combo performance over time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – contains GET parameters</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>figure, i.e. the graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.figure.Figure</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Uses POST data ‘report__year__gte’ (min year), ‘report__year__lte’ (max year),
+‘report__degreeProgram’ (degree program pk), ‘sloIR’ (SLOInReport primary key),
+‘assess’ (Assessment primary key)</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

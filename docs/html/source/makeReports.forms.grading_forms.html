@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.forms.grading_forms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.forms.grading_forms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.forms.grading_forms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.forms.grading_forms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.forms.grading_forms">
+<span id="makereports-forms-grading-forms-module"></span><h1>makeReports.forms.grading_forms module<a class="headerlink" href="#module-makeReports.forms.grading_forms" title="Permalink to this headline">¶</a></h1>
+<p>Forms related to AAC grading reports</p>
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.DuplicateRubricForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">DuplicateRubricForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.DuplicateRubricForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to duplicate a rubric (given the rubric) and set the new name</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">new_name</span></code>: New Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.DuplicateRubricForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.DuplicateRubricForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.OverallCommentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">OverallCommentForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.OverallCommentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.forms.cleaners.html#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form for the overall comment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.OverallCommentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.OverallCommentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.grading_forms.OverallCommentForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 2000</em><a class="headerlink" href="#makeReports.forms.grading_forms.OverallCommentForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.RubricItemForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">RubricItemForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create a new rubric item</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Category text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abbreviation</span></code>: Abbreviation (optional) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code>: Section number (<code class="xref py py-class docutils literal notranslate"><span class="pre">TypedChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code>: Order position of item (lower numbers will be displayed first) (optional) (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DMEtext</span></code>: Did not meet expectations text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEtext</span></code>: Met expectations with concerns text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EEtext</span></code>: Met expectations established text (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, fields, labels, and widgets for the ModelForm superclass to
+use to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['text', 'abbreviation', 'section', 'order', 'DMEtext', 'MEtext', 'EEtext']</em><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.Meta.labels">
+<code class="sig-name descname">labels</code><em class="property"> = {'DMEtext': 'Did not meet expectations text', 'EEtext': 'Met expectations established text', 'MEtext': 'Met expectations with concerns text', 'abbreviation': 'Abbreviation (optional)', 'order': 'Order position of item (lower numbers will be displayed first) (optional)', 'section': 'Section number', 'text': 'Category text'}</em><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.Meta.labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.RubricItem</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'DMEtext': &lt;django_summernote.widgets.SummernoteWidget object&gt;, 'EEtext': &lt;django_summernote.widgets.SummernoteWidget object&gt;, 'MEtext': &lt;django_summernote.widgets.SummernoteWidget object&gt;, 'text': &lt;django_summernote.widgets.SummernoteWidget object&gt;}</em><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_DMEtext">
+<code class="sig-name descname">clean_DMEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_DMEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field DMEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_EEtext">
+<code class="sig-name descname">clean_EEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_EEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field EEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_MEtext">
+<code class="sig-name descname">clean_MEtext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_MEtext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field MEtext</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.clean_text">
+<code class="sig-name descname">clean_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.clean_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans user input of field text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.RubricItemForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.RubricItemForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">SectionRubricForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to grade one section of a report based upon a rubric</p>
+<p><strong>Form fields:</strong></p>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form with fields for each rubric item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>rubricItems</strong> (<em>QuerySet</em>) – rubric items for the section</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.clean_section_comment">
+<code class="sig-name descname">clean_section_comment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.clean_section_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the markup of the comment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SectionRubricForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.SectionRubricForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.grading_forms.SubmitGrade">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.grading_forms.</code><code class="sig-name descname">SubmitGrade</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to submit rubric</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">override</span></code>: Submit without reviewing all rubric items (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and sets valid on the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>valid</strong> (<em>bool</em>) – the grading is complete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans form and raises validation error if not valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – the grading is not complete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.grading_forms.SubmitGrade.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.grading_forms.SubmitGrade.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

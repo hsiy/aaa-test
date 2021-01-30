@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+                {% block scripts %}{% endblock %}
+                <title>Academic Assessment Reports</title>
+                {% load static %}
+                <link href="{% static 'css/report.css' %}" rel="stylesheet">
+                <link href="{% static 'css/shelves.css' %}" rel="stylesheet">
+        </head>
+    <body>
+    Non-PDF Supplements
+    <div class="bT">
+        <table class='table' style="width: 70%">
+            <tbody>
+                <tr>
+                    <td>Name</td><td></td>
+                </tr>
+                {% for name, url in urls %}
+                    <tr>
+                        <td>{{name}}</td><td><a href="{{url}}">Download</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+</body>
+</html>

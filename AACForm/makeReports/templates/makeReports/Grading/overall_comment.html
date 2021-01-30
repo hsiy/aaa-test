@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block styles %}
+<style>
+.please-scroll{
+  height: calc(100vh - 275px);
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.italics{
+    font-style: italic;
+}
+.italics p{
+    margin:2pt;
+}
+.split {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gutter {
+    background-color: rgb(165, 165, 165);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+</style>
+<link href="{% static 'css/shelves.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+{% include 'makeReports/Grading/grading_navbar.html' %}
+<h3>Reviewing Whole Report</h3>
+<h5>{{rpt.year|add:"-1"}}-{{rpt.year}} Report for {{rpt.degreeProgram.name}} ({{rpt.degreeProgram.level}})</h5>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {% if reqTodo > 0 %}
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% elif sugTodo > 0 %}
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% endif %}
+            {% include 'makeReports/todoSansButton.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div id="one" class="col please-scroll">
+            <!--showreport column-->
+                {% include 'makeReports/DisplayReport/reportIncluding.html' %}
+        </div>
+        <div id="two" class="col please-scroll">
+                <!--grading column-->
+                {% if rpt.rubric.rubricVersion.fullFile %}
+                Full Rubric: <a href="{{rpt.rubric.rubricVersion.fullFile.url}}">Download PDF</a>
+                {% endif %}
+                <h5>Comments on the Report as a Whole</h5>
+                <form method="post" class="form" enctype="multipart/form-data"  style="display:inline;">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <button style="display:inline;" type="submit" class="btn btn-primary">Save & Next</button>
+                </form>
+                <a  role="button" class="btn btn-primary" href="{% url 'makeReports:rub-review' rpt.pk %}" style="display:inline;">Skip</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ STATIC_URL }} /static/js/splitGradingView.js"></script> 
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script>
+{% endblock %}

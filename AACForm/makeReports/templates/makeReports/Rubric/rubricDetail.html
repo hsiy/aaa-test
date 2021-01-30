@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h5>Rubric {{object.name}}</h5>
+{% if object.fullFile %}
+              Full Rubric: <a href="{{object.fullFile.url}}">Download PDF</a>
+{% endif %}
+
+<section>
+    
+        <h5>Section I. SLOs</h5>
+        <table class="table table-bordered">
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <b>Did Not Meet Expectations</b>
+            </td>
+            <td>
+                <b>Met Expectations with Concerns</b>
+            </td>
+            <td>
+                <b>Met Expectations Established</b>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        {% for RI in rI1 %}
+        <tr>
+            <td>
+                {{RI.text|safe}}
+            </td>
+            <td>
+                    {{RI.DMEtext|safe}}
+            </td>
+            <td>{{RI.MEtext|safe}}</td>
+            <td>{{RI.EEtext|safe}}</td>
+            <td><a class="btn btn-primary" href="{% url 'makeReports:update-RI' rubric=object.pk pk=RI.pk %}">Edit Item</a>
+                <a class="btn btn-primary" href="{% url 'makeReports:delete-RI' rubric=object.pk pk=RI.pk %}">Delete Item</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+</section>
+<br>
+<section>
+        
+        <h5>Section II. Assessments</h5>
+        <table class="table table-bordered">
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <b>Did Not Meet Expectations</b>
+            </td>
+            <td>
+                <b>Met Expectations with Concerns</b>
+            </td>
+            <td>
+                <b>Met Expectations Established</b>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        {% for RI in rI2 %}
+        <tr>
+            <td>
+                {{RI.text|safe}}
+            </td>
+            <td>
+                    {{RI.DMEtext|safe}}
+            </td>
+            <td>{{RI.MEtext|safe}}</td>
+            <td>{{RI.EEtext|safe}}</td>
+            <td><a class="btn btn-primary" href="{% url 'makeReports:update-RI' rubric=object.pk pk=RI.pk %}">Edit Item</a>
+                <a class="btn btn-primary" href="{% url 'makeReports:delete-RI' rubric=object.pk pk=RI.pk %}">Delete Item</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+    </section>
+    <br>
+    <section>
+            
+            <h5>Section III. Data</h5>
+        <table class="table table-bordered">
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <b>Did Not Meet Expectations</b>
+            </td>
+            <td>
+                <b>Met Expectations with Concerns</b>
+            </td>
+            <td>
+                <b>Met Expectations Established</b>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        {% for RI in rI3 %}
+        <tr>
+            <td>
+                {{RI.text|safe}}
+            </td>
+            <td>
+                    {{RI.DMEtext|safe}}
+            </td>
+            <td>{{RI.MEtext|safe}}</td>
+            <td>{{RI.EEtext|safe}}</td>
+            <td><a class="btn btn-primary" href="{% url 'makeReports:update-RI' rubric=object.pk pk=RI.pk %}">Edit Item</a>
+                <a class="btn btn-primary" href="{% url 'makeReports:delete-RI' rubric=object.pk pk=RI.pk %}">Delete Item</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+        </section>
+        <br>
+        <section>
+                
+                <h5>Section IV. Decisions & Actions</h5>
+                <table class="table table-bordered">
+                <tr>
+                    <td>
+        
+                    </td>
+                    <td>
+                        <b>Did Not Meet Expectations</b>
+                    </td>
+                    <td>
+                        <b>Met Expectations with Concerns</b>
+                    </td>
+                    <td>
+                        <b>Met Expectations Established</b>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                {% for RI in rI4 %}
+                <tr>
+                    <td>
+                        {{RI.text|safe}}
+                    </td>
+                    <td>
+                            {{RI.DMEtext|safe}}
+                    </td>
+                    <td>{{RI.MEtext|safe}}</td>
+                    <td>{{RI.EEtext|safe}}</td>
+                    <td><a class="btn btn-primary" href="{% url 'makeReports:update-RI' rubric=object.pk pk=RI.pk %}">Edit Item</a>
+                        <a class="btn btn-primary" href="{% url 'makeReports:delete-RI' rubric=object.pk pk=RI.pk %}">Delete Item</a></td>
+                </tr>
+                {% endfor %}
+                </table>
+            </section>
+{% endblock %}

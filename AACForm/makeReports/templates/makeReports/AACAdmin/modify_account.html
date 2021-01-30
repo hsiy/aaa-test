@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Modify Account</h3>
+<b>Name: </b> {{first_name}} {{last_name}}<br>
+<b>Username: </b> {{username}}<br>
+<b>Department: </b> {{department}} <br><br>
+<form method="post" class="form col-6" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Update</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

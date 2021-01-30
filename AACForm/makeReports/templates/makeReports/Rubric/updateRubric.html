@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Update Rubric</h3>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+                  <ul>
+                    {% for error in form.non_field_errors %}
+                      <li>{{ error }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              
+                {% for hidden_field in form.hidden_fields %}
+                  {% if hidden_field.errors %}
+                    <ul>
+                      {% for error in hidden_field.errors %}
+                        <li>(Hidden field {{ hidden_field.name }}) {{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                  {{ hidden_field }}
+                {% endfor %}
+                <table>
+                  {% for field in form.visible_fields %}
+                    <tr>
+                      <td>
+                            {{ field.errors }}
+                            {{ field.label_tag }} {{ field }}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Update</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

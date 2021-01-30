@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<script type='text/javascript'></script>
+<div id="vapp">
+{% endblock %}
+{% block content %}
+<h3>CSV Generator</h3>
+{% if user.profile.aac %}
+    <h4>Choose scope of CSV</h4>
+    <div class="dd_graph">
+        <select id="id_csv_scope" v-model="csv_scope">
+            <option value="1">Degree Program</option>
+            <option value="2">Department</option>
+            <option value="3">College</option>
+        </select>
+    </div>
+    <h4>Please choose college</h4>
+    <div class="dd_col">
+        <select id="id_college" v-model="college" v-on:change="updateDept" name="college">
+            {% for c in colleges %}
+                <option value="{{c.pk}}">{{ c.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <template v-if="csv_scope<3">
+    <h4>Please choose department</h4>
+    <div class="dd_dept">
+        <select id="id_department" v-model="department" v-on:change="updateProg" name="department">
+            <template v-for="d in depts">
+                    <option v-bind:value="d.pk">[[d.name]]</option>
+            </template>
+        </select>
+    </div>
+    </template>
+{% endif %}
+<template v-if="csv_scope==1">
+<h4>Please choose desired degree program</h4>
+<div class="dd_dprog">
+    <select id="id_prog" v-model="program" name="program">
+        <template v-for="p in progs">
+            <option v-bind:value="p.pk">[[p.name]] ([[p.level]])</option>
+        </template>
+    </select>
+</div>
+</template>
+<h4>Date Range</h4>
+<div class="dd_drange1">
+    <select id="id_range1" v-model="date1"></select>
+</div>
+<h5>to</h5>
+<div class="dd_drange2">
+    <select id="id_range2" v-model="date2"></select>
+</div>
+<br><br>
+<template v-if="csvURL.length>0">
+    <a role="button" class="btn btn-primary" :href=csvURL>Generate CSV</button> 
+
+</template>
+{% endblock %}
+{% block endscripts %}
+    <script type="application/javascript">
+    /**
+     * A Vue instance to handle CSV generator page
+     * @class csvManagement
+     */
+    var start = 2015;
+    var end = new Date().getFullYear();
+    var options = "";
+    for (var year = end; year >= start; year--)
+    {
+        yearMinus = year-1;
+        options += "<option value=\""+year+"\">"+ yearMinus+"-" + year + "</option>";
+    }
+    document.getElementById("id_range1").innerHTML = options;
+    document.getElementById("id_range2").innerHTML = options;
+    var vapp=new Vue({
+            el: '#vapp',
+            delimiters: ['[[', ']]'],
+            data: { 
+                /**
+                 * Departments with properties meeting parameters
+                 * @property depts
+                 * @type dictionary
+                 */
+                depts: null,
+                /**
+                 * Degree programs with properties meeting parameters
+                 * @property progs
+                 * @type dictionary
+                 */
+                progs: null,
+                /**
+                 * SLOs meeting parameters
+                 * @property slos
+                 * @type dictionary
+                 */
+                slos: null,
+                /**
+                 * The scope of the CSV
+                 * @property csv_scope
+                 * @type integer
+                 */
+                csv_scope: 1,
+                /**
+                 * Currently selected department primary key
+                 * @property department
+                 * @type integer
+                 */
+                department: {% if user.profile.department %}{{user.profile.department.pk}}{% else %}null {% endif %},
+                /**
+                 * Currently selected college primary key
+                 * @property college
+                 * @type integer
+                 */
+                college: {% if user.profile.department %}{{user.profile.department.college.pk}}{% else %}null {% endif %},
+                /**
+                 * Currently selected program primary key
+                 * @property program
+                 * @type integer
+                 */
+                program: null,
+                /**
+                 * Currently selected lower bound year
+                 * @property date1
+                 * @type integer
+                 */
+                date1: null,
+                /**
+                 * Currently selected upper bound year
+                 * @property date2
+                 * @type integer
+                 */
+                date2: null,
+            },
+            computed: {
+                /**
+                 * Computes the proper URL to get CSV from current parameters
+                 * @method csvURL
+                 * @return {String} the URL of CSV API with parameters
+                 */
+                csvURL: function(){
+                    url = ""
+                    if(this.csv_scope==3){
+                        url = "{% url 'makeReports:csv-col' 0 0 0 %}"
+                        if(this.college!=null && this.date1!=null && this.date2!=null){
+                            url = url.replace("/0/","/"+this.college+"/")
+                            url = url.replace("/0/", "/"+this.date1+"/")
+                            url = url.replace("/0/","/"+this.date2+"/")
+                        }else{
+                            url = ""
+                        }
+                    }else if(this.csv_scope==2){
+                        url = "{% url 'makeReports:csv-dept' 0 0 0  %}"
+                        if(this.department!=null && this.date1!=null && this.date2!=null){
+                            url = url.replace("/0/","/"+this.department+"/")
+                            url = url.replace("/0/", "/"+this.date1+"/")
+                            url = url.replace("/0/","/"+this.date2+"/")
+                        }else{
+                            url = ""
+                        }
+                    }else{
+                        url = "{% url 'makeReports:csv-dp' 0 0 0 0 %}"
+                        if(this.department!=null && this.program!=null && this.date1!=null && this.date2!=null){
+                            url = url.replace("/0/","/"+this.department+"/")
+                            url = url.replace("/0/","/"+this.program+"/")
+                            url = url.replace("/0/", "/"+this.date1+"/")
+                            url = url.replace("/0/","/"+this.date2+"/")
+                        }else{
+                            url = ""
+                        }
+                    }
+                    return url
+                }
+            },
+            /**
+             * Calls the updateProg upon mount
+             * @method mounted
+             */
+            mounted(){
+                this.updateDept();
+                this.updateProg();
+            },
+            methods: {
+                /**
+                 * Calls the API to update list of departments by selected college
+                 * @method updateDept
+                 */
+                updateDept: function () {
+                    fetch("{% url 'makeReports:api-dept-by-col' %}?college="+this.college)
+                        .then(response => {
+                            response.clone().json()
+                        .then(json => {
+                            this.depts = json;
+                        })
+                    });
+                },
+                /**
+                 * Calls the API to update the list of degree programs by selected department
+                 * @method updateProg
+                 */
+                updateProg: function() {
+                    fetch("{% url 'makeReports:api-prog-by-dept' %}?department="+this.department)
+                        .then(response => {
+                            response.clone().json()
+                        .then(json => {
+                            this.progs = json;
+                        })
+                    });
+                },
+            }
+    });
+    </script>
+{% endblock %}

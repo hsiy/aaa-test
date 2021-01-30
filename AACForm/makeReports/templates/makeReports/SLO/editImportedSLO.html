@@ -1,0 +1,15 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Edit SLO</h3>
+This SLO was imported in this or another report, so not all editing options are available.<br>
+Warning: This SLO's data will continued to be tracked with the data of all versions of this imported SLO.
+If you do not want this, delete this SLO and create a new one without importing.
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit Changes</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

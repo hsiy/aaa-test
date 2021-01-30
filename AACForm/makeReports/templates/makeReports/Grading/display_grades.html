@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Reviewing Section {{section}}</h3>
+<h5>{{rpt.year|add:"-1"}}-{{rpt.year}} Report for {{rpt.degreeProgram.name}} ({{rpt.degreeProgram.level}})</h5>
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <!--showreport column-->
+            {% include "main/includes/subtemplate.html" %}
+        </div>
+        <div class="col">
+            <!--see the grades column-->
+            The full rubric (pdf): 
+            <table class="table">
+                <tbody>
+                    {% for item in GRIs %}
+                            <tr>
+                                <td>
+                                    {{item.item.text|safe}}: {{item.grade_display}}
+                                </td>
+                            </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <b>Additional Comment: </b>{{rpt.section1Comment|safe}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

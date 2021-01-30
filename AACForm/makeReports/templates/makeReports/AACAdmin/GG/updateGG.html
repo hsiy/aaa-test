@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Update Graduate Goal</h3>
+Changing the goal text will update the text in all instances of this goal in reports - past and present.<br>
+If this is not intended, create a new graduate goal.<br>
+Uncheck the box below to set the goal inactive. Inactive goals cannot be included in new reports, and are not listed in most places.
+<br><br>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Update</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

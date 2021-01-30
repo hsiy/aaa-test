@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Department List</h3>
+<ul class="list-group">
+{% for dept in object_list %}
+    <li class = "list-group-item">{{dept.name}} in {{dept.college.name}} 
+        <a  role="button" class="btn btn-danger" href="{% url 'makeReports:delete-dept' pk=dept.pk %}">Recover Department</a>
+    </li>
+{% empty %}
+No departments
+{% endfor %}
+</ul>
+{% endblock %}

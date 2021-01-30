@@ -1,0 +1,911 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.grading_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.grading_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.grading_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.grading_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.grading_views">
+<span id="makereports-views-grading-views-module"></span><h1>makeReports.views.grading_views module<a class="headerlink" href="#module-makeReports.views.grading_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains views related to the AAC grading completed reports</p>
+<dl class="class">
+<dt id="makeReports.views.grading_views.Feedback">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">Feedback</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Feedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptAACMixin" title="makeReports.views.helperFunctions.mixins.DeptAACMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptAACMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View for department to view AAC feedback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to view feedback for</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.grading_views.Feedback.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Feedback.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> and
+graded items (<a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubricItem" title="makeReports.models.grading_models.GradedRubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradedRubricItem</span></code></a>) to the view</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to view feedback for</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Feedback.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Feedback.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for the template, including the report, graded rubric items, and
+context needed to display the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Feedback.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Feedback.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (return report option page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of return report option page (<a class="reference internal" href="#makeReports.views.grading_views.ReturnReport" title="makeReports.views.grading_views.ReturnReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReturnReport</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Feedback.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.grading_views.Feedback.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubricItem" title="makeReports.models.grading_models.GradedRubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.GradedRubricItem</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Feedback.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/feedback.html'</em><a class="headerlink" href="#makeReports.views.grading_views.Feedback.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.GradingEntry">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">GradingEntry</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACReportMixin" title="makeReports.views.helperFunctions.mixins.AACReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View that provides initial information on report to be graded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to grade</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingEntry.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingEntry.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds report supplements to the context</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context needed to display view, including the report supplements</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.GradingEntry.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/grading_entry.html'</em><a class="headerlink" href="#makeReports.views.grading_views.GradingEntry.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.GradingView">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">GradingView</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to grade one section of a form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>report</strong> (<em>str</em>) – primary key of current <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to grade</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.GradingView.section">
+<code class="sig-name descname">section</code><a class="headerlink" href="#makeReports.views.grading_views.GradingView.section" title="Permalink to this definition">¶</a></dt>
+<dd><p>section number of section currently being graded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view, and attaches <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> and
+rubric items (<a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code></a>) to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>report</strong> (<em>str</em>) – primary key of current <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to grade</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.GradingView.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.grading_views.GradingView.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.SectionRubricForm" title="makeReports.forms.grading_forms.SectionRubricForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.SectionRubricForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all graded rubric items and sets the grading comment for the section</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.SectionRubricForm" title="makeReports.forms.grading_forms.SectionRubricForm"><em>SectionRubricForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets template context, including the section, report, and rubric items</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get form keyword arguments, including the rubric items</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments for the form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the initial data to use for forms on this view.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.GradingView.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.GradingView.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (grading the next section page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of next section’s grading page</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.OverallComment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">OverallComment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.OverallComment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACReportMixin" title="makeReports.views.helperFunctions.mixins.AACReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add an overall comment to the report</p>
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.OverallComment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.OverallCommentForm" title="makeReports.forms.grading_forms.OverallCommentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.OverallCommentForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.OverallComment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the comment to the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><em>Single2000Textbox</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.OverallComment.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns template context, including the current report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context of template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.OverallComment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial value of the comment passed upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.OverallComment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (review the feedback page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of review the feedback page (<a class="reference internal" href="#makeReports.views.grading_views.RubricReview" title="makeReports.views.grading_views.RubricReview"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricReview</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.OverallComment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/overall_comment.html'</em><a class="headerlink" href="#makeReports.views.grading_views.OverallComment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.ReturnReport">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">ReturnReport</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to return report to department for modification</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> to return</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.ReturnReport.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['returned']</em><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.ReturnReport.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the report to be returned, not submitted, and not complete</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<em>ModelForm</em>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.ReturnReport.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.ReturnReport.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/home/'</em><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.ReturnReport.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/returnReport.html'</em><a class="headerlink" href="#makeReports.views.grading_views.ReturnReport.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.RubricReview">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">RubricReview</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACReportMixin" title="makeReports.views.helperFunctions.mixins.AACReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to review graded rubric</p>
+<dl class="method">
+<dt id="makeReports.views.grading_views.RubricReview.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches the view and attaches the graded rubric items (<a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubricItem" title="makeReports.models.grading_models.GradedRubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradedRubricItem</span></code></a>) to the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.RubricReview.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.SubmitGrade" title="makeReports.forms.grading_forms.SubmitGrade"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.SubmitGrade</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.RubricReview.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the rubric to complete and saves the rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.SubmitGrade" title="makeReports.forms.grading_forms.SubmitGrade"><em>SubmitGrade</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.RubricReview.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context data, including the report, the graded rubric and items, and the
+context needed to display the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.RubricReview.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the form keyword arguments, including whether the graded rubric is compelete</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments for form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.RubricReview.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (return report option page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of return report option page (<a class="reference internal" href="#makeReports.views.grading_views.ReturnReport" title="makeReports.views.grading_views.ReturnReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReturnReport</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.RubricReview.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/rubric_review.html'</em><a class="headerlink" href="#makeReports.views.grading_views.RubricReview.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.Section1Grading">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">Section1Grading</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.grading_views.GradingView" title="makeReports.views.grading_views.GradingView"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.grading_views.GradingView</span></code></a></p>
+<p>View for grading section 1</p>
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section1Grading.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the context for template needed to display section 1</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section1Grading.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the section comment based upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section1Grading.section">
+<code class="sig-name descname">section</code><em class="property"> = 1</em><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading.section" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section1Grading.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/home/'</em><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section1Grading.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/grading_section1.html'</em><a class="headerlink" href="#makeReports.views.grading_views.Section1Grading.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.Section2Grading">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">Section2Grading</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section2Grading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.grading_views.GradingView" title="makeReports.views.grading_views.GradingView"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.grading_views.GradingView</span></code></a></p>
+<p>View for grading section 2</p>
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section2Grading.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section2Grading.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides all context needed to display section 2 of the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section2Grading.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section2Grading.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial value for comment based upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section2Grading.section">
+<code class="sig-name descname">section</code><em class="property"> = 2</em><a class="headerlink" href="#makeReports.views.grading_views.Section2Grading.section" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section2Grading.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/grading_section2.html'</em><a class="headerlink" href="#makeReports.views.grading_views.Section2Grading.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.Section3Grading">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">Section3Grading</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section3Grading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.grading_views.GradingView" title="makeReports.views.grading_views.GradingView"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.grading_views.GradingView</span></code></a></p>
+<p>View for grading section 3</p>
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section3Grading.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section3Grading.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context needed to display section 3 of the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section3Grading.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section3Grading.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial form values, specifically the comment, based upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section3Grading.section">
+<code class="sig-name descname">section</code><em class="property"> = 3</em><a class="headerlink" href="#makeReports.views.grading_views.Section3Grading.section" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section3Grading.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/grading_section3.html'</em><a class="headerlink" href="#makeReports.views.grading_views.Section3Grading.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.grading_views.Section4Grading">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">Section4Grading</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.grading_views.GradingView" title="makeReports.views.grading_views.GradingView"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.grading_views.GradingView</span></code></a></p>
+<p>View for grading section 4</p>
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section4Grading.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context needed to display section 4 of the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section4Grading.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the initial comment value based upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.grading_views.Section4Grading.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (comment page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of overall comment page (<a class="reference internal" href="#makeReports.views.grading_views.OverallComment" title="makeReports.views.grading_views.OverallComment"><code class="xref py py-class docutils literal notranslate"><span class="pre">OverallComment</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section4Grading.section">
+<code class="sig-name descname">section</code><em class="property"> = 4</em><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading.section" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.grading_views.Section4Grading.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Grading/grading_section4.html'</em><a class="headerlink" href="#makeReports.views.grading_views.Section4Grading.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.grading_views.allRubricItemsSomeGrades">
+<code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">allRubricItemsSomeGrades</code><span class="sig-paren">(</span><em class="sig-param">rIs</em>, <em class="sig-param">gRIs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.allRubricItemsSomeGrades" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates dictionary with key of rubric items and value of grade.
+If no grade, the value is “Not graded”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rIs</strong> (<em>list</em>) – list of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code></a></p></li>
+<li><p><strong>gRIs</strong> (<em>list</em>) – list of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubricItem" title="makeReports.models.grading_models.GradedRubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradedRubricItem</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>items and grades</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.grading_views.generateRubricItems">
+<code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">generateRubricItems</code><span class="sig-paren">(</span><em class="sig-param">rIs</em>, <em class="sig-param">form</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.generateRubricItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates graded rubric items based on grading form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rIs</strong> (<em>list</em>) – list of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code></a> in rubric</p></li>
+<li><p><strong>form</strong> (<em>Form</em>) – completed form</p></li>
+<li><p><strong>r</strong> (<a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><em>Report</em></a>) – report</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.grading_views.getInitialRubric">
+<code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">getInitialRubric</code><span class="sig-paren">(</span><em class="sig-param">rIs</em>, <em class="sig-param">r</em>, <em class="sig-param">initial</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.getInitialRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes grading form based upon things already graded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rIs</strong> (<em>list</em>) – list of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code></a> in rubric</p></li>
+<li><p><strong>form</strong> (<em>Form</em>) – completed form</p></li>
+<li><p><strong>r</strong> (<a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><em>Report</em></a>) – report</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>initial rubric values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="makeReports.views.grading_views.get_item">
+<code class="sig-prename descclassname">makeReports.views.grading_views.</code><code class="sig-name descname">get_item</code><span class="sig-paren">(</span><em class="sig-param">dictionary</em>, <em class="sig-param">key1</em>, <em class="sig-param">key2</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.grading_views.get_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets item from dictionary in dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dictionary</strong> (<em>dict</em>) – outer dictionary</p></li>
+<li><p><strong>key1</strong> (<em>str</em>) – first dictionary key</p></li>
+<li><p><strong>key2</strong> (<em>str</em>) – second dictionary key</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary[key1][key2]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

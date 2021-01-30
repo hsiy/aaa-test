@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.tests.forms.test_gradingforms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.tests.forms.test_gradingforms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.tests.forms.test_gradingforms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.tests.forms.test_gradingforms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.tests.forms.test_gradingforms">
+<span id="makereports-tests-forms-test-gradingforms-module"></span><h1>makeReports.tests.forms.test_gradingforms module<a class="headerlink" href="#module-makeReports.tests.forms.test_gradingforms" title="Permalink to this headline">¶</a></h1>
+<p>This tests the grading forms work as expected</p>
+<dl class="class">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.tests.forms.test_gradingforms.</code><code class="sig-name descname">RubricFormsTests</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests forms related to the rubric forms</p>
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_dup_rub">
+<code class="sig-name descname">test_dup_rub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_dup_rub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the duplicate rubric form accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_dup_rub_toolong">
+<code class="sig-name descname">test_dup_rub_toolong</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_dup_rub_toolong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the form rejects when the new name is too long</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_item_form_nonint">
+<code class="sig-name descname">test_item_form_nonint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_item_form_nonint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the RubricItemForm rejects form with non-integer section</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_item_form_valid">
+<code class="sig-name descname">test_item_form_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_item_form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that RubricItemForm accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_overallcomment">
+<code class="sig-name descname">test_overallcomment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_overallcomment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the OverallCommentForm properly allows valid text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_choice_failed">
+<code class="sig-name descname">test_section_rubric_choice_failed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_choice_failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that SectionRubricForm fails when the rubric item is not one of the choices</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_toolong">
+<code class="sig-name descname">test_section_rubric_toolong</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_toolong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the form is invalid when the section comment is too long</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_valid">
+<code class="sig-name descname">test_section_rubric_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_section_rubric_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that SectionRubricForm accepts valid data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_submitGrade">
+<code class="sig-name descname">test_submitGrade</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_submitGrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the SubmitGrade form properly takes true argument</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_submitGradeFalse">
+<code class="sig-name descname">test_submitGradeFalse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.tests.forms.test_gradingforms.RubricFormsTests.test_submitGradeFalse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the SubmitGrade form properly fails when given a false argument</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

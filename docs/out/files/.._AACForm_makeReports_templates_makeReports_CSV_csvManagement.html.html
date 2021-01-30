@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>..\AACForm\makeReports\templates\makeReports\CSV\csvManagement.html</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/addSLO.html">addSLO</a></li>
+                                <li><a href="../classes/assessmentBoxes.html">assessmentBoxes</a></li>
+                                <li><a href="../classes/choice-widget-stk.html">choice-widget-stk</a></li>
+                                <li><a href="../classes/choices-widget.html">choices-widget</a></li>
+                                <li><a href="../classes/create_account.html">create_account</a></li>
+                                <li><a href="../classes/csvManagement.html">csvManagement</a></li>
+                                <li><a href="../classes/dataCollectionSummary.html">dataCollectionSummary</a></li>
+                                <li><a href="../classes/editNewSLO.html">editNewSLO</a></li>
+                                <li><a href="../classes/grading_section.html">grading_section</a></li>
+                                <li><a href="../classes/graphing.html">graphing</a></li>
+                                <li><a href="../classes/graphingDept.html">graphingDept</a></li>
+                                <li><a href="../classes/importAssessment.html">importAssessment</a></li>
+                                <li><a href="../classes/importAssessmentSLO.html">importAssessmentSLO</a></li>
+                                <li><a href="../classes/importAssessmentSupplement.html">importAssessmentSupplement</a></li>
+                                <li><a href="../classes/importSLO.html">importSLO</a></li>
+                                <li><a href="../classes/importStakeholderComm.html">importStakeholderComm</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: ..\AACForm\makeReports\templates\makeReports\CSV\csvManagement.html</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+{% extends &#x27;base.html&#x27; %}
+{% load bootstrap4 %}
+{% block scripts %}
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.6.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&#x27;text/javascript&#x27;&gt;&lt;/script&gt;
+&lt;div id=&quot;vapp&quot;&gt;
+{% endblock %}
+{% block content %}
+&lt;h3&gt;CSV Generator&lt;/h3&gt;
+{% if user.profile.aac %}
+    &lt;h4&gt;Choose scope of CSV&lt;/h4&gt;
+    &lt;div class=&quot;dd_graph&quot;&gt;
+        &lt;select id=&quot;id_csv_scope&quot; v-model=&quot;csv_scope&quot;&gt;
+            &lt;option value=&quot;1&quot;&gt;Degree Program&lt;/option&gt;
+            &lt;option value=&quot;2&quot;&gt;Department&lt;/option&gt;
+            &lt;option value=&quot;3&quot;&gt;College&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;h4&gt;Please choose college&lt;/h4&gt;
+    &lt;div class=&quot;dd_col&quot;&gt;
+        &lt;select id=&quot;id_college&quot; v-model=&quot;college&quot; v-on:change=&quot;updateDept&quot; name=&quot;college&quot;&gt;
+            {% for c in colleges %}
+                &lt;option value=&quot;{{c.pk}}&quot;&gt;{{ c.name }}&lt;/option&gt;
+            {% endfor %}
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;template v-if=&quot;csv_scope&lt;3&quot;&gt;
+    &lt;h4&gt;Please choose department&lt;/h4&gt;
+    &lt;div class=&quot;dd_dept&quot;&gt;
+        &lt;select id=&quot;id_department&quot; v-model=&quot;department&quot; v-on:change=&quot;updateProg&quot; name=&quot;department&quot;&gt;
+            &lt;template v-for=&quot;d in depts&quot;&gt;
+                    &lt;option v-bind:value=&quot;d.pk&quot;&gt;[[d.name]]&lt;/option&gt;
+            &lt;/template&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;/template&gt;
+{% endif %}
+&lt;template v-if=&quot;csv_scope==1&quot;&gt;
+&lt;h4&gt;Please choose desired degree program&lt;/h4&gt;
+&lt;div class=&quot;dd_dprog&quot;&gt;
+    &lt;select id=&quot;id_prog&quot; v-model=&quot;program&quot; name=&quot;program&quot;&gt;
+        &lt;template v-for=&quot;p in progs&quot;&gt;
+            &lt;option v-bind:value=&quot;p.pk&quot;&gt;[[p.name]] ([[p.level]])&lt;/option&gt;
+        &lt;/template&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;/template&gt;
+&lt;h4&gt;Date Range&lt;/h4&gt;
+&lt;div class=&quot;dd_drange1&quot;&gt;
+    &lt;select id=&quot;id_range1&quot; v-model=&quot;date1&quot;&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;h5&gt;to&lt;/h5&gt;
+&lt;div class=&quot;dd_drange2&quot;&gt;
+    &lt;select id=&quot;id_range2&quot; v-model=&quot;date2&quot;&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;template v-if=&quot;csvURL.length&gt;0&quot;&gt;
+    &lt;a role=&quot;button&quot; class=&quot;btn btn-primary&quot; :href=csvURL&gt;Generate CSV&lt;/button&gt; 
+
+&lt;/template&gt;
+{% endblock %}
+{% block endscripts %}
+    &lt;script type=&quot;application/javascript&quot;&gt;
+    /**
+     * A Vue instance to handle CSV generator page
+     * @class csvManagement
+     */
+    var start = 2015;
+    var end = new Date().getFullYear();
+    var options = &quot;&quot;;
+    for (var year = end; year &gt;= start; year--)
+    {
+        yearMinus = year-1;
+        options += &quot;&lt;option value=\&quot;&quot;+year+&quot;\&quot;&gt;&quot;+ yearMinus+&quot;-&quot; + year + &quot;&lt;/option&gt;&quot;;
+    }
+    document.getElementById(&quot;id_range1&quot;).innerHTML = options;
+    document.getElementById(&quot;id_range2&quot;).innerHTML = options;
+    var vapp=new Vue({
+            el: &#x27;#vapp&#x27;,
+            delimiters: [&#x27;[[&#x27;, &#x27;]]&#x27;],
+            data: { 
+                /**
+                 * Departments with properties meeting parameters
+                 * @property depts
+                 * @type dictionary
+                 */
+                depts: null,
+                /**
+                 * Degree programs with properties meeting parameters
+                 * @property progs
+                 * @type dictionary
+                 */
+                progs: null,
+                /**
+                 * SLOs meeting parameters
+                 * @property slos
+                 * @type dictionary
+                 */
+                slos: null,
+                /**
+                 * The scope of the CSV
+                 * @property csv_scope
+                 * @type integer
+                 */
+                csv_scope: 1,
+                /**
+                 * Currently selected department primary key
+                 * @property department
+                 * @type integer
+                 */
+                department: {% if user.profile.department %}{{user.profile.department.pk}}{% else %}null {% endif %},
+                /**
+                 * Currently selected college primary key
+                 * @property college
+                 * @type integer
+                 */
+                college: {% if user.profile.department %}{{user.profile.department.college.pk}}{% else %}null {% endif %},
+                /**
+                 * Currently selected program primary key
+                 * @property program
+                 * @type integer
+                 */
+                program: null,
+                /**
+                 * Currently selected lower bound year
+                 * @property date1
+                 * @type integer
+                 */
+                date1: null,
+                /**
+                 * Currently selected upper bound year
+                 * @property date2
+                 * @type integer
+                 */
+                date2: null,
+            },
+            computed: {
+                /**
+                 * Computes the proper URL to get CSV from current parameters
+                 * @method csvURL
+                 * @return {String} the URL of CSV API with parameters
+                 */
+                csvURL: function(){
+                    url = &quot;&quot;
+                    if(this.csv_scope==3){
+                        url = &quot;{% url &#x27;makeReports:csv-col&#x27; 0 0 0 %}&quot;
+                        if(this.college!=null &amp;&amp; this.date1!=null &amp;&amp; this.date2!=null){
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.college+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;, &quot;/&quot;+this.date1+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.date2+&quot;/&quot;)
+                        }else{
+                            url = &quot;&quot;
+                        }
+                    }else if(this.csv_scope==2){
+                        url = &quot;{% url &#x27;makeReports:csv-dept&#x27; 0 0 0  %}&quot;
+                        if(this.department!=null &amp;&amp; this.date1!=null &amp;&amp; this.date2!=null){
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.department+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;, &quot;/&quot;+this.date1+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.date2+&quot;/&quot;)
+                        }else{
+                            url = &quot;&quot;
+                        }
+                    }else{
+                        url = &quot;{% url &#x27;makeReports:csv-dp&#x27; 0 0 0 0 %}&quot;
+                        if(this.department!=null &amp;&amp; this.program!=null &amp;&amp; this.date1!=null &amp;&amp; this.date2!=null){
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.department+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.program+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;, &quot;/&quot;+this.date1+&quot;/&quot;)
+                            url = url.replace(&quot;/0/&quot;,&quot;/&quot;+this.date2+&quot;/&quot;)
+                        }else{
+                            url = &quot;&quot;
+                        }
+                    }
+                    return url
+                }
+            },
+            /**
+             * Calls the updateProg upon mount
+             * @method mounted
+             */
+            mounted(){
+                this.updateDept();
+                this.updateProg();
+            },
+            methods: {
+                /**
+                 * Calls the API to update list of departments by selected college
+                 * @method updateDept
+                 */
+                updateDept: function () {
+                    fetch(&quot;{% url &#x27;makeReports:api-dept-by-col&#x27; %}?college=&quot;+this.college)
+                        .then(response =&gt; {
+                            response.clone().json()
+                        .then(json =&gt; {
+                            this.depts = json;
+                        })
+                    });
+                },
+                /**
+                 * Calls the API to update the list of degree programs by selected department
+                 * @method updateProg
+                 */
+                updateProg: function() {
+                    fetch(&quot;{% url &#x27;makeReports:api-prog-by-dept&#x27; %}?department=&quot;+this.department)
+                        .then(response =&gt; {
+                            response.clone().json()
+                        .then(json =&gt; {
+                            this.progs = json;
+                        })
+                    });
+                },
+            }
+    });
+    &lt;/script&gt;
+{% endblock %}
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

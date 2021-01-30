@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Help Page</h3>
+<p><b>Q: Why are there no reports on the home page?</b></p>
+<p>A: The AAC has not yet assigned a report to your department. Contact the AAC if you believe this is an error.</p>
+<p><b>Q: A submitted report has returned to my to-do list with a "Modify" button. What does this mean?</b></p>
+<p>
+    This means an AAC member has reviewed your report and has returned it to you to make modifications. You can see feedback by
+    clicking 'Feedback' and can make the necessary modifications by clicking 'Modify' and navigating to the needed section.
+    You can simply resubmit the report when ready.
+</p>
+<p>
+    <b>Q: How do I see reports from past years?</b>
+</p>
+<p>
+    A: Click on 'Your Reports' at the top of the page.
+</p>
+<p>
+    <b>Q: How do I see the rubric for the report I am working on?</b>
+</p>
+<p>
+    Open the report by clicking 'Start'. On the far-right on the lower navigational bar there is the option to 'View Rubric.'
+</p>
+<p>
+    <b>Q: What does the To-Do list mean when completing a report?</b>
+</p>
+<p>
+    A: The To-Do list automatically updates as you complete the report. The list in each section covers the materials in that and prior sections. The To-Do list contains two parts: the required and the suggested. The required section lists what must be completed in the report,
+    before you can submit it to the AAC. If you feel one of these requirements does not apply to your degree program, contact the AAC.
+    They can submit the report on your behalf. The suggested section contains automated suggestions based upon the rubric. Sometimes these suggestions will not apply or be accurate for a given degree program. You will be able to submit the
+    report without acting upon any of the suggestions. Please use your judgement. Finally, the To-Do list disappears if there are no more suggestions or requirements to complete.
+</p>
+<p>
+    <b>Q: What is CSV?</b>
+</p>
+<p>
+    The CSV allows you to export the data within the system in a comma seperated list. CSV can be easily imported into programs such as Excel.
+    The option allows you to more easily do further data analysis in other programs.
+</p>
+<p>
+    <b>Q: What are not all my supplements included in the PDF of the report?</b>
+</p>
+<p>
+    The application can only include files that are already PDFs into the report PDF. Other supplements can still be downloaded seperately.
+</p>
+{% if user.profile.aac %}
+<p><b>Q: How can I see reports to review?</b></p>
+<p>A: With the top navigation bar, choose "AAC Reports" and search for not yet reviewed and submitted reports.</p>
+<p><b>Q: What does "Generate Reports" do?</b></p>
+<p>A: When degree programs are created, there is an option to assign a cycle length and starting year. For example, if 2015 is the starting year and 4 is the cycle length,
+    reports should be assigned in 2015, 2019, 2023, 2027, etc. Generating a year's reports assigns a report with the selected rubric to every degree program whose starting year
+    and cycle length combination indicates it should be assigned a report in the given year. However, it does not assign a report if a given degree program has already been manually assigned
+    a report for the given year. Further, note not all degree programs will have a cycle length and starting year, in which case this button will never assign the program a report.
+</p>
+<p><b>Q: How do I manually assign a report?</b></p>
+<p>
+    From the Departments & Degree Programs page on the top navigation bar, find the desired degree program or the department the degree program is within. There will be the option to "Assign Report,"
+    which will take you to the appropriate form.
+</p>
+{% endif %}
+{% endblock %}

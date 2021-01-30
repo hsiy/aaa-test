@@ -1,0 +1,1044 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.assessment_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.assessment_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.assessment_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.assessment_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.assessment_views">
+<span id="makereports-views-assessment-views-module"></span><h1>makeReports.views.assessment_views module<a class="headerlink" href="#module-makeReports.views.assessment_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains all views related to inputting assessments into the form</p>
+<dl class="class">
+<dt id="makeReports.views.assessment_views.AddNewAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">AddNewAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add a new assessment</p>
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.AddNewAssessment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.CreateNewAssessment" title="makeReports.forms.assessment_forms.CreateNewAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.CreateNewAssessment</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AddNewAssessment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Creates <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a> and <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> based upon form</div>
+<div class="line">Updates the numberOfAssess fields for <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code></a></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.CreateNewAssessment" title="makeReports.forms.assessment_forms.CreateNewAssessment"><em>CreateNewAssessment</em></a>) – completed form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AddNewAssessment.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets keyword arguments for form, only allowing for SLOs in report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments for form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AddNewAssessment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets assessment summary url (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>success url of success page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.AddNewAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/addAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.AddNewAssessmentSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">AddNewAssessmentSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessmentSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.assessment_views.AddNewAssessment" title="makeReports.views.assessment_views.AddNewAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.assessment_views.AddNewAssessment</span></code></a></p>
+<p>View to add new assessment from the SLO page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>slo</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code></a> to add assessment</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AddNewAssessmentSLO.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessmentSLO.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes slo of form to that of the page this view was navigated from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AddNewAssessmentSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AddNewAssessmentSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="makeReports.views.slo_views.html#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.AssessmentSummary">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">AssessmentSummary</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to summarize state of assessment section of form</p>
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.AssessmentSummary.context_object_name">
+<code class="sig-name descname">context_object_name</code><em class="property"> = 'assessment_list'</em><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AssessmentSummary.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for template</p>
+<p class="rubric">Notes</p>
+<p>calls section2Context to retrieve context needed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.AssessmentSummary.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns assessments in report ordered by SLO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> objects in report</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.AssessmentSummary.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.AssessmentVersion</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.AssessmentSummary.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/assessmentSummary.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.AssessmentSummary.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.DeleteImportedAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">DeleteImportedAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteImportedAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete imported assessments (more restricted than new assessments)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to “delete”</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.DeleteImportedAssessment.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param">queryset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteImportedAssessment.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook to ensure it is an imported assessment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.DeleteImportedAssessment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteImportedAssessment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets success url (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteImportedAssessment.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.assessment_views.DeleteImportedAssessment.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.AssessmentVersion</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteImportedAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/deleteAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.DeleteImportedAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.DeleteNewAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">DeleteNewAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteNewAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete new assessment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.DeleteNewAssessment.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param">queryset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteNewAssessment.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook to ensure it is a new assessment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.DeleteNewAssessment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteNewAssessment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets success url (assessment summary page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>assessment summary URL (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteNewAssessment.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.assessment_views.DeleteNewAssessment.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.AssessmentVersion</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteNewAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/deleteAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.DeleteNewAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.DeleteSupplement">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">DeleteSupplement</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteSupplement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete supplement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentSupplement" title="makeReports.models.assessment_models.AssessmentSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSupplement</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.DeleteSupplement.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.DeleteSupplement.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteSupplement.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.assessment_views.DeleteSupplement.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentSupplement" title="makeReports.models.assessment_models.AssessmentSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.AssessmentSupplement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.DeleteSupplement.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/deleteSupplement.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.DeleteSupplement.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">EditImportedAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to edit imported assessment (cannot change fields in <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to update</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view, and attaches <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to update</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.EditImportedAssessmentForm" title="makeReports.forms.assessment_forms.EditImportedAssessmentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.EditImportedAssessmentForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edits imported assessment based upon form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.EditImportedAssessmentForm" title="makeReports.forms.assessment_forms.EditImportedAssessmentForm"><em>EditImportedAssessmentForm</em></a>) – completed form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets form keywords, settings SLO options to those within the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>form keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial form values based upon the current values of the <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.EditImportedAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/editImportedAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.EditImportedAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.EditNewAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">EditNewAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditNewAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.assessment_views.EditImportedAssessment" title="makeReports.views.assessment_views.EditImportedAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.assessment_views.EditImportedAssessment</span></code></a></p>
+<p>View to edit new assessments (can change fields in <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to edit</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.EditNewAssessment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.EditNewAssessment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="makeReports.forms.assessment_forms.EditNewAssessmentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.EditNewAssessmentForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditNewAssessment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditNewAssessment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit assessment according to form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="makeReports.forms.assessment_forms.EditNewAssessmentForm"><em>EditNewAssessmentForm</em></a>) – form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.EditNewAssessment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.EditNewAssessment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get initial values of form based upon current values of the assessment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial values of form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.EditNewAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/editNewAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.EditNewAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.ImportAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">ImportAssessment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to import assessment from within the department</p>
+<p class="rubric">Notes</p>
+<p>Through get request URL, the following search parameters are sent:
+‘year’,’dp: primary key of degree program, ‘slo’: primary key of SLO (<a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a>)</p>
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.ImportAssessment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.ImportAssessmentForm" title="makeReports.forms.assessment_forms.ImportAssessmentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.ImportAssessmentForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Creates <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> from form</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.ImportAssessmentForm" title="makeReports.forms.assessment_forms.ImportAssessmentForm"><em>ImportAssessmentForm</em></a>) – completed form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessment.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for template, with the current degree program, all degree programs within the department, and SLOs within department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Arranges SLOs by first those which appear within this report, and then all others</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessment.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get keyword arguments of form, by filtering the assessment choices by search parameters,
+and SLO choices by the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments of the form</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.ImportAssessment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/importAssessment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">ImportAssessmentSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.assessment_views.ImportAssessment" title="makeReports.views.assessment_views.ImportAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.assessment_views.ImportAssessment</span></code></a></p>
+<p>Imports assessment for a specific SLO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>slo</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches the view, and attaches the specific <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>slo</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for the template, and attaches the <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to the context</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the form, sets the SLO appropriately</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="makeReports.views.slo_views.html#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.ImportAssessmentSLO.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/importAssessmentSLO.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.ImportAssessmentSLO.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.ImportSupplement">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">ImportSupplement</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to import supplement to assessment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Year and degree program to search for assessment passed via get request under
+‘year’ and ‘dp’ respectively</p>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportSupplement.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.ImportSupplement.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.assessment_forms.html#makeReports.forms.assessment_forms.ImportSupplementsForm" title="makeReports.forms.assessment_forms.ImportSupplementsForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.ImportSupplementsForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportSupplement.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports supplement to another assessment based upon form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<em>ImportSupplementForm</em>) – completed form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportSupplement.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context for template, passing the assessment, the current degree program, and degree programs within
+the department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportSupplement.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets form keyword arguments, set the supplement choices based upon search parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>form keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.ImportSupplement.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.ImportSupplement.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/importSupplement.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.ImportSupplement.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.Section2Comment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">Section2Comment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add a comment for the second section of the form</p>
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.Section2Comment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.Single2000Textbox</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.Section2Comment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the section 2 comment from the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><em>Single2000Textbox</em></a>) – completed form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.Section2Comment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial value for form based upon current comment value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.Section2Comment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (assessment summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary page (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.Section2Comment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/assessmentComment.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.Section2Comment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.assessment_views.SupplementUpload">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.assessment_views.</code><code class="sig-name descname">SupplementUpload</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to upload supplements to assessments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.assessment_views.SupplementUpload.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatch view and attach assessment to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>assessIR</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.SupplementUpload.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['supplement']</em><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.SupplementUpload.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the assessment version and datetime, then
+creates supplement to assessment based upon form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<em>ModelForm</em>) – completed form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.assessment_views.SupplementUpload.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets success URL and used as hook to add supplement to assessment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of assessment summary (<a class="reference internal" href="#makeReports.views.assessment_views.AssessmentSummary" title="makeReports.views.assessment_views.AssessmentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.SupplementUpload.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentSupplement" title="makeReports.models.assessment_models.AssessmentSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.AssessmentSupplement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.assessment_views.SupplementUpload.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Assessment/supplementUpload.html'</em><a class="headerlink" href="#makeReports.views.assessment_views.SupplementUpload.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Report Initial Information</h3>
+<form method="post" class="form" enctype="multipart/form-data" style="max-width:450px">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Next</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

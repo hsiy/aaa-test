@@ -1,0 +1,86 @@
+*{
+    font-family: 'Open Sans','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+}
+@page {
+    size: letter;
+    margin: 1in; 
+  }
+table.print-friendly tr td, table.print-friendly tr th {
+    page-break-inside: avoid;
+}
+.italicsSLO {
+    font-style: italic; 
+}
+
+.border-bottom{
+    border-bottom:1px solid black;
+}
+
+.pt-5 {
+    padding-top: 5pt;
+}
+
+.pb-5 {
+    padding-bottom: 5pt;
+}
+
+.pb-3{
+    padding-bottom: 3pt;
+}
+div.bT p{
+    margin: 2pt;
+    padding: 1pt;
+}
+div.bT tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1pt;
+    margin: 1pt;
+}
+div.bT td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+div.bT table{
+    border-collapse: collapse;
+}
+div.padd tr{
+    border-collapse: collapse;
+    padding: 3pt;
+}
+div.padd td{
+    border-collapse: collapse;
+    padding: 3pt;
+}
+div.padd table{
+    border-collapse: collapse;
+}
+.subsection {
+    margin: 15px 0px 10px 0px;
+}
+h3{
+    font-size:14pt;
+    margin: 15px 0px 10px 0px;
+}
+ td.table-success{
+    background-color: rgb(158, 214, 169);
+}
+th.table-success{
+    background-color: rgb(158, 214, 169);
+}
+td.table-danger{
+    background-color: rgb(231, 130, 130);
+}
+th.table-danger{
+    background-color: rgb(231, 130, 130);
+}
+td.table-warning{
+    background-color: #f1f09b;
+}
+th.table-warning{
+    background-color: #f1f09b;
+}
+tr.table-secondary{
+    background-color: #e0e0e0;
+}

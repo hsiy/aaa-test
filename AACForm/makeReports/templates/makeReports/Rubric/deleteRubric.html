@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Delete Rubric</h3>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    Are you sure you want to delete {{object}}?
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Delete</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

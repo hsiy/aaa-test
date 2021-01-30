@@ -1,0 +1,447 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<!-- Include Choices CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+<!-- Include Choices JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script type='text/javascript'></script>
+<div id="vapp">
+{% endblock %}
+{% block styles %}
+<meta charset='utf-8' />
+<style>
+    #hide-sam{
+        display: inherit;
+    }
+    #hide-freq{
+        display: inherit;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<h3>Historical Data</h3>
+<div class="row">
+    <div class="col-6">
+
+{% if user.profile.aac %}
+    <h4>College:</h4>
+    <div class="dd_col">
+        <select id="id_college" v-model="college" v-on:change="updateDept" name="college">
+            {% for c in colleges %}
+                <option value="{{c.pk}}">{{ c.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <h4>Department:</h4>
+    <div class="dd_dept">
+        <select id="id_department" v-model="department" v-on:change="updateProg" name="department">
+            <template v-for="d in depts">
+                    <option v-bind:value="d.pk">[[d.name]]</option>
+            </template>
+        </select>
+    </div>
+{% endif %}
+<h4>Degree program:</h4>
+<div class="dd_dprog">
+    <select id="id_prog" v-model="program" name="program" v-on:change="updateSLOs">
+            <option value="1">All Programs</option>
+        <template v-for="p in progs">
+            <option v-bind:value="p.pk">[[p.name]] ([[p.level]])</option>
+        </template>
+    </select>
+</div>
+<h4>Date Range</h4>
+<div class="dd_drange1">
+    <select id="id_range1" v-model="date1" v-on:change="updateSLOs"></select>
+</div>
+<h5>to</h5>
+<div class="dd_drange2">
+    <select id="id_range2" v-model="date2" v-on:change="updateSLOs"></select>
+</div>
+<h4>Graph type:</h4>
+<template v-if="program == 1">
+    <div class="dd_graph">
+        <select id="id_graph" v-model="graph_opt">
+            <option value="3">Percentage of targets each degree program meets</option>
+        </select>
+    </div>
+</template>
+<template v-if="program != 1">
+    <div class="dd_graph">
+        <select id="id_graph" v-model="graph_opt" v-on:change="changeGraphOpt">
+            <option value="1">Specific SLO and Assessment: target v. actual</option>
+            <option value="2">Number of SLOs met</option>
+        </select>
+    </div>
+</template>
+<template v-if="graph_opt == 1">
+    <h4>SLO (displayed as in most recent report):</h4>
+    <div class="specific">
+        <select id="spec" v-model="slo" v-on:change="updateAssesses">
+            <template v-for="s in slos">
+                <option v-bind:value="s.pk">[[s.goalText]]</option>
+            </template>
+        </select>
+    </div>
+    <h4>Assessment</h4>
+    <div class="specific">
+        <select id="assess" v-model="assess">
+            <template v-for="a in assesses">
+                <option v-bind:value="a.pk">[[a.assessment.title]]</option>
+            </template>
+        </select>
+    </div>
+</template>
+<template v-if="graph_opt == 2">
+<button class="btn btn-primary mt-3" v-on:click="showWeighing=!showWeighing">
+    Weight SLOs
+</button>
+    <template v-if="showWeighing">
+        <p>
+            Weights are relative and can be any non-negative integer.
+        </p>
+        <ul class="list-group">
+        <template v-for="s in slos">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-9">
+                        [[s.goalText]]
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control float-right" type="number" v-model="sloWeights[s.slo.pk]" min="0">
+                    </div>
+                </div>
+            </li>
+        </template>
+        </ul>
+    </template>
+</template>
+<div class="mt-5 mb-5"></div>
+<template v-if="date1!=null && date2!=null && graph_opt>0 && showButton">
+<button class='btn btn-primary' v-on:click="newGraph">View Graph</button> 
+</template>
+<br>
+</div>
+<div class="col-6">
+    <img v-if="url!=null && !graphError" :src="url" width="100%"></img>
+    <template v-if="graphError">
+    <p>No graph to display.</p>
+    </template>
+</div>
+</div>
+{% endblock %}
+{% block endscripts %}
+<script>
+    /**
+     * Handles dynamically providing options in dropdowns for graphing page
+     * @class graphing
+     */
+    /**
+    * Gets cookies: included to retrieve the CSRF token
+    * @method getCookie
+    * @param {String} name - the name of the cookie
+    * @returns {String} - the value of the cookie
+    */
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+    var start = 2015;
+    var end = new Date().getFullYear();
+    var options = "";
+    for (var year = end; year >= start; year--)
+    {
+        options += "<option>"+ year + "</option>";
+    }
+    document.getElementById("id_range1").innerHTML = options;
+    document.getElementById("id_range2").innerHTML = options;
+    var vapp = new Vue({
+            el: '#vapp',
+            delimiters: ['[[', ']]'],
+            data: { 
+                /**
+                 * Primary key of currently selected assessment
+                 * @property assess
+                 * @type integer
+                 */
+                assess: null,
+                /**
+                 * List of assessments meeting parameters
+                 * @property assesses
+                 * @type dictionary
+                 */
+                assesses: null,
+                /**
+                 * List of departments meeting parameters
+                 * @property depts
+                 * @type dictionary
+                 */
+                depts: null,
+                /**
+                 * List of degree programs meeting parameters
+                 * @property progs
+                 * @type dictionary
+                 */
+                progs: null,
+                /**
+                 * List of SLOs meeting parameters
+                 * @property slos
+                 * @type dictionary
+                 */
+                slos: null,
+                /**
+                 * List of weights for each SLO
+                 * @property sloWeights
+                 * @type dictionary
+                 */
+                sloWeights: {},
+                /**
+                 * Currently chosen graph type
+                 * @property graph_opt
+                 * @type integer
+                 */
+                graph_opt: 0,
+                /**
+                 * Primary key of currently chosen department
+                 * @property department
+                 * @type integer
+                 */
+                department: null,
+                /**
+                 * Primary key of currently chosen college
+                 * @property college
+                 * @type integer
+                 */
+                college: null,
+                /**
+                 * Primary key of currently chosen degree program
+                 * @property program
+                 * @type integer
+                 */
+                program: 1,
+                /**
+                 * Lower year bound
+                 * @property date1
+                 * @type integer
+                 */
+                date1: null,
+                /**
+                 * Upper year bound
+                 * @property date2
+                 * @type integer
+                 */
+                date2: null,
+                /**
+                 * Primary key of currently chosen SLO
+                 * @property slo
+                 * @type integer
+                 */
+                slo: null,
+                /**
+                 * Current URL of API for generating the graph 
+                 * @property url
+                 * @type String
+                 */
+                url: null,
+                /**
+                 * The drop down for SLOs
+                 * @property ch
+                 * @type ch
+                 */
+                ch: null,
+                /**
+                 * Whether there was an error retrieving the graph
+                 * @property graphError
+                 * @type Boolean
+                 */
+                graphError: false,
+                /**
+                 * Whether to show the weighing the SLOs portion of the site
+                 * @property showWeighing
+                 * @type Boolean
+                 */
+                showWeighing: false,
+                /**
+                 * Whether to show button
+                 * @property showButton
+                 * @type Boolean
+                 */
+                showButton: true,
+            },
+            //computed: {
+            //},
+            //mounted(){
+            //    this.ch = new Choices(document.getElementById('spec'),{shouldSort:false});
+            //},
+            methods: {
+                /**
+                * Calls the API to update the department based upon the chosen college
+                * @method updateDept
+                */
+                updateDept: function () {
+                    fetch("{% url 'makeReports:api-dept-by-col' %}?college="+this.college)
+                        .then(response => {
+                            response.clone().json()
+                        .then(json => {
+                            this.depts = json;
+                        })
+                    });
+                    this.updateProg();
+                },
+                /**
+                * Calls the API to update the degree programs based upon the chosen department
+                * @method updateProg
+                */
+                updateProg: function() {
+                    fetch("{% url 'makeReports:api-prog-by-dept' %}?department="+this.department)
+                        .then(response => {
+                            response.clone().json()
+                        .then(json => {
+                            this.progs = json;
+                        })
+                    });
+                },
+                /**
+                * Creates a new Choices dropdown if the graph type is newly changed to specific SLO
+                *@method changeGraphOpt
+                *
+                */
+                changeGraphOpt: function(){
+                    showButton=true;
+                    if(this.graph_opt==1){
+                        this.$nextTick(function(){
+                            //have to wait for DOM to change to attach ChoicesJS to dropdown
+                            this.ch = new Choices(document.getElementById('spec'),{shouldSort:false});
+                            this.updateSLOs();
+                        });
+                    }else if(this.graph_opt==2){
+                        this.updateSLOs();
+                    }
+                },
+                /**
+                * Calls the API to update the SLOs based upon the chosen degree program.
+                * It also creates a new instance of the ChoicesJS object (i.e. fancy dropdown) if necessary
+                * @method updateSLOs
+                */
+                updateSLOs: function() {
+                    if(this.graph_opt==1){
+                        fetch("{% url 'makeReports:api-slo-by-dp' %}?report__degreeProgram="+this.program
+                        +"&report__year__gte="+this.date1+"&report__year__lte="+this.date2)
+                            .then(response => {
+                                response.clone().json()
+                            .then(json => {
+                                this.slos = json;
+                                this.ch.setChoices(this.slos,'pk','goalText',true);
+                                //this.$nextTick(function () {
+                                    //have to wait for DOM to update so there is a select to be replaced
+                                    //this.ch = new Choices(document.getElementById('spec'),{shouldSort:false});
+                                    //if(this.slos!=undefined && this.ch!=undefined){
+                                 //   this.ch.setChoices(this.slos,'pk','goalText',true);
+                                //});
+                            })
+                        });
+                        
+                    }else if(this.graph_opt==2){
+                        this.showButton = false;
+                        //the user must wait for the SLOs to generate the graph
+                        fetch("{% url 'makeReports:api-slo-by-dp' %}?report__degreeProgram="+this.program
+                        +"&report__year__gte="+this.date1+"&report__year__lte="+this.date2)
+                            .then(response => {
+                                response.clone().json()
+                            .then(json => {
+                                this.slos = json;
+                                this.sloWeights = {};
+                                if(this.slos!=null){
+                                    for(var i=0;i<this.slos.length;i++){
+                                        this.$set(this.sloWeights,this.slos[i].slo.pk,1);
+                                    }
+                                }
+                                this.showButton = true;
+                            })
+                        });
+                        
+                    }
+                },
+                /**
+                 * Calls the API to update assessments
+                 * @method updateAssesses
+                 */
+                updateAssesses: function(){
+                    if(this.graph_opt==1){
+                        sloHere = this.slos.find(el => el.pk==this.slo);
+                        console.log(sloHere)
+                        fetch("{% url 'makeReports:api-assess-by-slo' %}?slo__slo="+sloHere.slo.pk
+                        +"&report__year__gte="+this.date1+"&report__year__lte="+this.date2)
+                            .then(response => {
+                                response.clone().json()
+                            .then(json => {
+                                this.assesses = json;
+                            })
+                        });
+                        
+                    }
+                },
+                /**
+                * Calls the API to generate the chosen graph based upon selected options
+                * @method newGraph
+                */
+                newGraph: function() {
+                    if(this.assesses!=null){
+                        assessHere = this.assesses.find(el => el.pk==this.assess);
+                    }else{
+                        assessHere = {
+                            assessment: {pk: -1} 
+                        }
+                    }
+                    data = {
+                        'report__degreeProgram__department': this.department,
+                        'report__degreeProgram': this.program,
+                        'report__year__gte': this.date1,
+                        'report__year__lte': this.date2,
+                        'decision': this.graph_opt,
+                        'sloIR': this.slo,
+                        'assess': assessHere.assessment.pk,
+                        'sloWeights': JSON.stringify(this.sloWeights)
+                    }
+                    
+                    fetch("{% url 'makeReports:api-new-graph' %}",{
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: new Headers({
+                            'content-type': 'application/json',
+                            'X-CSRFToken':csrftoken
+                        }),
+                    })
+                        .then(response => {
+                            if(response.status == 200){
+                                this.graphError = false
+                                response.clone().json().then(json => {
+                                    this.url = json;
+                                })   
+                            }else{
+                                this.graphError = true
+                            }
+                        })
+                    }
+            }
+    });
+    </script>
+{% endblock %}

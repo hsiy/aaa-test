@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block styles %}
+<style>
+.please-scroll{
+  height: calc(100vh - 275px);
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.italics{
+    font-style: italic;
+}
+.italics p{
+    margin:2pt;
+}
+.split {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gutter {
+    background-color: rgb(165, 165, 165);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+</style>
+{% block in_styles %}
+{% endblock %}
+{% endblock %}
+{% block content %}
+{% include 'makeReports/Grading/grading_navbar.html' %}
+<h3>Reviewing Section {{section}}</h3>
+<h5>{{rpt.year|add:"-1"}}-{{rpt.year}} Report for {{rpt.degreeProgram.name}} ({{rpt.degreeProgram.level}})</h5>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {% if reqTodo > 0 %}
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% elif sugTodo > 0 %}
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% endif %}
+            {% include 'makeReports/todoSansButtonReview.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div id="one" class="col please-scroll">
+            <!--showreport column-->
+            {% block report_content %}
+            {% endblock %}
+        </div>
+        <div id="two" class="col please-scroll">
+            <!--grading column-->
+            {% if rpt.rubric.rubricVersion.fullFile %}
+              Full Rubric: <a href="{{rpt.rubric.rubricVersion.fullFile.url}}">Download PDF</a>
+            {% endif %}
+            <h5>Section {{section}} Rubric</h5>
+            <form method="post" novalidate>
+                {% csrf_token %}
+              
+                {% if form.non_field_errors %}
+                  <ul>
+                    {% for error in form.non_field_errors %}
+                      <li>{{ error }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              
+                {% for hidden_field in form.hidden_fields %}
+                  {% if hidden_field.errors %}
+                    <ul>
+                      {% for error in hidden_field.errors %}
+                        <li>(Hidden field {{ hidden_field.name }}) {{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                  {{ hidden_field }}
+                {% endfor %}
+                <table>
+                  {% for field in form.visible_fields %}
+                    <tr>
+                      <td>
+                        {% bootstrap_field field %}
+                      </td>
+                    </tr>
+                    {% if not field.name == "section_comment" %}
+                    <tr>
+                        <td>
+                        <button class="btn btn-primary"  role="button" type="button" data-toggle="collapse" data-target="#col{{field.name}}" aria-expanded="false" aria-controls="col{{field.name}}">
+                                        More Details
+                        </button>
+                        <div class="collapse" id="col{{field.name}}">
+                                <div class="card card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Did Not Meet Expectations: </b>{% get_item extraHelp field.name 0 %}</li>
+                                            <li class="list-group-item"><b>Met Expectations with Concerns: </b>{% get_item extraHelp field.name 1 %}</li>
+                                            <li class="list-group-item"><b>Met Expectations Established: </b>{% get_item extraHelp field.name 2 %}</li>
+                                        </ul>
+                                </div>
+                        </div>
+                    </td>
+                    </tr>
+                    {% endif %}
+                  {% endfor %}
+                </table>
+                {% buttons %}
+                <button type="submit" class="btn btn-primary">Save & Next</button>
+                {% endbuttons %}
+              </form>
+              <div class="my-5 py-5"></div>
+              <div class="my-5 py-5"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ STATIC_URL }} /static/js/splitGradingView.js"></script> 
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script>
+{% endblock %}

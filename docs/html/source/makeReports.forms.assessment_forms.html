@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.forms.assessment_forms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.forms.assessment_forms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.forms.assessment_forms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.forms.assessment_forms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.forms.assessment_forms">
+<span id="makereports-forms-assessment-forms-module"></span><h1>makeReports.forms.assessment_forms module<a class="headerlink" href="#module-makeReports.forms.assessment_forms" title="Permalink to this headline">¶</a></h1>
+<p>Contains forms related to inputting assessments</p>
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">CreateNewAssessment</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to create new assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code>: Domain (<code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">directMeasure</span></code>: Direct measure (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: Percentage of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, including setting SLO options to passed QuerySet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloQS</strong> (<em>QuerySet</em>) – SLOs to be picked from (generally those within report)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_description">
+<code class="sig-name descname">clean_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_frequency">
+<code class="sig-name descname">clean_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the frequency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_sampleDescription">
+<code class="sig-name descname">clean_sampleDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_sampleDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the sample description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.clean_where">
+<code class="sig-name descname">clean_where</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.clean_where" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans out malicious or excess (from copying/pasting from Word) meta-data from rich text of the where field</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cleaned rich text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – when text is too long after being cleaned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.CreateNewAssessment.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.CreateNewAssessment.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">EditImportedAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="makeReports.forms.assessment_forms.EditNewAssessmentForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.EditNewAssessmentForm</span></code></a></p>
+<p>Edit imported assessment form (cannot change title, domain, or direct measure)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: Percentage of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.directMeasure">
+<code class="sig-name descname">directMeasure</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.directMeasure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.domain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.assessment_forms.EditImportedAssessmentForm.title">
+<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.forms.assessment_forms.EditImportedAssessmentForm.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">EditNewAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.forms.assessment_forms.CreateNewAssessment" title="makeReports.forms.assessment_forms.CreateNewAssessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.assessment_forms.CreateNewAssessment</span></code></a></p>
+<p>Form to edit new assessment (no restrictions)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: Title (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: Describe How Measure Aligns with SLO (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code>: Domain (<code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">directMeasure</span></code>: Direct measure (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalTerm</span></code>: Point in Program Assessment is Administered (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">where</span></code>: Where does the assessment occur (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allStudents</span></code>: Population Measured (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleDescription</span></code>: Describe what students are sampled (if not all) (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequencyChoice</span></code>: Frequency of Data Collection (<code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code>: Describe frequency if other (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Proficiency Threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code>: Program Proficiency Target: Percentage of students that achieve the proficiency threshold (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets SLOs choices to passed set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>sloQS</strong> (<em>QuerySet</em>) – set of SLOs to choose from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.EditNewAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.EditNewAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">ImportAssessmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to import pre-existing assessment</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assessment</span></code>: Assessment (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slo</span></code>: SLO Imported Assessments will Measure (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, sets assessment and SLO choices to passed sets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>assessChoices</strong> (<em>QuerySet</em>) – assessment choices</p></li>
+<li><p><strong>sloChoices</strong> (<em>QuerySet</em>) – SLO choices</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportAssessmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportAssessmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.assessment_forms.</code><code class="sig-name descname">ImportSupplementsForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Import supplement for assessment form</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sup</span></code>: Supplement Upload (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize form, with setting the supplement choices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>supChoices</strong> (<em>QuerySet</em>) – supplements to choose from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.assessment_forms.ImportSupplementsForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.assessment_forms.ImportSupplementsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

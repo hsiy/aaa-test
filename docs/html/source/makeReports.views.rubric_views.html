@@ -1,0 +1,627 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.rubric_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.rubric_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.rubric_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.rubric_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.rubric_views">
+<span id="makereports-views-rubric-views-module"></span><h1>makeReports.views.rubric_views module<a class="headerlink" href="#module-makeReports.views.rubric_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains views related to managing rubrics (but not grading with them)</p>
+<dl class="class">
+<dt id="makeReports.views.rubric_views.AddRubric">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">AddRubric</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to create a new rubric</p>
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubric.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['name', 'fullFile']</em><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.AddRubric.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the date to now and creates object based upon the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<em>ModelForm</em>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubric.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubric.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/rubric/list/'</em><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubric.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/addRubric.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.AddRubric.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.AddRubricItems">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">AddRubricItems</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add rubric items to rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>rubric</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.AddRubricItems.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>rubric</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubricItems.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.RubricItemForm" title="makeReports.forms.grading_forms.RubricItemForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.RubricItemForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.AddRubricItems.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates rubric items from form after it was validated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.RubricItemForm" title="makeReports.forms.grading_forms.RubricItemForm"><em>RubricItemForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.AddRubricItems.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns context for the template, including the number of rubric items</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>template context</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.AddRubricItems.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (add rubric item page)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of add rubric item page (<a class="reference internal" href="#makeReports.views.rubric_views.AddRubricItems" title="makeReports.views.rubric_views.AddRubricItems"><code class="xref py py-class docutils literal notranslate"><span class="pre">AddRubricItems</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.AddRubricItems.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/addRI.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.AddRubricItems.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.DeleteRubric">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">DeleteRubric</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.DeleteRubric.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubric.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (rubric list)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of rubric list page (<a class="reference internal" href="#makeReports.views.rubric_views.RubricList" title="makeReports.views.rubric_views.RubricList"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricList</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DeleteRubric.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubric.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DeleteRubric.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/deleteRubric.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubric.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.DeleteRubricItem">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">DeleteRubricItem</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubricItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>View to delete rubric item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code></a> to delete</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.DeleteRubricItem.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubricItem.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (view rubric)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of view rubric page (<a class="reference internal" href="#makeReports.views.rubric_views.ViewRubric" title="makeReports.views.rubric_views.ViewRubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewRubric</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DeleteRubricItem.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubricItem.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.RubricItem</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DeleteRubricItem.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/deleteRubricItem.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.DeleteRubricItem.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.DuplicateRubric">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">DuplicateRubric</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DuplicateRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to duplicate rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>rubric</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to duplicate</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DuplicateRubric.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.rubric_views.DuplicateRubric.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.DuplicateRubricForm" title="makeReports.forms.grading_forms.DuplicateRubricForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.DuplicateRubricForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.DuplicateRubric.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.DuplicateRubric.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates new rubric based upon form, and duplicates all rubric items</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.DuplicateRubricForm" title="makeReports.forms.grading_forms.DuplicateRubricForm"><em>DuplicateRubricForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DuplicateRubric.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/aac/rubric/list/'</em><a class="headerlink" href="#makeReports.views.rubric_views.DuplicateRubric.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.DuplicateRubric.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/duplicateRubric.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.DuplicateRubric.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.RubricList">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">RubricList</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.RubricList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list rubrics in reverse chronological order</p>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.RubricList.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.RubricList.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of items for this view.</p>
+<p>The return value must be an iterable and may be an instance of
+<cite>QuerySet</cite> in which case <cite>QuerySet</cite> specific behavior will be enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.RubricList.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.RubricList.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.RubricList.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/rubricList.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.RubricList.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.SearchRubricList">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">SearchRubricList</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.SearchRubricList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to search rubric, date must be within 180 days</p>
+<p class="rubric">Notes</p>
+<p>Search parameters sent via get request: ‘date’, ‘name’</p>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.SearchRubricList.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.SearchRubricList.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets rubrics within 180 days of date if it exists and containing name if it exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>rubrics (<a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a>) meeting search parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.SearchRubricList.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.SearchRubricList.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.SearchRubricList.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/rubricList.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.SearchRubricList.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.UpdateRubricFile">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">UpdateRubricFile</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to update file associated with the rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to update</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricFile.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['name', 'fullFile']</em><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricFile.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.UpdateRubricFile.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricFile.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (view rubric)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of view rubric page (<a class="reference internal" href="#makeReports.views.rubric_views.ViewRubric" title="makeReports.views.rubric_views.ViewRubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewRubric</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricFile.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricFile.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricFile.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/updateRubric.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricFile.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.UpdateRubricItem">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">UpdateRubricItem</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to update rubric item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <code class="xref py py-class docutils literal notranslate"><span class="pre">RubricItem</span></code> to update</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricItem.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricItem.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.grading_forms.html#makeReports.forms.grading_forms.RubricItemForm" title="makeReports.forms.grading_forms.RubricItemForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.grading_forms.RubricItemForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.rubric_views.UpdateRubricItem.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricItem.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (view rubric)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of view rubric page (<a class="reference internal" href="#makeReports.views.rubric_views.ViewRubric" title="makeReports.views.rubric_views.ViewRubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewRubric</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricItem.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricItem.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.RubricItem" title="makeReports.models.grading_models.RubricItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.RubricItem</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.UpdateRubricItem.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/updateRubricItem.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.UpdateRubricItem.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.rubric_views.ViewRubric">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.rubric_views.</code><code class="sig-name descname">ViewRubric</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.ViewRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.detail.DetailView</span></code></p>
+<p>View to view a rubric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to view</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.rubric_views.ViewRubric.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.rubric_views.ViewRubric.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets template context, including rubric items separated out by section</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>template context</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.ViewRubric.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.rubric_views.ViewRubric.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.rubric_views.ViewRubric.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/rubricDetail.html'</em><a class="headerlink" href="#makeReports.views.rubric_views.ViewRubric.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

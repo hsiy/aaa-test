@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>makeReports.migrations package &#8212; AAC Application Form 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="makereports-migrations-package">
+<h1>makeReports.migrations package<a class="headerlink" href="#makereports-migrations-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-makeReports.migrations.0001_initial">
+<span id="makereports-migrations-0001-initial-module"></span><h2>makeReports.migrations.0001_initial module<a class="headerlink" href="#module-makeReports.migrations.0001_initial" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0001_initial.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0001_initial.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0001_initial.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0001_initial.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = []</em><a class="headerlink" href="#makeReports.migrations.0001_initial.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0001_initial.Migration.initial">
+<code class="sig-name descname">initial</code><em class="property"> = True</em><a class="headerlink" href="#makeReports.migrations.0001_initial.Migration.initial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0001_initial.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;CreateModel  name='Assessment', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('title', &lt;django.db.models.fields.CharField&gt;), ('domainExamination', &lt;django.db.models.fields.BooleanField&gt;), ('domainProduct', &lt;django.db.models.fields.BooleanField&gt;), ('domainPerformance', &lt;django.db.models.fields.BooleanField&gt;), ('directMeasure', &lt;django.db.models.fields.BooleanField&gt;)]&gt;, &lt;CreateModel  name='AssessmentVersion', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('date', &lt;django.db.models.fields.DateField&gt;), ('description', &lt;django.db.models.fields.CharField&gt;), ('finalTerm', &lt;django.db.models.fields.BooleanField&gt;), ('where', &lt;django.db.models.fields.CharField&gt;), ('allStudents', &lt;django.db.models.fields.BooleanField&gt;), ('sampleDescription', &lt;django.db.models.fields.CharField&gt;), ('frequency', &lt;django.db.models.fields.CharField&gt;), ('threshold', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('target', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('assessment', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='College', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('name', &lt;django.db.models.fields.CharField&gt;)]&gt;, &lt;CreateModel  name='DataAdditionalInformation', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('comment', &lt;django.db.models.fields.CharField&gt;)]&gt;, &lt;CreateModel  name='DegreeProgram', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('name', &lt;django.db.models.fields.CharField&gt;), ('level', &lt;django.db.models.fields.CharField&gt;), ('cycle', &lt;django.db.models.fields.IntegerField&gt;)]&gt;, &lt;CreateModel  name='GradedRubric', fields=[('id', &lt;django.db.models.fields.AutoField&gt;)]&gt;, &lt;CreateModel  name='GradGoal', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;)]&gt;, &lt;CreateModel  name='Report', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('year', &lt;django.db.models.fields.DateField&gt;), ('author', &lt;django.db.models.fields.CharField&gt;), ('beginData', &lt;django.db.models.fields.DateField&gt;), ('endData', &lt;django.db.models.fields.DateField&gt;), ('section1Comment', &lt;django.db.models.fields.CharField&gt;), ('section2Comment', &lt;django.db.models.fields.CharField&gt;), ('section3Comment', &lt;django.db.models.fields.CharField&gt;), ('section4Comment', &lt;django.db.models.fields.CharField&gt;), ('submitted', &lt;django.db.models.fields.BooleanField&gt;), ('degreeProgram', &lt;django.db.models.fields.related.ForeignKey&gt;), ('rubric', &lt;django.db.models.fields.related.OneToOneField&gt;)]&gt;, &lt;CreateModel  name='Rubric', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('date', &lt;django.db.models.fields.DateField&gt;), ('fullFile', &lt;django.db.models.fields.files.FileField&gt;)]&gt;, &lt;CreateModel  name='SLO', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('blooms', &lt;django.db.models.fields.CharField&gt;), ('gradGoals', &lt;django.db.models.fields.related.ManyToManyField&gt;)]&gt;, &lt;CreateModel  name='Subassessment', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('title', &lt;django.db.models.fields.CharField&gt;), ('assessmentVersion', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='SubassessmentData', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('proficient', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('subassessment', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='SLOText', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('date', &lt;django.db.models.fields.DateField&gt;), ('goalText', &lt;django.db.models.fields.CharField&gt;), ('slo', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='SLOsToStakeholder', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;), ('report', &lt;django.db.models.fields.related.ManyToManyField&gt;)]&gt;, &lt;CreateModel  name='SLOStatus', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('status', &lt;django.db.models.fields.CharField&gt;), ('SLO', &lt;django.db.models.fields.related.ForeignKey&gt;), ('report', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='SLOInReport', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('report', &lt;django.db.models.fields.related.ForeignKey&gt;), ('slo', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='RubricItem', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;), ('section', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('rubricVersion', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='ResultCommunicate', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;), ('report', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='GradedRubricItem', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('grade', &lt;django.db.models.fields.CharField&gt;), ('item', &lt;django.db.models.fields.related.ForeignKey&gt;), ('rubric', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;AddField  model_name='gradedrubric', name='rubricVersion', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;, &lt;CreateModel  name='Department', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('name', &lt;django.db.models.fields.CharField&gt;), ('college', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;AddField  model_name='degreeprogram', name='department', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;, &lt;CreateModel  name='DecisionsActions', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('decisionProcess', &lt;django.db.models.fields.CharField&gt;), ('decisionMakers', &lt;django.db.models.fields.CharField&gt;), ('decisionTimeline', &lt;django.db.models.fields.CharField&gt;), ('dataUsed', &lt;django.db.models.fields.CharField&gt;), ('actionTimeline', &lt;django.db.models.fields.CharField&gt;), ('SLO', &lt;django.db.models.fields.related.ForeignKey&gt;), ('report', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='DataAddInfoSupplement', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('supplement', &lt;django.db.models.fields.files.FileField&gt;), ('addInfo', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;AddField  model_name='assessmentversion', name='report', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;, &lt;CreateModel  name='AssessmentSupplement', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('supplement', &lt;django.db.models.fields.files.FileField&gt;), ('assessmentVersion', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;, &lt;CreateModel  name='AssessmentData', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('dataBegin', &lt;django.db.models.fields.DateField&gt;), ('dataEnd', &lt;django.db.models.fields.DateField&gt;), ('numberStudents', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('overallProficient', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('assessmentVersion', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0001_initial.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0002_auto_20190928_1822">
+<span id="makereports-migrations-0002-auto-20190928-1822-module"></span><h2>makeReports.migrations.0002_auto_20190928_1822 module<a class="headerlink" href="#module-makeReports.migrations.0002_auto_20190928_1822" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0002_auto_20190928_1822.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0002_auto_20190928_1822.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0002_auto_20190928_1822.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0002_auto_20190928_1822.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0001_initial')]</em><a class="headerlink" href="#makeReports.migrations.0002_auto_20190928_1822.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0002_auto_20190928_1822.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='sloinreport', name='changedFromPrior', field=&lt;django.db.models.fields.BooleanField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='sloinreport', name='date', field=&lt;django.db.models.fields.DateField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='sloinreport', name='firstInstance', field=&lt;django.db.models.fields.BooleanField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='sloinreport', name='goalText', field=&lt;django.db.models.fields.CharField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='degreeprogram', name='level', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='sloinreport', name='slo', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;, &lt;DeleteModel  name='SLOText'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0002_auto_20190928_1822.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0003_auto_20190928_2257">
+<span id="makereports-migrations-0003-auto-20190928-2257-module"></span><h2>makeReports.migrations.0003_auto_20190928_2257 module<a class="headerlink" href="#module-makeReports.migrations.0003_auto_20190928_2257" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0003_auto_20190928_2257.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0003_auto_20190928_2257.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0003_auto_20190928_2257.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0003_auto_20190928_2257.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('auth', '__first__'), ('makeReports', '0002_auto_20190928_1822')]</em><a class="headerlink" href="#makeReports.migrations.0003_auto_20190928_2257.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0003_auto_20190928_2257.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='degreeprogram', name='startingYear', field=&lt;django.db.models.fields.PositiveIntegerField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='report', name='beginData', field=&lt;django.db.models.fields.DateField&gt;&gt;, &lt;AlterField  model_name='report', name='endData', field=&lt;django.db.models.fields.DateField&gt;&gt;, &lt;CreateModel  name='Profile', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('aac', &lt;django.db.models.fields.BooleanField&gt;), ('department', &lt;django.db.models.fields.related.ForeignKey&gt;), ('user', &lt;django.db.models.fields.related.OneToOneField&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0003_auto_20190928_2257.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0004_auto_20190929_1628">
+<span id="makereports-migrations-0004-auto-20190929-1628-module"></span><h2>makeReports.migrations.0004_auto_20190929_1628 module<a class="headerlink" href="#module-makeReports.migrations.0004_auto_20190929_1628" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0004_auto_20190929_1628.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0004_auto_20190929_1628.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0004_auto_20190929_1628.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0004_auto_20190929_1628.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0003_auto_20190928_2257')]</em><a class="headerlink" href="#makeReports.migrations.0004_auto_20190929_1628.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0004_auto_20190929_1628.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='college', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0004_auto_20190929_1628.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0005_remove_report_year">
+<span id="makereports-migrations-0005-remove-report-year-module"></span><h2>makeReports.migrations.0005_remove_report_year module<a class="headerlink" href="#module-makeReports.migrations.0005_remove_report_year" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0005_remove_report_year.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0005_remove_report_year.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0005_remove_report_year.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0005_remove_report_year.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0004_auto_20190929_1628')]</em><a class="headerlink" href="#makeReports.migrations.0005_remove_report_year.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0005_remove_report_year.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='report', name='year'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0005_remove_report_year.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0006_report_year">
+<span id="makereports-migrations-0006-report-year-module"></span><h2>makeReports.migrations.0006_report_year module<a class="headerlink" href="#module-makeReports.migrations.0006_report_year" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0006_report_year.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0006_report_year.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0006_report_year.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0006_report_year.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0005_remove_report_year')]</em><a class="headerlink" href="#makeReports.migrations.0006_report_year.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0006_report_year.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='report', name='year', field=&lt;django.db.models.fields.PositiveIntegerField&gt;, preserve_default=False&gt;]</em><a class="headerlink" href="#makeReports.migrations.0006_report_year.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0007_auto_20190929_1635">
+<span id="makereports-migrations-0007-auto-20190929-1635-module"></span><h2>makeReports.migrations.0007_auto_20190929_1635 module<a class="headerlink" href="#module-makeReports.migrations.0007_auto_20190929_1635" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0007_auto_20190929_1635.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0007_auto_20190929_1635.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0007_auto_20190929_1635.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0007_auto_20190929_1635.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0006_report_year')]</em><a class="headerlink" href="#makeReports.migrations.0007_auto_20190929_1635.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0007_auto_20190929_1635.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='report', name='beginData', field=&lt;django.db.models.fields.DateField&gt;&gt;, &lt;AlterField  model_name='report', name='endData', field=&lt;django.db.models.fields.DateField&gt;&gt;, &lt;AlterField  model_name='report', name='rubric', field=&lt;django.db.models.fields.related.OneToOneField&gt;&gt;, &lt;AlterField  model_name='report', name='section1Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='report', name='section2Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='report', name='section3Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='report', name='section4Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0007_auto_20190929_1635.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0008_auto_20190929_1933">
+<span id="makereports-migrations-0008-auto-20190929-1933-module"></span><h2>makeReports.migrations.0008_auto_20190929_1933 module<a class="headerlink" href="#module-makeReports.migrations.0008_auto_20190929_1933" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0008_auto_20190929_1933.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0008_auto_20190929_1933.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0008_auto_20190929_1933.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0008_auto_20190929_1933.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0007_auto_20190929_1635')]</em><a class="headerlink" href="#makeReports.migrations.0008_auto_20190929_1933.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0008_auto_20190929_1933.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='slostostakeholder', name='report'&gt;, &lt;AddField  model_name='slostostakeholder', name='report', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0008_auto_20190929_1933.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0009_auto_20190929_2037">
+<span id="makereports-migrations-0009-auto-20190929-2037-module"></span><h2>makeReports.migrations.0009_auto_20190929_2037 module<a class="headerlink" href="#module-makeReports.migrations.0009_auto_20190929_2037" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0009_auto_20190929_2037.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0009_auto_20190929_2037.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0009_auto_20190929_2037.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0009_auto_20190929_2037.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0008_auto_20190929_1933')]</em><a class="headerlink" href="#makeReports.migrations.0009_auto_20190929_2037.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0009_auto_20190929_2037.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='profile', name='aac', field=&lt;django.db.models.fields.BooleanField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0009_auto_20190929_2037.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0010_auto_20190930_1257">
+<span id="makereports-migrations-0010-auto-20190930-1257-module"></span><h2>makeReports.migrations.0010_auto_20190930_1257 module<a class="headerlink" href="#module-makeReports.migrations.0010_auto_20190930_1257" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0010_auto_20190930_1257.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0010_auto_20190930_1257.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0010_auto_20190930_1257.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0010_auto_20190930_1257.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0009_auto_20190929_2037')]</em><a class="headerlink" href="#makeReports.migrations.0010_auto_20190930_1257.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0010_auto_20190930_1257.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='gradedrubric', name='generalComment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='gradedrubric', name='section1Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='gradedrubric', name='section2Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='gradedrubric', name='section3Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='gradedrubric', name='section4Comment', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='rubricitem', name='order', field=&lt;django.db.models.fields.PositiveIntegerField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='rubricitem', name='section', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0010_auto_20190930_1257.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0011_gradedrubric_complete">
+<span id="makereports-migrations-0011-gradedrubric-complete-module"></span><h2>makeReports.migrations.0011_gradedrubric_complete module<a class="headerlink" href="#module-makeReports.migrations.0011_gradedrubric_complete" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0011_gradedrubric_complete.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0011_gradedrubric_complete.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0011_gradedrubric_complete.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0011_gradedrubric_complete.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0010_auto_20190930_1257')]</em><a class="headerlink" href="#makeReports.migrations.0011_gradedrubric_complete.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0011_gradedrubric_complete.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='gradedrubric', name='complete', field=&lt;django.db.models.fields.BooleanField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0011_gradedrubric_complete.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0012_auto_20190930_1924">
+<span id="makereports-migrations-0012-auto-20190930-1924-module"></span><h2>makeReports.migrations.0012_auto_20190930_1924 module<a class="headerlink" href="#module-makeReports.migrations.0012_auto_20190930_1924" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0012_auto_20190930_1924.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0012_auto_20190930_1924.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0012_auto_20190930_1924.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0012_auto_20190930_1924.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0011_gradedrubric_complete')]</em><a class="headerlink" href="#makeReports.migrations.0012_auto_20190930_1924.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0012_auto_20190930_1924.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='rubricitem', name='DMEtext', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='rubricitem', name='EEtext', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='rubricitem', name='MEtext', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0012_auto_20190930_1924.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0013_auto_20190930_2019">
+<span id="makereports-migrations-0013-auto-20190930-2019-module"></span><h2>makeReports.migrations.0013_auto_20190930_2019 module<a class="headerlink" href="#module-makeReports.migrations.0013_auto_20190930_2019" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0013_auto_20190930_2019.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0013_auto_20190930_2019.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0013_auto_20190930_2019.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0013_auto_20190930_2019.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0012_auto_20190930_1924')]</em><a class="headerlink" href="#makeReports.migrations.0013_auto_20190930_2019.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0013_auto_20190930_2019.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='gradedrubricitem', name='item', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;, &lt;AlterField  model_name='rubricitem', name='order', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0013_auto_20190930_2019.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0014_auto_20191001_1654">
+<span id="makereports-migrations-0014-auto-20191001-1654-module"></span><h2>makeReports.migrations.0014_auto_20191001_1654 module<a class="headerlink" href="#module-makeReports.migrations.0014_auto_20191001_1654" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0014_auto_20191001_1654.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0014_auto_20191001_1654.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0014_auto_20191001_1654.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0014_auto_20191001_1654.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0013_auto_20190930_2019')]</em><a class="headerlink" href="#makeReports.migrations.0014_auto_20191001_1654.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0014_auto_20191001_1654.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='assessmentversion', name='changedFromPrior', field=&lt;django.db.models.fields.BooleanField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='assessmentversion', name='firstInstance', field=&lt;django.db.models.fields.BooleanField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='assessmentversion', name='slo', field=&lt;django.db.models.fields.related.ForeignKey&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='assessmentsupplement', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;AlterField  model_name='assessmentversion', name='sampleDescription', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='assessmentversion', name='where', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='dataaddinfosupplement', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;AlterField  model_name='rubric', name='fullFile', field=&lt;django.db.models.fields.files.FileField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0014_auto_20191001_1654.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0015_rubric_name">
+<span id="makereports-migrations-0015-rubric-name-module"></span><h2>makeReports.migrations.0015_rubric_name module<a class="headerlink" href="#module-makeReports.migrations.0015_rubric_name" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0015_rubric_name.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0015_rubric_name.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0015_rubric_name.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0015_rubric_name.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0014_auto_20191001_1654')]</em><a class="headerlink" href="#makeReports.migrations.0015_rubric_name.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0015_rubric_name.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0015_rubric_name.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0016_auto_20191002_1116">
+<span id="makereports-migrations-0016-auto-20191002-1116-module"></span><h2>makeReports.migrations.0016_auto_20191002_1116 module<a class="headerlink" href="#module-makeReports.migrations.0016_auto_20191002_1116" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0016_auto_20191002_1116.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0016_auto_20191002_1116.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0016_auto_20191002_1116.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0016_auto_20191002_1116.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0015_rubric_name')]</em><a class="headerlink" href="#makeReports.migrations.0016_auto_20191002_1116.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0016_auto_20191002_1116.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='degreeprogram', name='cycle', field=&lt;django.db.models.fields.IntegerField&gt;&gt;, &lt;AlterField  model_name='degreeprogram', name='startingYear', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0016_auto_20191002_1116.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0017_auto_20191003_1423">
+<span id="makereports-migrations-0017-auto-20191003-1423-module"></span><h2>makeReports.migrations.0017_auto_20191003_1423 module<a class="headerlink" href="#module-makeReports.migrations.0017_auto_20191003_1423" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0017_auto_20191003_1423.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0017_auto_20191003_1423.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0017_auto_20191003_1423.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0017_auto_20191003_1423.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0016_auto_20191002_1116')]</em><a class="headerlink" href="#makeReports.migrations.0017_auto_20191003_1423.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0017_auto_20191003_1423.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='assessmentsupplement', name='uploaded_at', field=&lt;django.db.models.fields.DateTimeField&gt;, preserve_default=False&gt;, &lt;AddField  model_name='subassessment', name='proficient', field=&lt;django.db.models.fields.PositiveIntegerField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;DeleteModel  name='SubassessmentData'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0017_auto_20191003_1423.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0018_auto_20191003_2039">
+<span id="makereports-migrations-0018-auto-20191003-2039-module"></span><h2>makeReports.migrations.0018_auto_20191003_2039 module<a class="headerlink" href="#module-makeReports.migrations.0018_auto_20191003_2039" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0018_auto_20191003_2039.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0018_auto_20191003_2039.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0018_auto_20191003_2039.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0018_auto_20191003_2039.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0017_auto_20191003_1423')]</em><a class="headerlink" href="#makeReports.migrations.0018_auto_20191003_2039.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0018_auto_20191003_2039.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='subassessment', name='proficient'&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;CreateModel  name='SubassessmentData', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('proficient', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('subassessment', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0018_auto_20191003_2039.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0018_auto_20191004_1658">
+<span id="makereports-migrations-0018-auto-20191004-1658-module"></span><h2>makeReports.migrations.0018_auto_20191004_1658 module<a class="headerlink" href="#module-makeReports.migrations.0018_auto_20191004_1658" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0018_auto_20191004_1658.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0018_auto_20191004_1658.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0018_auto_20191004_1658.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0018_auto_20191004_1658.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0017_auto_20191003_1423')]</em><a class="headerlink" href="#makeReports.migrations.0018_auto_20191004_1658.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0018_auto_20191004_1658.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='assessmentdata', name='dataRange', field=&lt;django.db.models.fields.CharField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0018_auto_20191004_1658.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0019_auto_20191003_2043">
+<span id="makereports-migrations-0019-auto-20191003-2043-module"></span><h2>makeReports.migrations.0019_auto_20191003_2043 module<a class="headerlink" href="#module-makeReports.migrations.0019_auto_20191003_2043" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0019_auto_20191003_2043.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0019_auto_20191003_2043.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0019_auto_20191003_2043.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0019_auto_20191003_2043.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0018_auto_20191003_2039')]</em><a class="headerlink" href="#makeReports.migrations.0019_auto_20191003_2043.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0019_auto_20191003_2043.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='report', name='returned', field=&lt;django.db.models.fields.BooleanField&gt;&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0019_auto_20191003_2043.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0019_auto_20191004_1704">
+<span id="makereports-migrations-0019-auto-20191004-1704-module"></span><h2>makeReports.migrations.0019_auto_20191004_1704 module<a class="headerlink" href="#module-makeReports.migrations.0019_auto_20191004_1704" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0019_auto_20191004_1704.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0019_auto_20191004_1704.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0019_auto_20191004_1704.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0019_auto_20191004_1704.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0018_auto_20191004_1658')]</em><a class="headerlink" href="#makeReports.migrations.0019_auto_20191004_1704.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0019_auto_20191004_1704.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='dataadditionalinformation', name='report', field=&lt;django.db.models.fields.related.ForeignKey&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0019_auto_20191004_1704.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0020_auto_20191003_2044">
+<span id="makereports-migrations-0020-auto-20191003-2044-module"></span><h2>makeReports.migrations.0020_auto_20191003_2044 module<a class="headerlink" href="#module-makeReports.migrations.0020_auto_20191003_2044" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0020_auto_20191003_2044.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0020_auto_20191003_2044.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0020_auto_20191003_2044.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0020_auto_20191003_2044.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0019_auto_20191003_2043')]</em><a class="headerlink" href="#makeReports.migrations.0020_auto_20191003_2044.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0020_auto_20191003_2044.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0020_auto_20191003_2044.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0020_auto_20191004_1744">
+<span id="makereports-migrations-0020-auto-20191004-1744-module"></span><h2>makeReports.migrations.0020_auto_20191004_1744 module<a class="headerlink" href="#module-makeReports.migrations.0020_auto_20191004_1744" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0020_auto_20191004_1744.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0020_auto_20191004_1744.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0020_auto_20191004_1744.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0020_auto_20191004_1744.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0019_auto_20191004_1704')]</em><a class="headerlink" href="#makeReports.migrations.0020_auto_20191004_1744.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0020_auto_20191004_1744.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0020_auto_20191004_1744.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0021_auto_20191003_2047">
+<span id="makereports-migrations-0021-auto-20191003-2047-module"></span><h2>makeReports.migrations.0021_auto_20191003_2047 module<a class="headerlink" href="#module-makeReports.migrations.0021_auto_20191003_2047" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0021_auto_20191003_2047.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0021_auto_20191003_2047.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0021_auto_20191003_2047.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0021_auto_20191003_2047.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0020_auto_20191003_2044')]</em><a class="headerlink" href="#makeReports.migrations.0021_auto_20191003_2047.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0021_auto_20191003_2047.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='college', name='active', field=&lt;django.db.models.fields.BooleanField&gt;&gt;, &lt;AddField  model_name='degreeprogram', name='active', field=&lt;django.db.models.fields.BooleanField&gt;&gt;, &lt;AddField  model_name='department', name='active', field=&lt;django.db.models.fields.BooleanField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0021_auto_20191003_2047.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0022_auto_20191003_2149">
+<span id="makereports-migrations-0022-auto-20191003-2149-module"></span><h2>makeReports.migrations.0022_auto_20191003_2149 module<a class="headerlink" href="#module-makeReports.migrations.0022_auto_20191003_2149" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0022_auto_20191003_2149.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0022_auto_20191003_2149.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0022_auto_20191003_2149.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0022_auto_20191003_2149.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0021_auto_20191003_2047')]</em><a class="headerlink" href="#makeReports.migrations.0022_auto_20191003_2149.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0022_auto_20191003_2149.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='report', name='beginData'&gt;, &lt;RemoveField  model_name='report', name='endData'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0022_auto_20191003_2149.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0023_auto_20191003_2212">
+<span id="makereports-migrations-0023-auto-20191003-2212-module"></span><h2>makeReports.migrations.0023_auto_20191003_2212 module<a class="headerlink" href="#module-makeReports.migrations.0023_auto_20191003_2212" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0023_auto_20191003_2212.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0023_auto_20191003_2212.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0023_auto_20191003_2212.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0023_auto_20191003_2212.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0022_auto_20191003_2149')]</em><a class="headerlink" href="#makeReports.migrations.0023_auto_20191003_2212.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0023_auto_20191003_2212.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='report', name='date_range_of_reported_data', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;CreateModel  name='ReportSupplement', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('supplement', &lt;django.db.models.fields.files.FileField&gt;), ('report', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0023_auto_20191003_2212.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0024_auto_20191006_2350">
+<span id="makereports-migrations-0024-auto-20191006-2350-module"></span><h2>makeReports.migrations.0024_auto_20191006_2350 module<a class="headerlink" href="#module-makeReports.migrations.0024_auto_20191006_2350" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0024_auto_20191006_2350.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0024_auto_20191006_2350.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0024_auto_20191006_2350.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0024_auto_20191006_2350.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0023_auto_20191003_2212')]</em><a class="headerlink" href="#makeReports.migrations.0024_auto_20191006_2350.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0024_auto_20191006_2350.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='assessmentsupplement', name='assessmentVersion'&gt;, &lt;AddField  model_name='assessmentversion', name='supplements', field=&lt;django.db.models.fields.related.ManyToManyField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0024_auto_20191006_2350.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0024_merge_20191005_2123">
+<span id="makereports-migrations-0024-merge-20191005-2123-module"></span><h2>makeReports.migrations.0024_merge_20191005_2123 module<a class="headerlink" href="#module-makeReports.migrations.0024_merge_20191005_2123" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0024_merge_20191005_2123.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0024_merge_20191005_2123.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0024_merge_20191005_2123.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0024_merge_20191005_2123.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0020_auto_20191004_1744'), ('makeReports', '0023_auto_20191003_2212')]</em><a class="headerlink" href="#makeReports.migrations.0024_merge_20191005_2123.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0024_merge_20191005_2123.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = []</em><a class="headerlink" href="#makeReports.migrations.0024_merge_20191005_2123.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0025_auto_20191005_2202">
+<span id="makereports-migrations-0025-auto-20191005-2202-module"></span><h2>makeReports.migrations.0025_auto_20191005_2202 module<a class="headerlink" href="#module-makeReports.migrations.0025_auto_20191005_2202" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0025_auto_20191005_2202.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0025_auto_20191005_2202.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0025_auto_20191005_2202.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0025_auto_20191005_2202.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0024_merge_20191005_2123')]</em><a class="headerlink" href="#makeReports.migrations.0025_auto_20191005_2202.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0025_auto_20191005_2202.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='assessmentdata', name='dataBegin'&gt;, &lt;RemoveField  model_name='assessmentdata', name='dataEnd'&gt;, &lt;AddField  model_name='subassessment', name='proficient', field=&lt;django.db.models.fields.PositiveIntegerField&gt;, preserve_default=False&gt;, &lt;AlterField  model_name='rubric', name='name', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;DeleteModel  name='SubassessmentData'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0025_auto_20191005_2202.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0026_auto_20191006_1857">
+<span id="makereports-migrations-0026-auto-20191006-1857-module"></span><h2>makeReports.migrations.0026_auto_20191006_1857 module<a class="headerlink" href="#module-makeReports.migrations.0026_auto_20191006_1857" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0026_auto_20191006_1857.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0026_auto_20191006_1857.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0026_auto_20191006_1857.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0026_auto_20191006_1857.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0025_auto_20191005_2202')]</em><a class="headerlink" href="#makeReports.migrations.0026_auto_20191006_1857.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0026_auto_20191006_1857.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='dataadditionalinformation', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;, preserve_default=False&gt;, &lt;DeleteModel  name='DataAddInfoSupplement'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0026_auto_20191006_1857.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0027_merge_20191007_0238">
+<span id="makereports-migrations-0027-merge-20191007-0238-module"></span><h2>makeReports.migrations.0027_merge_20191007_0238 module<a class="headerlink" href="#module-makeReports.migrations.0027_merge_20191007_0238" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0027_merge_20191007_0238.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0027_merge_20191007_0238.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0027_merge_20191007_0238.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0027_merge_20191007_0238.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0026_auto_20191006_1857'), ('makeReports', '0024_auto_20191006_2350')]</em><a class="headerlink" href="#makeReports.migrations.0027_merge_20191007_0238.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0027_merge_20191007_0238.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = []</em><a class="headerlink" href="#makeReports.migrations.0027_merge_20191007_0238.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0028_auto_20191007_2142">
+<span id="makereports-migrations-0028-auto-20191007-2142-module"></span><h2>makeReports.migrations.0028_auto_20191007_2142 module<a class="headerlink" href="#module-makeReports.migrations.0028_auto_20191007_2142" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0028_auto_20191007_2142.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0028_auto_20191007_2142.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0028_auto_20191007_2142.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0028_auto_20191007_2142.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0027_merge_20191007_0238')]</em><a class="headerlink" href="#makeReports.migrations.0028_auto_20191007_2142.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0028_auto_20191007_2142.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='assessmentversion', name='threshold', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0028_auto_20191007_2142.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0029_auto_20191009_1048">
+<span id="makereports-migrations-0029-auto-20191009-1048-module"></span><h2>makeReports.migrations.0029_auto_20191009_1048 module<a class="headerlink" href="#module-makeReports.migrations.0029_auto_20191009_1048" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0029_auto_20191009_1048.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0029_auto_20191009_1048.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0029_auto_20191009_1048.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0029_auto_20191009_1048.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0028_auto_20191007_2142')]</em><a class="headerlink" href="#makeReports.migrations.0029_auto_20191009_1048.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0029_auto_20191009_1048.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='report', name='numberOfSLOs', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AddField  model_name='sloinreport', name='number', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AlterField  model_name='gradedrubricitem', name='item', field=&lt;django.db.models.fields.related.ForeignKey&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0029_auto_20191009_1048.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0030_auto_20191009_1143">
+<span id="makereports-migrations-0030-auto-20191009-1143-module"></span><h2>makeReports.migrations.0030_auto_20191009_1143 module<a class="headerlink" href="#module-makeReports.migrations.0030_auto_20191009_1143" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0030_auto_20191009_1143.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0030_auto_20191009_1143.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0030_auto_20191009_1143.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0030_auto_20191009_1143.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0029_auto_20191009_1048')]</em><a class="headerlink" href="#makeReports.migrations.0030_auto_20191009_1143.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0030_auto_20191009_1143.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='assessmentversion', name='sampleDescription', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0030_auto_20191009_1143.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0031_auto_20191009_1351">
+<span id="makereports-migrations-0031-auto-20191009-1351-module"></span><h2>makeReports.migrations.0031_auto_20191009_1351 module<a class="headerlink" href="#module-makeReports.migrations.0031_auto_20191009_1351" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0031_auto_20191009_1351.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0031_auto_20191009_1351.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0031_auto_20191009_1351.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0031_auto_20191009_1351.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0030_auto_20191009_1143')]</em><a class="headerlink" href="#makeReports.migrations.0031_auto_20191009_1351.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0031_auto_20191009_1351.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='assessmentversion', name='number', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AlterField  model_name='dataadditionalinformation', name='comment', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0031_auto_20191009_1351.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0032_report_numberofassess">
+<span id="makereports-migrations-0032-report-numberofassess-module"></span><h2>makeReports.migrations.0032_report_numberofassess module<a class="headerlink" href="#module-makeReports.migrations.0032_report_numberofassess" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0032_report_numberofassess.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0032_report_numberofassess.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0032_report_numberofassess.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0032_report_numberofassess.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0031_auto_20191009_1351')]</em><a class="headerlink" href="#makeReports.migrations.0032_report_numberofassess.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0032_report_numberofassess.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='report', name='numberOfAssess', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0032_report_numberofassess.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0033_auto_20191009_1409">
+<span id="makereports-migrations-0033-auto-20191009-1409-module"></span><h2>makeReports.migrations.0033_auto_20191009_1409 module<a class="headerlink" href="#module-makeReports.migrations.0033_auto_20191009_1409" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0033_auto_20191009_1409.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0033_auto_20191009_1409.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0033_auto_20191009_1409.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0033_auto_20191009_1409.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0032_report_numberofassess')]</em><a class="headerlink" href="#makeReports.migrations.0033_auto_20191009_1409.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0033_auto_20191009_1409.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='report', name='numberOfAssess'&gt;, &lt;AddField  model_name='sloinreport', name='numberOfAssess', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0033_auto_20191009_1409.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0034_auto_20191010_1632">
+<span id="makereports-migrations-0034-auto-20191010-1632-module"></span><h2>makeReports.migrations.0034_auto_20191010_1632 module<a class="headerlink" href="#module-makeReports.migrations.0034_auto_20191010_1632" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0034_auto_20191010_1632.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0034_auto_20191010_1632.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0034_auto_20191010_1632.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0034_auto_20191010_1632.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0033_auto_20191009_1409')]</em><a class="headerlink" href="#makeReports.migrations.0034_auto_20191010_1632.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0034_auto_20191010_1632.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='decisionsactions', name='text', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AddField  model_name='rubricitem', name='abbreviation', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='decisionsactions', name='actionTimeline', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='decisionsactions', name='dataUsed', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='decisionsactions', name='decisionMakers', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='decisionsactions', name='decisionProcess', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='decisionsactions', name='decisionTimeline', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0034_auto_20191010_1632.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0035_auto_20191013_0051">
+<span id="makereports-migrations-0035-auto-20191013-0051-module"></span><h2>makeReports.migrations.0035_auto_20191013_0051 module<a class="headerlink" href="#module-makeReports.migrations.0035_auto_20191013_0051" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0035_auto_20191013_0051.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0035_auto_20191013_0051.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0035_auto_20191013_0051.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0035_auto_20191013_0051.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0034_auto_20191010_1632')]</em><a class="headerlink" href="#makeReports.migrations.0035_auto_20191013_0051.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0035_auto_20191013_0051.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='assessmentsupplement', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;AlterField  model_name='dataadditionalinformation', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;AlterField  model_name='reportsupplement', name='supplement', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;AlterField  model_name='rubric', name='fullFile', field=&lt;django.db.models.fields.files.FileField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0035_auto_20191013_0051.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0036_announcement_message">
+<span id="makereports-migrations-0036-announcement-message-module"></span><h2>makeReports.migrations.0036_announcement_message module<a class="headerlink" href="#module-makeReports.migrations.0036_announcement_message" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0036_announcement_message.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0036_announcement_message.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0036_announcement_message.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0036_announcement_message.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('auth', '__first__'), ('makeReports', '0035_auto_20191013_0051')]</em><a class="headerlink" href="#makeReports.migrations.0036_announcement_message.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0036_announcement_message.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;CreateModel  name='Announcement', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;), ('expiration', &lt;django.db.models.fields.DateTimeField&gt;), ('creation', &lt;django.db.models.fields.DateTimeField&gt;)]&gt;, &lt;CreateModel  name='Message', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('text', &lt;django.db.models.fields.CharField&gt;), ('read', &lt;django.db.models.fields.BooleanField&gt;), ('date', &lt;django.db.models.fields.DateTimeField&gt;), ('receiver', &lt;django.db.models.fields.related.ForeignKey&gt;), ('sender', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0036_announcement_message.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0037_delete_message">
+<span id="makereports-migrations-0037-delete-message-module"></span><h2>makeReports.migrations.0037_delete_message module<a class="headerlink" href="#module-makeReports.migrations.0037_delete_message" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0037_delete_message.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0037_delete_message.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0037_delete_message.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0037_delete_message.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0036_announcement_message')]</em><a class="headerlink" href="#makeReports.migrations.0037_delete_message.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0037_delete_message.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;DeleteModel  name='Message'&gt;]</em><a class="headerlink" href="#makeReports.migrations.0037_delete_message.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0038_gradgoal_active">
+<span id="makereports-migrations-0038-gradgoal-active-module"></span><h2>makeReports.migrations.0038_gradgoal_active module<a class="headerlink" href="#module-makeReports.migrations.0038_gradgoal_active" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0038_gradgoal_active.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0038_gradgoal_active.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0038_gradgoal_active.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0038_gradgoal_active.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0037_delete_message')]</em><a class="headerlink" href="#makeReports.migrations.0038_gradgoal_active.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0038_gradgoal_active.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='gradgoal', name='active', field=&lt;django.db.models.fields.BooleanField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0038_gradgoal_active.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0039_auto_20191013_1130">
+<span id="makereports-migrations-0039-auto-20191013-1130-module"></span><h2>makeReports.migrations.0039_auto_20191013_1130 module<a class="headerlink" href="#module-makeReports.migrations.0039_auto_20191013_1130" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0039_auto_20191013_1130.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0039_auto_20191013_1130.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0039_auto_20191013_1130.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0039_auto_20191013_1130.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0038_gradgoal_active')]</em><a class="headerlink" href="#makeReports.migrations.0039_auto_20191013_1130.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0039_auto_20191013_1130.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterModelManagers  name='gradgoal', managers=[('active_objects', &lt;django.db.models.manager.Manager object&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0039_auto_20191013_1130.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0040_auto_20191013_1200">
+<span id="makereports-migrations-0040-auto-20191013-1200-module"></span><h2>makeReports.migrations.0040_auto_20191013_1200 module<a class="headerlink" href="#module-makeReports.migrations.0040_auto_20191013_1200" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0040_auto_20191013_1200.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0040_auto_20191013_1200.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0040_auto_20191013_1200.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0040_auto_20191013_1200.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0039_auto_20191013_1130')]</em><a class="headerlink" href="#makeReports.migrations.0040_auto_20191013_1200.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0040_auto_20191013_1200.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='announcement', name='expiration', field=&lt;django.db.models.fields.DateField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0040_auto_20191013_1200.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0041_auto_20191013_1212">
+<span id="makereports-migrations-0041-auto-20191013-1212-module"></span><h2>makeReports.migrations.0041_auto_20191013_1212 module<a class="headerlink" href="#module-makeReports.migrations.0041_auto_20191013_1212" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0041_auto_20191013_1212.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0041_auto_20191013_1212.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0041_auto_20191013_1212.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0041_auto_20191013_1212.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0040_auto_20191013_1200')]</em><a class="headerlink" href="#makeReports.migrations.0041_auto_20191013_1212.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0041_auto_20191013_1212.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterModelManagers  name='gradgoal', managers=[]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0041_auto_20191013_1212.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0042_auto_20191016_2041">
+<span id="makereports-migrations-0042-auto-20191016-2041-module"></span><h2>makeReports.migrations.0042_auto_20191016_2041 module<a class="headerlink" href="#module-makeReports.migrations.0042_auto_20191016_2041" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0042_auto_20191016_2041.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0042_auto_20191016_2041.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0042_auto_20191016_2041.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0042_auto_20191016_2041.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0041_auto_20191013_1212')]</em><a class="headerlink" href="#makeReports.migrations.0042_auto_20191016_2041.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0042_auto_20191016_2041.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;RemoveField  model_name='assessmentversion', name='firstInstance'&gt;, &lt;RemoveField  model_name='sloinreport', name='firstInstance'&gt;, &lt;AddField  model_name='assessment', name='numberOfUses', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AddField  model_name='slo', name='numberOfUses', field=&lt;django.db.models.fields.PositiveIntegerField&gt;&gt;, &lt;AlterField  model_name='gradgoal', name='text', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0042_auto_20191016_2041.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0043_auto_20191017_1926">
+<span id="makereports-migrations-0043-auto-20191017-1926-module"></span><h2>makeReports.migrations.0043_auto_20191017_1926 module<a class="headerlink" href="#module-makeReports.migrations.0043_auto_20191017_1926" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0043_auto_20191017_1926.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0043_auto_20191017_1926.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0043_auto_20191017_1926.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0043_auto_20191017_1926.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0042_auto_20191016_2041')]</em><a class="headerlink" href="#makeReports.migrations.0043_auto_20191017_1926.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0043_auto_20191017_1926.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AddField  model_name='assessmentversion', name='frequencyChoice', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='slo', name='blooms', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0043_auto_20191017_1926.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0044_auto_20191018_1808">
+<span id="makereports-migrations-0044-auto-20191018-1808-module"></span><h2>makeReports.migrations.0044_auto_20191018_1808 module<a class="headerlink" href="#module-makeReports.migrations.0044_auto_20191018_1808" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0044_auto_20191018_1808.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0044_auto_20191018_1808.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0044_auto_20191018_1808.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0044_auto_20191018_1808.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0043_auto_20191017_1926')]</em><a class="headerlink" href="#makeReports.migrations.0044_auto_20191018_1808.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0044_auto_20191018_1808.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='assessmentversion', name='frequencyChoice', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='rubric', name='fullFile', field=&lt;django.db.models.fields.files.FileField&gt;&gt;, &lt;CreateModel  name='AssessmentAggregate', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('aggregate_proficiency', &lt;django.db.models.fields.PositiveIntegerField&gt;), ('met', &lt;django.db.models.fields.BooleanField&gt;), ('assessmentVersion', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#makeReports.migrations.0044_auto_20191018_1808.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations.0045_auto_20191024_1335">
+<span id="makereports-migrations-0045-auto-20191024-1335-module"></span><h2>makeReports.migrations.0045_auto_20191024_1335 module<a class="headerlink" href="#module-makeReports.migrations.0045_auto_20191024_1335" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="makeReports.migrations.0045_auto_20191024_1335.Migration">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.migrations.0045_auto_20191024_1335.</code><code class="sig-name descname">Migration</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.migrations.0045_auto_20191024_1335.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="makeReports.migrations.0045_auto_20191024_1335.Migration.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property"> = [('makeReports', '0044_auto_20191018_1808')]</em><a class="headerlink" href="#makeReports.migrations.0045_auto_20191024_1335.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.migrations.0045_auto_20191024_1335.Migration.operations">
+<code class="sig-name descname">operations</code><em class="property"> = [&lt;AlterField  model_name='assessmentversion', name='sampleDescription', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='assessmentversion', name='where', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='gradgoal', name='text', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='sloinreport', name='goalText', field=&lt;django.db.models.fields.CharField&gt;&gt;, &lt;AlterField  model_name='slostatus', name='status', field=&lt;django.db.models.fields.CharField&gt;&gt;]</em><a class="headerlink" href="#makeReports.migrations.0045_auto_20191024_1335.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-makeReports.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-makeReports.migrations" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">AAC Application Form</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emma Dargy, Sarah McCarty, and David Ream.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/makeReports.migrations.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

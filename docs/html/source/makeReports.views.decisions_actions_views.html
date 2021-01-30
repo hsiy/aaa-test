@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.decisions_actions_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.decisions_actions_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.decisions_actions_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.decisions_actions_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.decisions_actions_views">
+<span id="makereports-views-decisions-actions-views-module"></span><h1>makeReports.views.decisions_actions_views module<a class="headerlink" href="#module-makeReports.views.decisions_actions_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains all views related to inputting decisions/actions into the form</p>
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">AddDecisionAction</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to add new decision and action</p>
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches view and attaches <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> to instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.decisions_actions_forms.html#makeReports.forms.decisions_actions_forms.DecActForm1Box" title="makeReports.forms.decisions_actions_forms.DecActForm1Box"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.decisions_actions_forms.DecActForm1Box</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the SLO and Report appropriately, then creates the object from the form</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context data for template, including the SLO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets url of success page (decision actions summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of decisions actions summary (<a class="reference internal" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary" title="makeReports.views.decisions_actions_views.DecisionsActionsSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecisionsActionsSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionAction.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DecisionsActions/changeDecisionAction.html'</em><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionAction.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionActionSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">AddDecisionActionSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionActionSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.decisions_actions_views.AddDecisionAction" title="makeReports.views.decisions_actions_views.AddDecisionAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.decisions_actions_views.AddDecisionAction</span></code></a></p>
+<p>Add decision/action from SLO page</p>
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddDecisionActionSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddDecisionActionSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="makeReports.views.slo_views.html#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.AddEditRedirect">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">AddEditRedirect</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddEditRedirect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.RedirectView</span></code></p>
+<p>Correctly redirects to the right new or edit view for decision/actions
+based upon whether a decision action already exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>slopk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.AddEditRedirect.get_redirect_url">
+<code class="sig-name descname">get_redirect_url</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.AddEditRedirect.get_redirect_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the redirect url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of either add or edit decision action</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.DecisionsActionsSummary">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">DecisionsActionsSummary</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to summary decisions and actions during form entry</p>
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.DecisionsActionsSummary.context_object_name">
+<code class="sig-name descname">context_object_name</code><em class="property"> = 'decisions_actions_list'</em><a class="headerlink" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.DecisionsActionsSummary.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets context needed for template, including the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.DecisionsActionsSummary.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.DecisionsActions" title="makeReports.models.decisionsActions_models.DecisionsActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.decisionsActions_models.DecisionsActions</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.DecisionsActionsSummary.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DecisionsActions/decisionsActionsSummary.html'</em><a class="headerlink" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">EditDecisionAction</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>Edit decision/action</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pk</strong> (<em>str</em>) – primary key of <code class="xref py py-class docutils literal notranslate"><span class="pre">DecisionsActions</span></code> to update</p></li>
+<li><p><strong>slopk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches the view and attaches the <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code></a> to the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>pk</strong> (<em>str</em>) – primary key of <code class="xref py py-class docutils literal notranslate"><span class="pre">DecisionsActions</span></code> to update</p></li>
+<li><p><strong>slopk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response of page to request</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.decisions_actions_forms.html#makeReports.forms.decisions_actions_forms.DecActForm1Box" title="makeReports.forms.decisions_actions_forms.DecActForm1Box"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.decisions_actions_forms.DecActForm1Box</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the corresponding <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL of success page (decisions/actions summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of decisions and actions summary page (<a class="reference internal" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary" title="makeReports.views.decisions_actions_views.DecisionsActionsSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecisionsActionsSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.DecisionsActions" title="makeReports.models.decisionsActions_models.DecisionsActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.decisionsActions_models.DecisionsActions</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionAction.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DecisionsActions/changeDecisionAction.html'</em><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionAction.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionActionSLO">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">EditDecisionActionSLO</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionActionSLO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.decisions_actions_views.EditDecisionAction" title="makeReports.views.decisions_actions_views.EditDecisionAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.decisions_actions_views.EditDecisionAction</span></code></a></p>
+<p>Edit the decision/action</p>
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.EditDecisionActionSLO.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.EditDecisionActionSLO.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="makeReports.views.slo_views.html#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.decisions_actions_views.</code><code class="sig-name descname">Section4Comment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to add a comment for section four</p>
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.slo_forms.Single2000Textbox</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets comment based upon form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.slo_forms.html#makeReports.forms.slo_forms.Single2000Textbox" title="makeReports.forms.slo_forms.Single2000Textbox"><em>Single2000Textbox</em></a>) – filled out form to be processed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment.get_initial">
+<code class="sig-name descname">get_initial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment.get_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets initial form values based upon current value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>initial form values</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (decisions/actions summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of decisions/actions summary page (<a class="reference internal" href="#makeReports.views.decisions_actions_views.DecisionsActionsSummary" title="makeReports.views.decisions_actions_views.DecisionsActionsSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecisionsActionsSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.decisions_actions_views.Section4Comment.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/DecisionsActions/comment.html'</em><a class="headerlink" href="#makeReports.views.decisions_actions_views.Section4Comment.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

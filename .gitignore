@@ -1,0 +1,18 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.cpython-36.pyc
+*.cpython-37.pyc
+env/
+.vscode/
+.vscode/*
+*/__pycache__/*
+*.pyc
+*.pyo
+AACForm/staticfiles/
+AACForm/staticfiles/*
+AACForm/makeReports/__pycache__/
+.env
+oldenv
+gd_cred.json
+AACForm/gd_cred.json
+gd_cred2.json
+AACForm/gd_cred2.json

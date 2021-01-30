@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block styles %}
+<style>
+.please-scroll{
+  height: calc(100vh - 225px);
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.italics{
+    font-style: italic;
+}
+.italics p{
+    margin:2pt;
+}
+.split {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gutter {
+    background-color: rgb(165, 165, 165);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+</style>
+<link href="{% static 'css/shelves.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{% include 'makeReports/Grading/grading_navbar.html' %}
+<h5>{{rpt.year|add:"-1"}}-{{rpt.year}} Report for {{rpt.degreeProgram.name}} ({{rpt.degreeProgram.level}})</h5>
+<div class="container-fluid"></div>
+    <div class="row">
+        <div class="col-12">
+            {% if reqTodo > 0 %}
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% elif sugTodo > 0 %}
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% endif %}
+            <a class="btn btn-primary"  role="button" href="{% url 'makeReports:graded-rub-pdf' report=rpt.pk %}" style="display:inline;">PDF of Feedback </a>
+            {% include 'makeReports/todoSansButtonReview.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div id="one" class="col please-scroll">
+            <!--showreport column-->
+            {% include 'makeReports/DisplayReport/reportIncluding.html' %}
+        </div>
+        <div id="two" class="col please-scroll">
+            <!--grading column-->
+            {% if rpt.rubric.rubricVersion.fullFile %}
+              Full Rubric: <a href="{{rpt.rubric.rubricVersion.fullFile.url}}">Download PDF</a>
+            {% endif %}
+            <h5>Rubric</h5>
+              <form method="post" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                {% endbuttons %}
+              </form>
+                <table>
+                  <tr><td><h5>Section I. SLOs</h5></td></tr>
+                  {% for ri, grade in rIs1 %}
+                    <tr>
+                      <td>
+                        {{ri.text|safe}} <p><b>{{grade}}</b></p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button class="btn btn-primary"  role="button" type="button" data-toggle="collapse" data-target="#col{{ri.pk}}" aria-expanded="false" aria-controls="col{{ri.pk}}">
+                                        More Details
+                        </button>
+                        <div class="collapse" id="col{{ri.pk}}">
+                                <div class="card card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Did Not Meet Expectations: </b>{{ri.DMEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations with Concerns: </b>{{ri.MEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations Established: </b>{{ri.EEtext|safe}}</li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  <tr><td><b>Section I Comments: </b>{{gRub.section1Comment|safe}}</td></tr>
+                  <tr><td><h5>Section II. Assessments</h5></td></tr>
+                  {% for ri, grade in rIs2 %}
+                    <tr>
+                      <td>
+                        {{ri.text|safe}} <p><b>{{grade}}</b></p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button class="btn btn-primary"  role="button" type="button" data-toggle="collapse" data-target="#col{{ri.pk}}" aria-expanded="false" aria-controls="col{{ri.pk}}">
+                                        More Details
+                        </button>
+                        <div class="collapse" id="col{{ri.pk}}">
+                                <div class="card card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Did Not Meet Expectations: </b>{{ri.DMEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations with Concerns: </b>{{ri.MEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations Established: </b>{{ri.EEtext|safe}}</li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  <tr><td><b>Section II Comments: </b>{{gRub.section2Comment|safe}}</td></tr>
+                  <tr><td><h5>Section III. Data</h5></td></tr>
+                  {% for ri, grade in rIs3 %}
+                    <tr>
+                      <td>
+                        {{ri.text|safe}} <p><b>{{grade}}</b></p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button class="btn btn-primary"  role="button" type="button" data-toggle="collapse" data-target="#col{{ri.pk}}" aria-expanded="false" aria-controls="col{{ri.pk}}">
+                                        More Details
+                        </button>
+                        <div class="collapse" id="col{{ri.pk}}">
+                                <div class="card card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Did Not Meet Expectations: </b>{{ri.DMEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations with Concerns: </b>{{ri.MEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations Established: </b>{{ri.EEtext|safe}}</li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  <tr><td><b>Section III Comments: </b>{{gRub.section3Comment|safe}}</td></tr>
+                  <tr><td><h5>Section IV. Decisions & Actions</h5></td></tr>
+                  {% for ri, grade in rIs4 %}
+                    <tr>
+                      <td>
+                        {{ri.text|safe}} <p><b>{{grade}}</b></p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button class="btn btn-primary"  role="button" type="button" data-toggle="collapse" data-target="#col{{ri.pk}}" aria-expanded="false" aria-controls="col{{ri.pk}}">
+                                        More Details
+                        </button>
+                        <div class="collapse" id="col{{ri.pk}}">
+                                <div class="card card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Did Not Meet Expectations: </b>{{ri.DMEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations with Concerns: </b>{{ri.MEtext|safe}}</li>
+                                            <li class="list-group-item"><b>Met Expectations Established: </b>{{ri.EEtext|safe}}</li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  <tr><td><b>Section IV Comments: </b>{{gRub.section4Comment|safe}}</td></tr>
+                  <tr><td><b>Overall: </b>{{gRub.generalComment|safe}}</td></tr>
+                </table>
+                <form method="post" class="form" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {% bootstrap_form form %}
+                  {% buttons %}
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  {% endbuttons %}
+                </form>
+            
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ STATIC_URL }} /static/js/splitGradingView.js"></script> 
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script>
+{% endblock %}

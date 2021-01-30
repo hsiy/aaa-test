@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{% include 'makeReports/Grading/grading_navbar.html' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {% if reqTodo > 0 %}
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% elif sugTodo > 0 %}
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseTodo" aria-expanded="false" aria-controls="collapseTodo">
+                    Needs Attention
+            </button>
+            {% endif %}
+            {% include 'makeReports/todoSansButton.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <!--showreport column-->
+            <h4>Report Information</h4>
+            
+                <div class="row justify-content-center">
+                    <div class="col" style="text-align: center;">
+                        {% if rpt.accredited %}
+                        <h4>ACCREDITED PROGRAM TEMPLATE</h4>
+                        {% else %}
+                        <h4>NON-ACCREDITED PROGRAM TEMPLATE</h4>
+                        {% endif %}
+			<h4>{{rpt.degreeProgram.get_level_display}} Assessment Report for {{rpt.year|add:"-1"}}-{{rpt.year}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <a  role="button" class="btn btn-primary" href="{% url 'makeReports:report-pdf' report=rpt.pk %}">Report PDF (with supplements)</a>
+                                <a  role="button" class="btn btn-primary" href="{% url 'makeReports:report-pdf-no-sups' report=rpt.pk %}">Report PDF (without supplements)</a>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col">
+                        <b>College: {{rpt.degreeProgram.department.college.name}}</b>
+                    </div>
+                    <div class="col">
+                        <b>Department: {{rpt.degreeProgram.department.name}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <b>Program: {{rpt.degreeProgram.name}}</b>
+                    </div>
+                    <div class="col">
+                        <b>Degree Level: {{rpt.degreeProgram.get_level_display}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <b>Academic Year of Report: {{rpt.year|add:"-1"}}-{{rpt.year}}</b>
+                    </div>
+                    <div class="col">
+                        <b>Date Range of Reported Data: {{rpt.date_range_of_reported_data}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <b>Person Preparing the Report: {{rpt.author}}</b>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                        <div class="col">
+                            <h4>Report Supplements</h4>
+                            <table>
+                                {% for sup in reportSups %}
+                                <tr><td>
+                                    <a href="{{sup.supplement.url}}">{{sup}}</a>
+                                </td></tr>
+                                {% empty %}
+                                No report supplements.
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+        </div>
+        
+</div>
+<div class="row mt-5">
+    <a role="button" class="btn btn-primary" href="{% url 'makeReports:grade-sec1' rpt.pk %}">Next</a>
+</div>
+</div>
+{% endblock %}

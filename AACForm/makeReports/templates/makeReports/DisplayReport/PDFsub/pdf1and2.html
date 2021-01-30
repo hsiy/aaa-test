@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                {% load static %}
+                <link href="{% static 'css/report.css' %}" rel="stylesheet">        
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+                {% block scripts %}{% endblock %}
+                <title>Academic Assessment Reports</title>
+                {# Load the tag library #}
+                {# Load CSS and JavaScript #}
+            </head>
+    <body>
+    <section>
+            {% include 'makeReports/DisplayReport/PDFsub/headings.html' %}
+    </section>
+            <section>
+                        {% include 'makeReports/DisplayReport/PDFsub/slos.html' %}
+            </section>
+            <section>
+                        {% include 'makeReports/DisplayReport/PDFsub/assessment.html' %}
+            </section>
+</body>
+</html>

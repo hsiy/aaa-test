@@ -1,0 +1,8 @@
+<div {% if widget.attrs|dict_key:'class' %} class = "{{widget.attrs|dict_key:'class' }}" {% endif %} style="border:0px;">
+    <select multiple name="{{widget.name}}" {% include "widgets/attrs.html" %} id="choices">{% for group_name, group_choices, group_index in widget.optgroups %}{% if group_name %}
+      <optgroup label="{{ group_name }}">{% endif %}{% for option in group_choices %}
+      {% include option.template_name with widget=option %}{% endfor %}{% if group_name %}
+      </optgroup>{% endif %}{% endfor %}
+    </select>
+  </div>
+  

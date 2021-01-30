@@ -1,0 +1,10 @@
+{% extends 'makeReports/Grading/grading_section.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block in_styles %}
+<!--this page use shelves css to make the table, because Bootstrap grid system was insufficient-->
+<link href="{% static 'css/shelves.css' %}" rel="stylesheet">
+{% endblock %}
+{% block report_content %}
+  {% include 'makeReports/DisplayReport/dataCollection.html' %}
+{% endblock %}

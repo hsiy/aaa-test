@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.models.basic_models module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.models.basic_models module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.models.basic_models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.models.basic_models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.models.basic_models">
+<span id="makereports-models-basic-models-module"></span><h1>makeReports.models.basic_models module<a class="headerlink" href="#module-makeReports.models.basic_models" title="Permalink to this headline">¶</a></h1>
+<p>Includes most common models used extensively by all users across the site</p>
+<dl class="class">
+<dt id="makeReports.models.basic_models.NonArchivedManager">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.basic_models.</code><code class="sig-name descname">NonArchivedManager</code><a class="headerlink" href="#makeReports.models.basic_models.NonArchivedManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.manager.Manager</span></code></p>
+<p>Includes only active objects</p>
+<dl class="method">
+<dt id="makeReports.models.basic_models.NonArchivedManager.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.basic_models.NonArchivedManager.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves only active objects within type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>active objects only</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.models.basic_models.Profile">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.basic_models.</code><code class="sig-name descname">Profile</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.basic_models.Profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Model to hold extra information in addition to Django’s User class, including whether they are
+AAC members and the department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>AutoField</em>) – Id</p></li>
+<li><p><strong>aac</strong> (<em>BooleanField</em>) – Aac</p></li>
+<li><p><strong>department</strong> (ForeignKey to <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">Department</span></code></a>) – Department</p></li>
+<li><p><strong>user</strong> (OneToOneField to <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code>) – User</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="makeReports.models.basic_models.Profile.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="makeReports.models.basic_models.Profile.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.aac">
+<code class="sig-name descname">aac</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.aac" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> aac</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.department">
+<code class="sig-name descname">department</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.department" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> department, accesses the <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">Department</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.department_id">
+<code class="sig-name descname">department_id</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.department_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> department</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#makeReports.models.basic_models.Profile.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.user">
+<code class="sig-name descname">user</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.user" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> user, accesses the <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Profile.user_id">
+<code class="sig-name descname">user_id</code><a class="headerlink" href="#makeReports.models.basic_models.Profile.user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> user</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.models.basic_models.Report">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.basic_models.</code><code class="sig-name descname">Report</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.basic_models.Report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Report model which collects attributes specific to a report and completion status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>AutoField</em>) – Id</p></li>
+<li><p><strong>year</strong> (<em>PositiveIntegerField</em>) – Year</p></li>
+<li><p><strong>author</strong> (<em>CharField</em>) – Author</p></li>
+<li><p><strong>degreeProgram</strong> (ForeignKey to <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.DegreeProgram" title="makeReports.models.aac_models.DegreeProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">DegreeProgram</span></code></a>) – Degree program</p></li>
+<li><p><strong>date_range_of_reported_data</strong> (<em>CharField</em>) – Date range of reported data</p></li>
+<li><p><strong>rubric</strong> (OneToOneField to <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubric" title="makeReports.models.grading_models.GradedRubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradedRubric</span></code></a>) – Rubric</p></li>
+<li><p><strong>section1Comment</strong> (<em>CharField</em>) – Section i comment</p></li>
+<li><p><strong>section2Comment</strong> (<em>CharField</em>) – Section ii comment</p></li>
+<li><p><strong>section3Comment</strong> (<em>CharField</em>) – Section iii comment</p></li>
+<li><p><strong>section4Comment</strong> (<em>CharField</em>) – Section iv comment</p></li>
+<li><p><strong>submitted</strong> (<em>BooleanField</em>) – Submitted</p></li>
+<li><p><strong>returned</strong> (<em>BooleanField</em>) – Returned</p></li>
+<li><p><strong>numberOfSLOs</strong> (<em>PositiveIntegerField</em>) – Number of slos</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="makeReports.models.basic_models.Report.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#makeReports.models.basic_models.Report.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="makeReports.models.basic_models.Report.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#makeReports.models.basic_models.Report.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.assessmentversion_set">
+<code class="sig-name descname">assessmentversion_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.assessmentversion_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.author">
+<code class="sig-name descname">author</code><a class="headerlink" href="#makeReports.models.basic_models.Report.author" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> author</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.dataadditionalinformation_set">
+<code class="sig-name descname">dataadditionalinformation_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.dataadditionalinformation_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.DataAdditionalInformation" title="makeReports.models.data_models.DataAdditionalInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataAdditionalInformation</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.date_range_of_reported_data">
+<code class="sig-name descname">date_range_of_reported_data</code><a class="headerlink" href="#makeReports.models.basic_models.Report.date_range_of_reported_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> date range of reported data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.degreeProgram">
+<code class="sig-name descname">degreeProgram</code><a class="headerlink" href="#makeReports.models.basic_models.Report.degreeProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> degree program, accesses the <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.DegreeProgram" title="makeReports.models.aac_models.DegreeProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">DegreeProgram</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.degreeProgram_id">
+<code class="sig-name descname">degreeProgram_id</code><a class="headerlink" href="#makeReports.models.basic_models.Report.degreeProgram_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> degree program</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#makeReports.models.basic_models.Report.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.numberOfSLOs">
+<code class="sig-name descname">numberOfSLOs</code><a class="headerlink" href="#makeReports.models.basic_models.Report.numberOfSLOs" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> number of SLOs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#makeReports.models.basic_models.Report.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.reportsupplement_set">
+<code class="sig-name descname">reportsupplement_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.reportsupplement_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.ReportSupplement" title="makeReports.models.decisionsActions_models.ReportSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReportSupplement</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.resultcommunicate_set">
+<code class="sig-name descname">resultcommunicate_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.resultcommunicate_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.ResultCommunicate" title="makeReports.models.data_models.ResultCommunicate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultCommunicate</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.returned">
+<code class="sig-name descname">returned</code><a class="headerlink" href="#makeReports.models.basic_models.Report.returned" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> returned</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.rubric">
+<code class="sig-name descname">rubric</code><a class="headerlink" href="#makeReports.models.basic_models.Report.rubric" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> rubric, accesses the <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.GradedRubric" title="makeReports.models.grading_models.GradedRubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">GradedRubric</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.rubric_id">
+<code class="sig-name descname">rubric_id</code><a class="headerlink" href="#makeReports.models.basic_models.Report.rubric_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> rubric</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.section1Comment">
+<code class="sig-name descname">section1Comment</code><a class="headerlink" href="#makeReports.models.basic_models.Report.section1Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> section I comment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.section2Comment">
+<code class="sig-name descname">section2Comment</code><a class="headerlink" href="#makeReports.models.basic_models.Report.section2Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> section II comment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.section3Comment">
+<code class="sig-name descname">section3Comment</code><a class="headerlink" href="#makeReports.models.basic_models.Report.section3Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> section III comment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.section4Comment">
+<code class="sig-name descname">section4Comment</code><a class="headerlink" href="#makeReports.models.basic_models.Report.section4Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> section IV comment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.sloinreport_set">
+<code class="sig-name descname">sloinreport_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.sloinreport_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.slostostakeholder_set">
+<code class="sig-name descname">slostostakeholder_set</code><a class="headerlink" href="#makeReports.models.basic_models.Report.slostostakeholder_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the M2M <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOsToStakeholder" title="makeReports.models.slo_models.SLOsToStakeholder"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOsToStakeholder</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.submitted">
+<code class="sig-name descname">submitted</code><a class="headerlink" href="#makeReports.models.basic_models.Report.submitted" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> submitted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.basic_models.Report.year">
+<code class="sig-name descname">year</code><a class="headerlink" href="#makeReports.models.basic_models.Report.year" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> year</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

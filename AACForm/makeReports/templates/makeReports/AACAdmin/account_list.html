@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Account Management</h3>
+<a  role="button" class="btn btn-primary" href="{% url 'makeReports:make-account'  %}">Create New Account</a>
+<form action="{% url 'makeReports:search-account-list' %}" class="col-6" type="get">
+        <h3>Search:</h3>
+        <div class="form-group"><label for="f">First name:</label><input id="f" type="text" class="form-control" name="f"></div>
+        <div class="form-group"><label for="l">Last name:</label><input id="l" type="text" class="form-control" name="l"></div>
+        <div class="form-group"><label for="e">Email:</label><input id="e" type="text" class="form-control" name="e"></div>
+        <button id="sub" type="submit" class="btn btn-primary" style="margin-top:1em">Search</button><br>
+    </form>
+<h4>Account List</h4>
+<ul class="list-group col-10">
+{% for prof in object_list %}
+    <li class = "list-group-item">{{prof.user.first_name}} {{prof.user.last_name}}, {{prof.user.email}}
+        <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:aac-modify-account' pk=prof.pk %}">Modify</a>
+        <a  role="button" class="btn btn-danger float-right" href="{% url 'makeReports:inactivate-account' pk=prof.user.pk %}">Deactivate</a>
+      </li>
+{% empty %}
+No reports matching query.
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Archive Degree Program</h3>
+Uncheck the box to archive the degree program. The degree program will no longer appear most places. 
+If necessary, the degree program may be restored.
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Archive Degree Program</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Edit SLO</h3>
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% load static %}
+    {% bootstrap_label form.text.label_tag %}
+    {% bootstrap_field form.text show_label=False %}
+    <div class="alert alert-secondary col-6" role="alert" id="complex_sugg" style="display: none">
+        This SLO may be too complex. Consider breaking it down into multiple SLOs.
+    </div>
+    {% bootstrap_label form.blooms.label_tag %}
+    <div class="alert alert-secondary col-6" role="alert" id="blooms_sugg" style="display: none">
+        
+    </div>
+    <div class="alert alert-secondary col-6" role="alert" id="keywords_sugg" style="display: none">
+        
+    </div>
+    {% bootstrap_field form.blooms show_label=False %}
+    {% if form.gradGoals %}
+    {% bootstrap_label form.gradGoals.label_tag %}
+    {% bootstrap_field form.gradGoals show_label=False %}
+    {% endif %}
+    <p id='errors'></p>
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add SLO</button>
+    {% endbuttons %}
+</form>
+{% endblock %}
+{% block in_endscripts %}
+<script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.4.1.min.js">
+</script> 
+<script>
+    /**
+     * Handles calling for SLO suggestions API while on page
+     * @class editNewSLO
+     */
+    var suggest = "none";
+    $('#id_text').blur(function() {
+        // Method to get cookie
+        /**
+         * Gets the CSRF cookie needed for post requests
+         * @method getCookie
+         * @param {String} name - the name of the cookie
+         * @return {String} cookie value
+         */
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        // Method to check if HTTP method needs cookie
+        /**
+         * Method to check if HTTP method needs cookie
+         * @method csrfSafeMethod
+         * @return {Boolean} whether cookie is required
+         */
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        // Ensure cookie is sent in ajax request
+        
+        $.ajaxSetup({
+            /**
+             * Ensures cookie is sent in the ajax request
+             * @method beforeSend
+             */
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+        // actual ajax request
+        /**
+         * Sends the ajax request to get SLO suggestions
+         * @method ajax
+         */
+        $.ajax({
+            url: '{% url 'makeReports:api-slo-suggestions' %}',
+            type: 'post', 
+            data: {
+                "slo_text": $('#id_text').val()
+            },
+            // If the request goes through, do the following
+            /**
+             * Upon succesfully getting a response, show the results to the user
+             * 
+             * @method success
+             */
+            success: function(msg, status, jqXHR){
+                suggest = msg.blooms;
+                if(suggest !== "none"){
+                    $('#blooms_sugg').html("Suggested Bloom's Taxonomy Level: <b>" + suggest + "</b>");
+                    $('#blooms_sugg').css("display", "block");
+                } else {
+                    $('#blooms_sugg').css("display", "none");
+                }
+
+                var error_str;
+                if(msg.complex){
+                    $("#complex_sugg").css("display", "block");
+                } else {
+                    $("#complex_sugg").css("display", "none");
+                }
+            }
+        });
+    });
+    $('#id_blooms').change(function() {
+        suggestions = {
+            "Knowledge": "remember, repeat, copy, reproduce, define, retell, duplicate, recite, recognize, read, memorize, knowledge, tell, retell",
+            "Comprehension": "ask, infer, cite, summarize, classify, purpose, compare, show, contrast, demonstrate, discuss, express, rephrase, examples",
+            "Application": "act, develop, administer, solve, apply, teach, build, plan, choose, employ, connect, demonstrate",
+            "Analysis": "analyze, inspect, arrange, research, breakdown, compare, categorize, highlight, differences, find, dissect, question, examine, cause and effect",
+            "Synthesis": "adapt, plan, build, produce, construct, solve, compose, think, create, theorize, develop, modify, formulate, improve",
+            "Evaluation": "argue, measure, assess, opinion, compare, prove, conclude, support, debate, test, decide, validate, evaluate, interpret",
+        }
+        selected = $('#id_blooms option:selected').text();
+        if(selected !== suggest){
+            $("#keywords_sugg").css("display", "block");
+            $('#blooms_sugg').css("display", "block");
+            msg = "The following keywords commonly appear in <b>" + selected + "</b> level SLOs: "
+                + suggestions[selected] + ".";
+            $("#keywords_sugg").html(msg);
+        } else {
+            $("#keywords_sugg").css("display", "none");
+            $('#blooms_sugg').css("display", "none");
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Decisions and Actions</h3>
+<div class="container" style="max-width:95%">
+        <div class="row">
+                <div class="col">
+                    {% include 'makeReports/toDoList.html' %}
+                </div>
+            </div>
+    <div class="row">
+        <div class="col">
+            <h4>Decisions and Actions Table</h4>
+                <table class='table'>
+                        <tbody>
+                            <tr>
+                                <td>SLO</td>
+                                <td>Description</td>
+                                <td>Options</td>
+                            </tr>
+                            {% for SLO_decisions in decisions_actions_list %}
+                                <tr>
+                                    <td style="width:47%">{{ SLO_decisions.slo_text}}</td>
+                                    {% if SLO_decisions.decisions_obj == None %}
+                                        <td>(No Information)</td>
+                                        <td>
+                                            <a  role="button" title="Add" class="btn btn-primary" href="{% url 'makeReports:add-decisions-actions' report=rpt.pk slopk=SLO_decisions.slo_pk %}">Add</a>
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            {{SLO_decisions.decisions_obj.text|safe}}
+                                        </td>
+                                        <td>
+                                            <a  role="button" title="Edit" class="btn btn-primary" href="{% url 'makeReports:edit-decisions-actions' report=rpt.pk slopk=SLO_decisions.slo_pk pk=SLO_decisions.decisions_obj.pk %}">Edit</a>
+                                        </td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+        </div>
+        <!--<div class="col-3">
+                <h4>Section IV.</h4>
+                1. Decisions and Actions<br>
+                2. <a href="{% url 'makeReports:d-a-comment' report=rpt.pk %}">Additional Comments</a>
+            </div>
+        </div>-->
+    </div>
+    <div class="row mt-5">
+        <div class="col-7">
+            <h4>Additional Comments</h4>
+            {{rpt.section4Comment|safe}}
+        </div>
+        <div class="col-2">
+                <a class="btn btn-primary" href="{% url 'makeReports:d-a-comment' report=rpt.pk %}">Edit</a>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+                <a class="btn btn-primary" href="{% url 'makeReports:rpt-sup-list' report=rpt.pk %}">Next</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

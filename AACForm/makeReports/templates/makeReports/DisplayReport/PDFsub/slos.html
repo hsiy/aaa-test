@@ -1,0 +1,43 @@
+<h3>I. Student Learning Outcomes (SLOs)</h3>
+<div class="bT">
+    <div class="subsection">A. Outcome Table</div>
+<table class="table" style="width:100%;">
+    <tbody>
+            <tr>
+                <td style="width:65%"><b>Program Student Learning Outcomes</b></td><td ><b>Bloom's Taxonomy</b></td>{% if slo_list.0.report.degreeProgram.level == "GR" %}<td><b>Graduate Goals</b></td>{% endif %}
+            </tr>
+            {% for slo in slo_list %}
+            <tr>
+                <td>
+                    <b>SLO {{slo.number}}: </b>
+                    <p>{{slo.goalText}}</p>
+                </td>
+                <td >
+                    {{slo.slo.get_blooms_display}}
+                </td>
+                {% if slo_list.0.report.degreeProgram.level == "GR" %}
+                <td >
+                    {% for gG in slo.slo.gradGoals.all %}
+                        <p>{{gG.text|safe}}</p>
+                    {% endfor %}
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% if not rpt.accredited %}
+<div class="subsection">B. Stakeholder Communication</div>
+{{stk|safe}}
+{% endif %}
+
+<div class="subsection">
+    {% if not rpt.accredited %}
+    C. Comment
+    {% else %}
+    B. Comment
+    {% endif %}
+</div>
+{{rpt.section1Comment|safe}}

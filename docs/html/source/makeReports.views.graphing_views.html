@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.graphing_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.graphing_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.graphing_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.graphing_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.graphing_views">
+<span id="makereports-views-graphing-views-module"></span><h1>makeReports.views.graphing_views module<a class="headerlink" href="#module-makeReports.views.graphing_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains views related to graphing</p>
+<dl class="class">
+<dt id="makeReports.views.graphing_views.CSVManagement">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">CSVManagement</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.CSVManagement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View to set parameters to generate CSV from one of the other views</p>
+<dl class="method">
+<dt id="makeReports.views.graphing_views.CSVManagement.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.CSVManagement.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets active colleges needed to display page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary of context for template, including active colleges</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>context (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.CSVManagement.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/CSV/csvManagement.html'</em><a class="headerlink" href="#makeReports.views.graphing_views.CSVManagement.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.graphing_views.GraphingDept">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">GraphingDept</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.GraphingDept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.mixins.UserPassesTestMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View of page for users to create graphs within the department</p>
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.GraphingDept.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Graphing/graphing_dept.html'</em><a class="headerlink" href="#makeReports.views.graphing_views.GraphingDept.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.GraphingDept.test_func">
+<code class="sig-name descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.GraphingDept.test_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures user is part of the department for requested page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>whether user is part of the department and can access page</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.graphing_views.GraphingHome">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">GraphingHome</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.GraphingHome" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.AACOnlyMixin" title="makeReports.views.helperFunctions.mixins.AACOnlyMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.AACOnlyMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View of page to generate graphs for the AAC</p>
+<dl class="method">
+<dt id="makeReports.views.graphing_views.GraphingHome.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.GraphingHome.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently active colleges needed to display the page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary of context including active colleges</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>context (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.GraphingHome.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Graphing/graphing.html'</em><a class="headerlink" href="#makeReports.views.graphing_views.GraphingHome.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.graphing_views.OutputCSVCollege">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">OutputCSVCollege</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVCollege" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.graphing_views.OutputCSVDepartment" title="makeReports.views.graphing_views.OutputCSVDepartment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.graphing_views.OutputCSVDepartment</span></code></a></p>
+<p>View to output CSV for data within a specific college</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gYear</strong> (<em>str</em>) – the minimum year for data</p></li>
+<li><p><strong>lYear</strong> (<em>str</em>) – the maximum year for data</p></li>
+<li><p><strong>col</strong> (<em>str</em>) – the primary key of the desired college</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.OutputCSVCollege.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['assessmentVersion__report__year', 'assessmentVersion__report__degreeProgram__department', 'assessmentVersion__report__degreeProgram__department__name', 'assessmentVersion__report__degreeProgram', 'assessmentVersion__report__degreeProgram__name', 'assessmentVersion__report', 'assessmentVersion__slo', 'assessmentVersion__slo__goalText', 'assessmentVersion__slo__changedFromPrior', 'assessmentVersion__slo__slo__blooms', 'assessmentVersion__slo__slo', 'assessmentVersion__assessment', 'assessmentVersion__assessment__title', 'assessmentVersion__assessment__domainExamination', 'assessmentVersion__assessment__domainProduct', 'assessmentVersion__assessment__domainPerformance', 'assessmentVersion__assessment__directMeasure', 'assessmentVersion', 'assessmentVersion__assessmentaggregate__aggregate_proficiency', 'assessmentVersion__assessmentaggregate__met', 'assessmentVersion__date', 'assessmentVersion__description', 'assessmentVersion__finalTerm', 'assessmentVersion__where', 'assessmentVersion__allStudents', 'assessmentVersion__sampleDescription', 'assessmentVersion__frequencyChoice', 'assessmentVersion__frequency', 'assessmentVersion__threshold', 'assessmentVersion__target', 'assessmentVersion__changedFromPrior', 'dataRange', 'numberStudents', 'overallProficient']</em><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVCollege.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVCollege.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVCollege.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the QuerySet to generate CSV for, filtering based upon year and college</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of AssessmentData within parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVCollege.test_func">
+<code class="sig-name descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVCollege.test_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures the user is within the AAC</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>whether the user is in the AAC and therefore can access the page</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.graphing_views.OutputCSVDP">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">OutputCSVDP</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#makeReports.views.graphing_views.OutputCSVDepartment" title="makeReports.views.graphing_views.OutputCSVDepartment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.graphing_views.OutputCSVDepartment</span></code></a></p>
+<p>View to generate CSV for a specific degree program within given years</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gYear</strong> (<em>str</em>) – the minimum year for data</p></li>
+<li><p><strong>lYear</strong> (<em>str</em>) – the maximum year for data</p></li>
+<li><p><strong>dept</strong> (<em>str</em>) – the primary key of the desired department</p></li>
+<li><p><strong>dP</strong> (<em>str</em>) – the primary key of the desired degree program</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVDP.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDP.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the QuerySet to generate CSV for, filtering based upon year and degree program</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of AssessmentData within parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.graphing_views.</code><code class="sig-name descname">OutputCSVDepartment</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.mixins.UserPassesTestMixin</span></code>, <a class="reference internal" href="makeReports.views.helperFunctions.csvExport.html#makeReports.views.helperFunctions.csvExport.CSVExportView" title="makeReports.views.helperFunctions.csvExport.CSVExportView"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.csvExport.CSVExportView</span></code></a></p>
+<p>CSV generating page for within the department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gYear</strong> (<em>str</em>) – the minimum year for data</p></li>
+<li><p><strong>lYear</strong> (<em>str</em>) – the maximum year for data</p></li>
+<li><p><strong>dept</strong> (<em>str</em>) – the primary key of the desired department</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['assessmentVersion__report__year', 'assessmentVersion__report__degreeProgram', 'assessmentVersion__report__degreeProgram__name', 'assessmentVersion__report', 'assessmentVersion__slo', 'assessmentVersion__slo__goalText', 'assessmentVersion__slo__changedFromPrior', 'assessmentVersion__slo__slo__blooms', 'assessmentVersion__assessment', 'assessmentVersion__assessment__title', 'assessmentVersion__assessment__domainExamination', 'assessmentVersion__assessment__domainProduct', 'assessmentVersion__assessment__domainPerformance', 'assessmentVersion__assessment__directMeasure', 'assessmentVersion', 'assessmentVersion__assessmentaggregate__aggregate_proficiency', 'assessmentVersion__assessmentaggregate__met', 'assessmentVersion__date', 'assessmentVersion__description', 'assessmentVersion__finalTerm', 'assessmentVersion__where', 'assessmentVersion__allStudents', 'assessmentVersion__sampleDescription', 'assessmentVersion__frequencyChoice', 'assessmentVersion__frequency', 'assessmentVersion__threshold', 'assessmentVersion__target', 'assessmentVersion__changedFromPrior', 'dataRange', 'numberStudents', 'overallProficient']</em><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment.get_field_value">
+<code class="sig-name descname">get_field_value</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment.get_field_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generally gets field value. Since not all assessment versions have assessment aggregates,
+this ensures the application does not fail</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of the field (many types possible)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the QuerySet of AssessmentData to generate the CSV for.
+In particular, it limits to assessments within the year within the department.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of AssessmentData within parameters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.AssessmentData" title="makeReports.models.data_models.AssessmentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.data_models.AssessmentData</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.graphing_views.OutputCSVDepartment.test_func">
+<code class="sig-name descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.graphing_views.OutputCSVDepartment.test_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures the user is in the department or the AAC</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>whether user can access the page</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

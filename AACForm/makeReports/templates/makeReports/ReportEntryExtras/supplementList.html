@@ -1,0 +1,18 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Report Supplements List</h3>
+<a class="btn btn-primary" href="{% url 'makeReports:add-rpt-sup' report=rpt.pk%}">Add Supplement to Report</a>
+<ul class="list-group">
+{% for sup in object_list %}
+    <li class = "list-group-item">
+      <a href="{{sup.supplement.url}}">{{sup.supplement}}</a> 
+      <a class="btn btn-primary" href="{% url 'makeReports:delete-rpt-sup' report=rpt.pk pk=sup.pk %}">Delete Supplement</a>
+    </li>
+{% empty %}
+No supplements.
+{% endfor %}
+</ul>
+<a class="btn btn-primary" href="{% url 'makeReports:submit-report' report=rpt.pk %}">Next</a>
+
+{% endblock %}

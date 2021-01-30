@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Delete Report</h3>
+Warning: This will delete all data associated with this report. This cannot be undone.
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>Are you sure you want to delete this report? This will result in permanent data loss.</p>
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Delete Report</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.report_entry_extra_views module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.report_entry_extra_views module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.report_entry_extra_views module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.report_entry_extra_views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.report_entry_extra_views">
+<span id="makereports-views-report-entry-extra-views-module"></span><h1>makeReports.views.report_entry_extra_views module<a class="headerlink" href="#module-makeReports.views.report_entry_extra_views" title="Permalink to this headline">¶</a></h1>
+<p>This file contains extra views needed during the form input process</p>
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">AddEndSupplements</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<p>View to add report supplement</p>
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['supplement']</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the report then creates the report supplement from the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<em>ModelForm</em>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (report supplement summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of report supplement list page (<a class="reference internal" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements" title="makeReports.views.report_entry_extra_views.FinalReportSupplements"><code class="xref py py-class docutils literal notranslate"><span class="pre">FinalReportSupplements</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.ReportSupplement" title="makeReports.models.decisionsActions_models.ReportSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.decisionsActions_models.ReportSupplement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.AddEndSupplements.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/addSupplement.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.AddEndSupplements.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.DeleteEndSupplements">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">DeleteEndSupplements</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeleteEndSupplements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<p>Delete a report supplement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.ReportSupplement" title="makeReports.models.decisionsActions_models.ReportSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReportSupplement</span></code></a> to be deleted</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.DeleteEndSupplements.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeleteEndSupplements.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (report supplement summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of report supplement list page (<a class="reference internal" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements" title="makeReports.views.report_entry_extra_views.FinalReportSupplements"><code class="xref py py-class docutils literal notranslate"><span class="pre">FinalReportSupplements</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.DeleteEndSupplements.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeleteEndSupplements.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.ReportSupplement" title="makeReports.models.decisionsActions_models.ReportSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.decisionsActions_models.ReportSupplement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.DeleteEndSupplements.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/deleteSupplement.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeleteEndSupplements.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.DeptViewRubric">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">DeptViewRubric</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeptViewRubric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.detail.DetailView</span></code></p>
+<p>View to view a rubric as a department</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>pk</strong> (<em>str</em>) – primary key of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rubric</span></code></a> to view</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.DeptViewRubric.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeptViewRubric.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets template context, including rubric items separated out by section</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>template context</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.DeptViewRubric.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeptViewRubric.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.grading_models.html#makeReports.models.grading_models.Rubric" title="makeReports.models.grading_models.Rubric"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.grading_models.Rubric</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.DeptViewRubric.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/Rubric/rubricViewNoEdit.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.DeptViewRubric.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.FinalReportSupplements">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">FinalReportSupplements</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<p>View to list report supplements while entering them</p>
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.FinalReportSupplements.get_queryset">
+<code class="sig-name descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of items for this view.</p>
+<p>The return value must be an iterable and may be an instance of
+<cite>QuerySet</cite> in which case <cite>QuerySet</cite> specific behavior will be enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.FinalReportSupplements.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.decisionsActions_models.html#makeReports.models.decisionsActions_models.ReportSupplement" title="makeReports.models.decisionsActions_models.ReportSupplement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.decisionsActions_models.ReportSupplement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.FinalReportSupplements.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/supplementList.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.FinalReportSupplements.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">ReportFirstPage</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptAACMixin" title="makeReports.views.helperFunctions.mixins.DeptAACMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptAACMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<p>View to set report wide attributes</p>
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatch the view and attach the report to the instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request to view page</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response of page to request</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['author', 'date_range_of_reported_data']</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets URL to go to upon success (SLO summary)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>URL of SLO summary page (<a class="reference internal" href="makeReports.views.slo_views.html#makeReports.views.slo_views.SLOSummary" title="makeReports.views.slo_views.SLOSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOSummary</span></code></a>)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.labels">
+<code class="sig-name descname">labels</code><em class="property"> = {'author': 'Person preparing the report'}</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.ReportFirstPage.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/first_page.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.ReportFirstPage.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">SubmitReport</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.views.helperFunctions.mixins.html#makeReports.views.helperFunctions.mixins.DeptReportMixin" title="makeReports.views.helperFunctions.mixins.DeptReportMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.views.helperFunctions.mixins.DeptReportMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.FormView</span></code></p>
+<p>View to review and submit form</p>
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.forms.other_forms.html#makeReports.forms.other_forms.SubmitReportForm" title="makeReports.forms.other_forms.SubmitReportForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.other_forms.SubmitReportForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.form_valid">
+<code class="sig-name descname">form_valid</code><span class="sig-paren">(</span><em class="sig-param">form</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>After the form is validated, set the report to submitted</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>form</strong> (<a class="reference internal" href="makeReports.forms.other_forms.html#makeReports.forms.other_forms.SubmitReportForm" title="makeReports.forms.other_forms.SubmitReportForm"><em>SubmitReportForm</em></a>) – filled out form to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>redirects to success URL given by get_success_url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the context for the template, including the report, and context needed for all report sections</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context for template</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.get_form_kwargs">
+<code class="sig-name descname">get_form_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.get_form_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get keyword arguments for the form, including whether the report is compelete and error message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>keyword arguments</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/report/submit/success/'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.SubmitReport.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/submit.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SubmitReport.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.report_entry_extra_views.SuccessSubmit">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.report_entry_extra_views.</code><code class="sig-name descname">SuccessSubmit</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SuccessSubmit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.TemplateView</span></code></p>
+<p>View to show after successfully submitting report</p>
+<dl class="attribute">
+<dt id="makeReports.views.report_entry_extra_views.SuccessSubmit.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'makeReports/ReportEntryExtras/success.html'</em><a class="headerlink" href="#makeReports.views.report_entry_extra_views.SuccessSubmit.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

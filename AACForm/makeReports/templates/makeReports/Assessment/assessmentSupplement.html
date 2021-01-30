@@ -1,0 +1,15 @@
+{% extends 'form_entry_base.html' %}
+{% load bootstrap4 %}
+{% block inner_content %}
+<h3>Assessment Supplement Upload</h3>
+<a  role="button" class="btn btn-primary" href="{% url 'makeReports:assessment-stk-import' report=rpt.pk %}?dp={{rpt.degreeProgram.pk}}&year={{rpt.year}}">Import</a>
+
+<form method="post" class="form col-6" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Save</button>
+    {% endbuttons %}
+</form>
+
+{% endblock %}

@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.API.serializers module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.API.serializers module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.API.serializers module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.API.serializers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.API.serializers">
+<span id="makereports-views-api-serializers-module"></span><h1>makeReports.views.API.serializers module<a class="headerlink" href="#module-makeReports.views.API.serializers" title="Permalink to this headline">¶</a></h1>
+<p>This file contains the JSON APIs used</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.AssessmentParentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">AssessmentParentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentParentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes parent assessments (<a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a>) into its primary key and title</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.AssessmentParentSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentParentSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.AssessmentParentSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'title']</em><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentParentSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.AssessmentParentSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentParentSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.assessment_models.Assessment</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.AssessmentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">AssessmentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes assessments (<a class="reference internal" href="makeReports.models.assessment_models.html#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a>) to JSON with the primary key and and title</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.AssessmentSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.AssessmentSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'assessment']</em><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.AssessmentSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.AssessmentSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.DeptSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">DeptSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.DeptSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes departments to JSON with the primary key and name</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.DeptSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.DeptSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer.</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.DeptSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'name']</em><a class="headerlink" href="#makeReports.views.API.serializers.DeptSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.DeptSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.DeptSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.aac_models.Department</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.FileSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">FileSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.FileSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes graphs to JSON with all fields</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.FileSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.FileSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.FileSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = '__all__'</em><a class="headerlink" href="#makeReports.views.API.serializers.FileSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.FileSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.FileSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.Graph" title="makeReports.models.data_models.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.data_models.Graph</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.ProgSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">ProgSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.ProgSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes degree programs to JSON with the primary key, name, and level</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.ProgSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.ProgSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.ProgSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'name', 'level']</em><a class="headerlink" href="#makeReports.views.API.serializers.ProgSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.ProgSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.ProgSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.DegreeProgram" title="makeReports.models.aac_models.DegreeProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.aac_models.DegreeProgram</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOParentSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">SLOParentSerializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.SLOParentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLO</span></code></a> into just its primary key</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOParentSerializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOParentSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOParentSerializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk']</em><a class="headerlink" href="#makeReports.views.API.serializers.SLOParentSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOParentSerializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOParentSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLO" title="makeReports.models.slo_models.SLO"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLO</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOSerializerWithParent">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">SLOSerializerWithParent</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.SLOSerializerWithParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes SLOs (<a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a>) to JSON with the primary key and name and primary key of SLO</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOSerializerWithParent.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOSerializerWithParent.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOSerializerWithParent.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'goalText', 'slo']</em><a class="headerlink" href="#makeReports.views.API.serializers.SLOSerializerWithParent.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOSerializerWithParent.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOSerializerWithParent.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOserializer">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.API.serializers.</code><code class="sig-name descname">SLOserializer</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">data=&lt;class 'rest_framework.fields.empty'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.API.serializers.SLOserializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.HyperlinkedModelSerializer</span></code></p>
+<p>Serializes SLOs to JSON with the primary key and name</p>
+<dl class="class">
+<dt id="makeReports.views.API.serializers.SLOserializer.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOserializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the superclass
+to use to build the serializer</p>
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOserializer.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['pk', 'goalText']</em><a class="headerlink" href="#makeReports.views.API.serializers.SLOserializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.API.serializers.SLOserializer.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.views.API.serializers.SLOserializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.SLOInReport</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

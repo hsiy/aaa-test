@@ -1,0 +1,47 @@
+<table style="width: 100%;">
+<tr>
+        <td colspan="2">
+            <h2 style="text-align: center;">
+                {% if rpt.accredited %}
+                ACCREDITED PROGRAM TEMPLATE
+                {% else %}
+                NON-ACCREDITED PROGRAM TEMPLATE
+                {% endif %}
+	    </h2>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;" colspan="2">
+            <b >{{rpt.degreeProgram.get_level_display}} Assessment Report for {{rpt.year|add:"-1"}}-{{rpt.year}}</b>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+            <b>College: {{rpt.degreeProgram.department.college.name}}</b>
+        </td>
+        <td style="width:50%">
+            <b>Department: {{rpt.degreeProgram.department.name}}</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Program: {{rpt.degreeProgram.name}}</b>
+        </td>
+        <td>
+            <b>Degree Level: {{rpt.degreeProgram.get_level_display}}</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Academic Year of Report: {{rpt.year|add:"-1"}}-{{rpt.year}}</b>
+        </td>
+        <td>
+            <b>Date Range of Reported Data: {{rpt.date_range_of_reported_data}}</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Person Preparing the Report: {{rpt.author}}</b>
+        </td>
+    </tr>
+</table>

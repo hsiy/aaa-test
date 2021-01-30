@@ -1,0 +1,1237 @@
+{
+    "project": {},
+    "files": {
+        "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "modules": {},
+            "classes": {
+                "create_account": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html",
+            "modules": {},
+            "classes": {
+                "importAssessment": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html",
+            "modules": {},
+            "classes": {
+                "importAssessmentSLO": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importSupplement.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importSupplement.html",
+            "modules": {},
+            "classes": {
+                "importAssessmentSupplement": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "modules": {},
+            "classes": {
+                "csvManagement": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\DataCollection\\dataCollectionSummary.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\DataCollection\\dataCollectionSummary.html",
+            "modules": {},
+            "classes": {
+                "dataCollectionSummary": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "modules": {},
+            "classes": {
+                "graphing": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "modules": {},
+            "classes": {
+                "graphingDept": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "modules": {},
+            "classes": {
+                "addSLO": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "modules": {},
+            "classes": {
+                "editNewSLO": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importSLO.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importSLO.html",
+            "modules": {},
+            "classes": {
+                "importSLO": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importStakeholderComm.html": {
+            "name": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importStakeholderComm.html",
+            "modules": {},
+            "classes": {
+                "importStakeholderComm": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\static\\extPlugin\\choice-widget-stk.js": {
+            "name": "..\\AACForm\\static\\extPlugin\\choice-widget-stk.js",
+            "modules": {},
+            "classes": {
+                "choice-widget-stk": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\static\\extPlugin\\choices-widget.js": {
+            "name": "..\\AACForm\\static\\extPlugin\\choices-widget.js",
+            "modules": {},
+            "classes": {
+                "choices-widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\static\\js\\assessmentEntryBoxes.js": {
+            "name": "..\\AACForm\\static\\js\\assessmentEntryBoxes.js",
+            "modules": {},
+            "classes": {
+                "assessmentBoxes": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\AACForm\\static\\js\\splitGradingView.js": {
+            "name": "..\\AACForm\\static\\js\\splitGradingView.js",
+            "modules": {},
+            "classes": {
+                "grading_section": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "create_account": {
+            "name": "create_account",
+            "shortname": "create_account",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 91,
+            "description": "Vue instance to control create account page"
+        },
+        "importAssessment": {
+            "name": "importAssessment",
+            "shortname": "importAssessment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html",
+            "line": 54,
+            "description": "Creates the drop-down for the year and the SLO in the search"
+        },
+        "importAssessmentSLO": {
+            "name": "importAssessmentSLO",
+            "shortname": "importAssessmentSLO",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html",
+            "line": 45,
+            "description": "Creates the drop-down for the year and the SLO in the search"
+        },
+        "importAssessmentSupplement": {
+            "name": "importAssessmentSupplement",
+            "shortname": "importAssessmentSupplement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importSupplement.html",
+            "line": 44,
+            "description": "Creates the drop-down for the year"
+        },
+        "csvManagement": {
+            "name": "csvManagement",
+            "shortname": "csvManagement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 65,
+            "description": "A Vue instance to handle CSV generator page"
+        },
+        "dataCollectionSummary": {
+            "name": "dataCollectionSummary",
+            "shortname": "dataCollectionSummary",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\DataCollection\\dataCollectionSummary.html",
+            "line": 225,
+            "description": "Handles calling the API to clear overrides"
+        },
+        "graphing": {
+            "name": "graphing",
+            "shortname": "graphing",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 141,
+            "description": "Handles dynamically providing options in dropdowns for graphing page"
+        },
+        "graphingDept": {
+            "name": "graphingDept",
+            "shortname": "graphingDept",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 122,
+            "description": "Set of functions and Vue instance to handle the graphing page for departments"
+        },
+        "addSLO": {
+            "name": "addSLO",
+            "shortname": "addSLO",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 35,
+            "description": "Handles calling for SLO suggestions API while on page"
+        },
+        "editNewSLO": {
+            "name": "editNewSLO",
+            "shortname": "editNewSLO",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 35,
+            "description": "Handles calling for SLO suggestions API while on page"
+        },
+        "importSLO": {
+            "name": "importSLO",
+            "shortname": "importSLO",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importSLO.html",
+            "line": 47,
+            "description": "Creates the drop-down for the year"
+        },
+        "importStakeholderComm": {
+            "name": "importStakeholderComm",
+            "shortname": "importStakeholderComm",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importStakeholderComm.html",
+            "line": 38,
+            "description": "Handles creating and managing the drop-downs"
+        },
+        "choice-widget-stk": {
+            "name": "choice-widget-stk",
+            "shortname": "choice-widget-stk",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\static\\extPlugin\\choice-widget-stk.js",
+            "line": 1,
+            "description": "Function to instantiate the ChoicesJS dropdown for stakeholders"
+        },
+        "choices-widget": {
+            "name": "choices-widget",
+            "shortname": "choices-widget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\static\\extPlugin\\choices-widget.js",
+            "line": 1,
+            "description": "Function to instantiate the ChoicesJS dropdown for SLOs"
+        },
+        "assessmentBoxes": {
+            "name": "assessmentBoxes",
+            "shortname": "assessmentBoxes",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\static\\js\\assessmentEntryBoxes.js",
+            "line": 1,
+            "description": "Functions to properly show and hide boxes on the assessment forms"
+        },
+        "grading_section": {
+            "name": "grading_section",
+            "shortname": "grading_section",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "..\\AACForm\\static\\js\\splitGradingView.js",
+            "line": 1,
+            "description": "Handles the adjustment of the width of the columns, uses Split.js library"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 101,
+            "description": "Deparment (primary key) chosen",
+            "itemtype": "property",
+            "name": "department",
+            "type": "integer",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 107,
+            "description": "List of departments with properties to choose within college",
+            "itemtype": "property",
+            "name": "depts",
+            "type": "dictionary",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 113,
+            "description": "Primary key of college chosen",
+            "itemtype": "property",
+            "name": "college",
+            "type": "integer",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 119,
+            "description": "Whether there was an error upon submission between the college and dept",
+            "itemtype": "property",
+            "name": "error",
+            "type": "Boolean",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 129,
+            "description": "Calls the API to get the departments within the college",
+            "itemtype": "method",
+            "name": "updateDept",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\AACAdmin\\create_account.html",
+            "line": 142,
+            "description": "Makes sure if a college is chosen so is a department before submitting",
+            "itemtype": "method",
+            "name": "vSubmit",
+            "class": "create_account"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html",
+            "line": 60,
+            "description": "Upon DOM existing, create the drop down for the SLO and Years and updateYears",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "importAssessment"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html",
+            "line": 70,
+            "description": "Calls the API to update the year choices for the search,\nbased upon the currently selected degree program",
+            "itemtype": "method",
+            "name": "updateYears",
+            "class": "importAssessment"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessment.html",
+            "line": 89,
+            "description": "Calls the API to update the list of SLOs that match the year and degree program",
+            "itemtype": "method",
+            "name": "updateSLOs",
+            "class": "importAssessment"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html",
+            "line": 51,
+            "description": "Upon DOM being loaded, create the drop downs and update years",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "importAssessmentSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html",
+            "line": 61,
+            "description": "Calls the API to update the year choices for the search,\nbased upon the currently selected degree program",
+            "itemtype": "method",
+            "name": "updateYears",
+            "class": "importAssessmentSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importAssessmentSLO.html",
+            "line": 81,
+            "description": "Calls the API to update the list of SLOs that match the year and degree program",
+            "itemtype": "method",
+            "name": "updateSLOs",
+            "class": "importAssessmentSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importSupplement.html",
+            "line": 51,
+            "description": "On load create the year drop-down and update the year options",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "importAssessmentSupplement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Assessment\\importSupplement.html",
+            "line": 59,
+            "description": "Calls the API to update the year choices for the search,\nbased upon the currently selected degree program",
+            "itemtype": "method",
+            "name": "updateYears",
+            "class": "importAssessmentSupplement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 83,
+            "description": "Departments with properties meeting parameters",
+            "itemtype": "property",
+            "name": "depts",
+            "type": "dictionary",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 89,
+            "description": "Degree programs with properties meeting parameters",
+            "itemtype": "property",
+            "name": "progs",
+            "type": "dictionary",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 95,
+            "description": "SLOs meeting parameters",
+            "itemtype": "property",
+            "name": "slos",
+            "type": "dictionary",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 101,
+            "description": "The scope of the CSV",
+            "itemtype": "property",
+            "name": "csv_scope",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 107,
+            "description": "Currently selected department primary key",
+            "itemtype": "property",
+            "name": "department",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 113,
+            "description": "Currently selected college primary key",
+            "itemtype": "property",
+            "name": "college",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 119,
+            "description": "Currently selected program primary key",
+            "itemtype": "property",
+            "name": "program",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 125,
+            "description": "Currently selected lower bound year",
+            "itemtype": "property",
+            "name": "date1",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 131,
+            "description": "Currently selected upper bound year",
+            "itemtype": "property",
+            "name": "date2",
+            "type": "integer",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 139,
+            "description": "Computes the proper URL to get CSV from current parameters",
+            "itemtype": "method",
+            "name": "csvURL",
+            "return": {
+                "description": "the URL of CSV API with parameters",
+                "type": "String"
+            },
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 178,
+            "description": "Calls the updateProg upon mount",
+            "itemtype": "method",
+            "name": "mounted",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 187,
+            "description": "Calls the API to update list of departments by selected college",
+            "itemtype": "method",
+            "name": "updateDept",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\CSV\\csvManagement.html",
+            "line": 200,
+            "description": "Calls the API to update the list of degree programs by selected department",
+            "itemtype": "method",
+            "name": "updateProg",
+            "class": "csvManagement"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\DataCollection\\dataCollectionSummary.html",
+            "line": 230,
+            "description": "Calls API to clear overrides on statuses and aggregates, \nthen refreshes page",
+            "itemtype": "method",
+            "name": "clearOver",
+            "class": "dataCollectionSummary"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 145,
+            "description": "Gets cookies: included to retrieve the CSRF token",
+            "itemtype": "method",
+            "name": "getCookie",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- the name of the cookie",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- the value of the cookie",
+                "type": "String"
+            },
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 180,
+            "description": "Primary key of currently selected assessment",
+            "itemtype": "property",
+            "name": "assess",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 186,
+            "description": "List of assessments meeting parameters",
+            "itemtype": "property",
+            "name": "assesses",
+            "type": "dictionary",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 192,
+            "description": "List of departments meeting parameters",
+            "itemtype": "property",
+            "name": "depts",
+            "type": "dictionary",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 198,
+            "description": "List of degree programs meeting parameters",
+            "itemtype": "property",
+            "name": "progs",
+            "type": "dictionary",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 204,
+            "description": "List of SLOs meeting parameters",
+            "itemtype": "property",
+            "name": "slos",
+            "type": "dictionary",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 210,
+            "description": "List of weights for each SLO",
+            "itemtype": "property",
+            "name": "sloWeights",
+            "type": "dictionary",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 216,
+            "description": "Currently chosen graph type",
+            "itemtype": "property",
+            "name": "graph_opt",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 222,
+            "description": "Primary key of currently chosen department",
+            "itemtype": "property",
+            "name": "department",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 228,
+            "description": "Primary key of currently chosen college",
+            "itemtype": "property",
+            "name": "college",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 234,
+            "description": "Primary key of currently chosen degree program",
+            "itemtype": "property",
+            "name": "program",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 240,
+            "description": "Lower year bound",
+            "itemtype": "property",
+            "name": "date1",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 246,
+            "description": "Upper year bound",
+            "itemtype": "property",
+            "name": "date2",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 252,
+            "description": "Primary key of currently chosen SLO",
+            "itemtype": "property",
+            "name": "slo",
+            "type": "integer",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 258,
+            "description": "Current URL of API for generating the graph",
+            "itemtype": "property",
+            "name": "url",
+            "type": "String",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 264,
+            "description": "The drop down for SLOs",
+            "itemtype": "property",
+            "name": "ch",
+            "type": "ch",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 270,
+            "description": "Whether there was an error retrieving the graph",
+            "itemtype": "property",
+            "name": "graphError",
+            "type": "Boolean",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 276,
+            "description": "Whether to show the weighing the SLOs portion of the site",
+            "itemtype": "property",
+            "name": "showWeighing",
+            "type": "Boolean",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 282,
+            "description": "Whether to show button",
+            "itemtype": "property",
+            "name": "showButton",
+            "type": "Boolean",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 295,
+            "description": "Calls the API to update the department based upon the chosen college",
+            "itemtype": "method",
+            "name": "updateDept",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 309,
+            "description": "Calls the API to update the degree programs based upon the chosen department",
+            "itemtype": "method",
+            "name": "updateProg",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 322,
+            "description": "Creates a new Choices dropdown if the graph type is newly changed to specific SLO",
+            "itemtype": "method",
+            "name": "changeGraphOpt",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 339,
+            "description": "Calls the API to update the SLOs based upon the chosen degree program.\nIt also creates a new instance of the ChoicesJS object (i.e. fancy dropdown) if necessary",
+            "itemtype": "method",
+            "name": "updateSLOs",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 383,
+            "description": "Calls the API to update assessments",
+            "itemtype": "method",
+            "name": "updateAssesses",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html",
+            "line": 402,
+            "description": "Calls the API to generate the chosen graph based upon selected options",
+            "itemtype": "method",
+            "name": "newGraph",
+            "class": "graphing"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 128,
+            "description": "Gets cookies: included to retrieve the CSRF token",
+            "itemtype": "method",
+            "name": "getCookie",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- the name of the cookie",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- the value of the cookie",
+                "type": "String"
+            },
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 163,
+            "description": "Primary key of currently selected assessment",
+            "itemtype": "property",
+            "name": "assess",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 169,
+            "description": "Dictionary of assessments and properties meeting parameters",
+            "itemtype": "property",
+            "name": "assesses",
+            "type": "dictionary",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 175,
+            "description": "Dictionary of departments meeting parameters",
+            "itemtype": "property",
+            "name": "depts",
+            "type": "dictionary",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 181,
+            "description": "List of degree programs meeting parameters",
+            "itemtype": "property",
+            "name": "progs",
+            "type": "dictionary",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 187,
+            "description": "List of SLOs meeting parameters",
+            "itemtype": "property",
+            "name": "slos",
+            "type": "dictionary",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 193,
+            "description": "List of weights for each SLO",
+            "itemtype": "property",
+            "name": "sloWeights",
+            "type": "dictionary",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 199,
+            "description": "Currently chosen graph type",
+            "itemtype": "property",
+            "name": "graph_opt",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 205,
+            "description": "Primary key of the user's department",
+            "itemtype": "property",
+            "name": "department",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 211,
+            "description": "Primary key of currently chosen degree program",
+            "itemtype": "property",
+            "name": "program",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 217,
+            "description": "Lower year bound",
+            "itemtype": "property",
+            "name": "date1",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 223,
+            "description": "Upper year bound",
+            "itemtype": "property",
+            "name": "date2",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 229,
+            "description": "Primary key of currently chosen SLO",
+            "itemtype": "property",
+            "name": "slo",
+            "type": "integer",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 235,
+            "description": "Current URL of API for generating the graph",
+            "itemtype": "property",
+            "name": "url",
+            "type": "String",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 241,
+            "description": "The drop down for SLOs",
+            "itemtype": "property",
+            "name": "ch",
+            "type": "ch",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 247,
+            "description": "Whether there was an error retrieving the graph",
+            "itemtype": "property",
+            "name": "graphError",
+            "type": "Boolean",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 253,
+            "description": "Whether to show the weighing the SLOs portion of the site",
+            "itemtype": "property",
+            "name": "showWeighing",
+            "type": "Boolean",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 259,
+            "description": "Whether to show button",
+            "itemtype": "property",
+            "name": "showButton",
+            "type": "Boolean",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 268,
+            "description": "Upon mounting, update the degree programs for user's department",
+            "itemtype": "method",
+            "name": "mounted",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 277,
+            "description": "Calls the API to update the department based upon the chosen college",
+            "itemtype": "method",
+            "name": "updateProg",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 291,
+            "description": "Calls the API to update the degree programs based upon the chosen department",
+            "itemtype": "method",
+            "name": "updateProg",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 304,
+            "description": "Creates a new Choices dropdown if the graph type is newly changed to specific SLO",
+            "itemtype": "method",
+            "name": "changeGraphOpt",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 321,
+            "description": "Calls the API to update the SLOs based upon the chosen degree program.\nIt also creates a new instance of the ChoicesJS object (i.e. fancy dropdown) if necessary",
+            "itemtype": "method",
+            "name": "updateSLOs",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 364,
+            "description": "Calls the API to update assessments",
+            "itemtype": "method",
+            "name": "updateAssesses",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html",
+            "line": 382,
+            "description": "Calls the API to generate the chosen graph based upon selected options",
+            "itemtype": "method",
+            "name": "newGraph",
+            "class": "graphingDept"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 42,
+            "description": "Gets the CSRF cookie needed for post requests",
+            "itemtype": "method",
+            "name": "getCookie",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- the name of the cookie",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "cookie value",
+                "type": "String"
+            },
+            "class": "addSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 65,
+            "description": "Method to check if HTTP method needs cookie",
+            "itemtype": "method",
+            "name": "csrfSafeMethod",
+            "return": {
+                "description": "whether cookie is required",
+                "type": "Boolean"
+            },
+            "class": "addSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 77,
+            "description": "Ensures cookie is sent in the ajax request",
+            "itemtype": "method",
+            "name": "beforeSend",
+            "class": "addSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 88,
+            "description": "Sends the ajax request to get SLO suggestions",
+            "itemtype": "method",
+            "name": "ajax",
+            "class": "addSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\addSLO.html",
+            "line": 99,
+            "description": "Upon succesfully getting a response, show the results to the user",
+            "itemtype": "method",
+            "name": "success",
+            "class": "addSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 42,
+            "description": "Gets the CSRF cookie needed for post requests",
+            "itemtype": "method",
+            "name": "getCookie",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- the name of the cookie",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "cookie value",
+                "type": "String"
+            },
+            "class": "editNewSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 65,
+            "description": "Method to check if HTTP method needs cookie",
+            "itemtype": "method",
+            "name": "csrfSafeMethod",
+            "return": {
+                "description": "whether cookie is required",
+                "type": "Boolean"
+            },
+            "class": "editNewSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 77,
+            "description": "Ensures cookie is sent in the ajax request",
+            "itemtype": "method",
+            "name": "beforeSend",
+            "class": "editNewSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 88,
+            "description": "Sends the ajax request to get SLO suggestions",
+            "itemtype": "method",
+            "name": "ajax",
+            "class": "editNewSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\editNewSLO.html",
+            "line": 99,
+            "description": "Upon succesfully getting a response, show the results to the user",
+            "itemtype": "method",
+            "name": "success",
+            "class": "editNewSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importSLO.html",
+            "line": 52,
+            "description": "Creates drop down for year and updates upon the DOM being loaded",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "importSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importSLO.html",
+            "line": 60,
+            "description": "Calls the API to update the year choices for the search,\nbased upon the currently selected degree program",
+            "itemtype": "method",
+            "name": "updateYears",
+            "class": "importSLO"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importStakeholderComm.html",
+            "line": 42,
+            "description": "Creates the drop-down for the year",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "importStakeholderComm"
+        },
+        {
+            "file": "..\\AACForm\\makeReports\\templates\\makeReports\\SLO\\importStakeholderComm.html",
+            "line": 51,
+            "description": "Calls the API to update the year choices for the search,\nbased upon the currently selected degree program",
+            "itemtype": "method",
+            "name": "updateYears",
+            "class": "importStakeholderComm"
+        },
+        {
+            "file": "..\\AACForm\\static\\extPlugin\\choice-widget-stk.js",
+            "line": 6,
+            "description": "On load, create the dropdown",
+            "itemtype": "method",
+            "name": "DOMContentLoaded",
+            "class": "choice-widget-stk"
+        },
+        {
+            "file": "..\\AACForm\\static\\extPlugin\\choices-widget.js",
+            "line": 6,
+            "description": "On load, create the dropdown",
+            "itemtype": "method",
+            "name": "DOMContentLoaded",
+            "class": "choices-widget"
+        },
+        {
+            "file": "..\\AACForm\\static\\js\\assessmentEntryBoxes.js",
+            "line": 6,
+            "description": "On load, calls the change function for allStudents and frequencyChoice",
+            "itemtype": "method",
+            "name": "onLoad",
+            "class": "assessmentBoxes"
+        },
+        {
+            "file": "..\\AACForm\\static\\js\\assessmentEntryBoxes.js",
+            "line": 16,
+            "description": "When allStudents change, hide or show the box to describe students",
+            "itemtype": "method",
+            "name": "allStudents.change",
+            "class": "assessmentBoxes"
+        },
+        {
+            "file": "..\\AACForm\\static\\js\\assessmentEntryBoxes.js",
+            "line": 28,
+            "description": "When frequencyChoice changes, hide or show the box to describe the frequency",
+            "itemtype": "method",
+            "name": "frequencyChoice.change",
+            "class": "assessmentBoxes"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " ..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing.html:145"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " ..\\AACForm\\makeReports\\templates\\makeReports\\Graphing\\graphing_dept.html:128"
+        }
+    ]
+}

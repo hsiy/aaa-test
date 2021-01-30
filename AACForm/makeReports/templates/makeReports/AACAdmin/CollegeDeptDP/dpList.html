@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Degree Program List for {{dept.name}}
+</h3>
+
+Looking for a deleted degree program?  <a  role="button" class="btn btn-primary" href="{% url 'makeReports:arc-dps' dept=dept.pk %}">Archived Degree Programs</a><br>
+<a  role="button" class="btn btn-primary" href="{% url 'makeReports:add-dp' dept=dept.pk %}">Add Degree Program</a>
+<ul class="list-group col-11">
+{% for dp in object_list %}
+    <li class = "list-group-item">
+        <div class="row"><div class="col">
+        <b>{{dp.name}}</b> 
+        </div></div>
+        <div class="row">
+        <div class="col">
+                <p>
+                    {{dp.get_level_display}} program in {{dp.department.college.name}}
+                </p>
+                    <p> 
+                        {% if dp.cycle %}{% if dp.startingYear %}Cycle: Every {{dp.cycle}} years from {{dp.startingYear}}{% endif %}{% endif %}
+                </p>
+        </div>
+            <div class="col-2">
+            <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:add-rpt-dp' dP=dp.pk %}">Assign Report</a>
+        </div>
+        <div class="col-1">
+            <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:update-dp' dept=dp.department.pk pk=dp.pk %}">Update</a>
+        </div>
+        <div class="col-1">
+            <a  role="button" class="btn btn-danger float-right" href="{% url 'makeReports:delete-dp' dept=dp.department.pk pk=dp.pk %}">Archive</a>
+            </div>
+        </li>
+    {% empty %}
+No degree programs.
+{% endfor %}
+</ul>
+{% endblock %}

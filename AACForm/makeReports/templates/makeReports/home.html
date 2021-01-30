@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+<h3>Welcome!</h3>
+{% if user.profile %}
+    
+      <div class="row">
+        <div class="col-9">
+    {% if user.profile.aac %}
+    Continue to AAC Administration: <a  role="button" class="btn btn-primary" href="{% url 'makeReports:admin-home'%}">Administration Home</a>
+
+    {% endif %}
+    {% if user.profile.department.name %}
+    <h3>Department Reports To-Do</h3>
+    <ul class="list-group">
+    {% for r in object_list %}
+        <li class = "list-group-item"><b>{{r.degreeProgram.name}}</b> ({{r.degreeProgram.level}}) report for {{r.year|add:"-1"}}-{{r.year}}
+                {% if r.returned %} <a  role="button" class="btn btn-danger float-right" href="{% url 'makeReports:slo-summary' report=r.pk %}">Modify</a> 
+                <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:rpt-feedback' report=r.pk %}">Feedback</a>
+                {% else %}<a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:rpt-first-page' pk=r.pk %}">Start</a>
+                {% endif %}
+        </li>
+    {% empty %}
+        Your department does not have any outstanding reports.
+    {% endfor %}
+    </ul>
+    <br><br>
+    <h3>Department Reports Reviewed</h3>
+    <ul class="list-group">
+    {% for r in gReps %}
+    <li class = "list-group-item"><b>{{r.degreeProgram.name}}</b> ({{r.degreeProgram.level}}) report for {{r.year|add:"-1"}}-{{r.year}}
+            <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:view-rpt' pk=r.pk %}">View</a>
+            <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:rpt-feedback' report=r.pk %}">Feedback</a>
+    </li>
+
+    {% empty %}
+        Your department does not have any reviewed reports from this year.
+    {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+    <div class="col-3">
+        <h5>Announcements</h5>
+        <table class="table">
+            {% for a in announ %}
+            <tr>
+                <td>{{a.text|safe}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+{% else %}
+<a  role="button" class="btn btn-primary" href="accounts/login/">Login</a>
+{% endif %}
+
+
+{% endblock %}

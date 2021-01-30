@@ -1,0 +1,546 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.models.assessment_models module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.models.assessment_models module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.models.assessment_models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.models.assessment_models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.models.assessment_models">
+<span id="makereports-models-assessment-models-module"></span><h1>makeReports.models.assessment_models module<a class="headerlink" href="#module-makeReports.models.assessment_models" title="Permalink to this headline">¶</a></h1>
+<p>This file contains models most directly related to assessments of SLOs, excluding data collection</p>
+<dl class="class">
+<dt id="makeReports.models.assessment_models.Assessment">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.assessment_models.</code><code class="sig-name descname">Assessment</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.Assessment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Assessment model collects assessments that are ostensibly the same except for minor changes,
+and includes fields which should never change</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>AutoField</em>) – Id</p></li>
+<li><p><strong>title</strong> (<em>CharField</em>) – Title</p></li>
+<li><p><strong>domainExamination</strong> (<em>BooleanField</em>) – Examination domain</p></li>
+<li><p><strong>domainProduct</strong> (<em>BooleanField</em>) – Product domain</p></li>
+<li><p><strong>domainPerformance</strong> (<em>BooleanField</em>) – Performance domain</p></li>
+<li><p><strong>directMeasure</strong> (<em>BooleanField</em>) – Direct measure</p></li>
+<li><p><strong>numberOfUses</strong> (<em>PositiveIntegerField</em>) – Number of uses</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.Assessment.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.Assessment.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.assessmentversion_set">
+<code class="sig-name descname">assessmentversion_set</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.assessmentversion_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> assessment, accesses the M2M <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.directMeasure">
+<code class="sig-name descname">directMeasure</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.directMeasure" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> direct measure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.domainExamination">
+<code class="sig-name descname">domainExamination</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.domainExamination" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> examination domain</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.domainPerformance">
+<code class="sig-name descname">domainPerformance</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.domainPerformance" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> performance domain</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.domainProduct">
+<code class="sig-name descname">domainProduct</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.domainProduct" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> product domain</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.numberOfUses">
+<code class="sig-name descname">numberOfUses</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.numberOfUses" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> number of uses</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.Assessment.title">
+<code class="sig-name descname">title</code><a class="headerlink" href="#makeReports.models.assessment_models.Assessment.title" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> title</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.assessment_models.</code><code class="sig-name descname">AssessmentSupplement</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Supplemental files to assessments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>AutoField</em>) – Id</p></li>
+<li><p><strong>supplement</strong> (<em>FileField</em>) – Supplement</p></li>
+<li><p><strong>uploaded_at</strong> (<em>DateTimeField</em>) – Uploaded at</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.assessmentversion_set">
+<code class="sig-name descname">assessmentversion_set</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.assessmentversion_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> supplements, accesses the M2M <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.get_next_by_uploaded_at">
+<code class="sig-name descname">get_next_by_uploaded_at</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateTimeField: uploaded_at&gt;</em>, <em class="sig-param">is_next=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.get_next_by_uploaded_at" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Autogenerated:</strong> Finds next instance based on <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentSupplement.uploaded_at" title="makeReports.models.assessment_models.AssessmentSupplement.uploaded_at"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uploaded_at</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.get_previous_by_uploaded_at">
+<code class="sig-name descname">get_previous_by_uploaded_at</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateTimeField: uploaded_at&gt;</em>, <em class="sig-param">is_next=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.get_previous_by_uploaded_at" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Autogenerated:</strong> Finds previous instance based on <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentSupplement.uploaded_at" title="makeReports.models.assessment_models.AssessmentSupplement.uploaded_at"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uploaded_at</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.supplement">
+<code class="sig-name descname">supplement</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.supplement" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> supplement
+<strong>Return type:</strong> <code class="xref py py-class docutils literal notranslate"><span class="pre">FieldFile</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentSupplement.uploaded_at">
+<code class="sig-name descname">uploaded_at</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentSupplement.uploaded_at" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> uploaded at</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.models.assessment_models.AssessmentVersion">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.models.assessment_models.</code><code class="sig-name descname">AssessmentVersion</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Specific versions of Assessments that occur within a report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>AutoField</em>) – Id</p></li>
+<li><p><strong>report</strong> (ForeignKey to <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a>) – Report</p></li>
+<li><p><strong>slo</strong> (ForeignKey to <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a>) – Slo in report</p></li>
+<li><p><strong>number</strong> (<em>PositiveIntegerField</em>) – Number</p></li>
+<li><p><strong>changedFromPrior</strong> (<em>BooleanField</em>) – Changed from prior version</p></li>
+<li><p><strong>assessment</strong> (ForeignKey to <a class="reference internal" href="#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a>) – Assessment</p></li>
+<li><p><strong>date</strong> (<em>DateField</em>) – Date</p></li>
+<li><p><strong>description</strong> (<em>CharField</em>) – Description</p></li>
+<li><p><strong>finalTerm</strong> (<em>BooleanField</em>) – Final term</p></li>
+<li><p><strong>where</strong> (<em>CharField</em>) – Location of assessment</p></li>
+<li><p><strong>allStudents</strong> (<em>BooleanField</em>) – All students assessed</p></li>
+<li><p><strong>sampleDescription</strong> (<em>CharField</em>) – Description of sample</p></li>
+<li><p><strong>frequencyChoice</strong> (<em>CharField</em>) – Frequency choice</p></li>
+<li><p><strong>frequency</strong> (<em>CharField</em>) – Frequency</p></li>
+<li><p><strong>threshold</strong> (<em>CharField</em>) – Threshold</p></li>
+<li><p><strong>target</strong> (<em>PositiveIntegerField</em>) – Target</p></li>
+<li><p><strong>supplements</strong> (<em>ManyToManyField</em>) – Supplements</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.allStudents">
+<code class="sig-name descname">allStudents</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.allStudents" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> all students assessed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.assessment">
+<code class="sig-name descname">assessment</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.assessment" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> assessment, accesses the <a class="reference internal" href="#makeReports.models.assessment_models.Assessment" title="makeReports.models.assessment_models.Assessment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assessment</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.assessment_id">
+<code class="sig-name descname">assessment_id</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.assessment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> assessment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.assessmentaggregate">
+<code class="sig-name descname">assessmentaggregate</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.assessmentaggregate" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> assessment version, accesses the <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.AssessmentAggregate" title="makeReports.models.data_models.AssessmentAggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentAggregate</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.assessmentdata_set">
+<code class="sig-name descname">assessmentdata_set</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.assessmentdata_set" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> assessment version, accesses the M2M <a class="reference internal" href="makeReports.models.data_models.html#makeReports.models.data_models.AssessmentData" title="makeReports.models.data_models.AssessmentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentData</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.changedFromPrior">
+<code class="sig-name descname">changedFromPrior</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.changedFromPrior" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> changed from prior version</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.date">
+<code class="sig-name descname">date</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.date" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> date</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.description">
+<code class="sig-name descname">description</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.description" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> description</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.finalTerm">
+<code class="sig-name descname">finalTerm</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.finalTerm" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> final term</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.frequency">
+<code class="sig-name descname">frequency</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> frequency</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.frequencyChoice">
+<code class="sig-name descname">frequencyChoice</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.frequencyChoice" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> frequency choice</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.get_frequencyChoice_display">
+<code class="sig-name descname">get_frequencyChoice_display</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.CharField: frequencyChoice&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.get_frequencyChoice_display" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Autogenerated:</strong> Shows the label of the <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion.frequencyChoice" title="makeReports.models.assessment_models.AssessmentVersion.frequencyChoice"><code class="xref py py-attr docutils literal notranslate"><span class="pre">frequencyChoice</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.get_next_by_date">
+<code class="sig-name descname">get_next_by_date</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateField: date&gt;</em>, <em class="sig-param">is_next=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.get_next_by_date" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Autogenerated:</strong> Finds next instance based on <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion.date" title="makeReports.models.assessment_models.AssessmentVersion.date"><code class="xref py py-attr docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.get_previous_by_date">
+<code class="sig-name descname">get_previous_by_date</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateField: date&gt;</em>, <em class="sig-param">is_next=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.get_previous_by_date" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Autogenerated:</strong> Finds previous instance based on <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion.date" title="makeReports.models.assessment_models.AssessmentVersion.date"><code class="xref py py-attr docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.number">
+<code class="sig-name descname">number</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.number" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> number</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.report">
+<code class="sig-name descname">report</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.report" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report, accesses the <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.report_id">
+<code class="sig-name descname">report_id</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.report_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> report</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.sampleDescription">
+<code class="sig-name descname">sampleDescription</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.sampleDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> description of sample</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.slo">
+<code class="sig-name descname">slo</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.slo" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> SLO in report, accesses the <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.SLOInReport" title="makeReports.models.slo_models.SLOInReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">SLOInReport</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.slo_id">
+<code class="sig-name descname">slo_id</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.slo_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> SLO in report</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.supplements">
+<code class="sig-name descname">supplements</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.supplements" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> supplements, accesses the M2M <a class="reference internal" href="#makeReports.models.assessment_models.AssessmentVersion" title="makeReports.models.assessment_models.AssessmentVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssessmentVersion</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.target" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> target</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.threshold">
+<code class="sig-name descname">threshold</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> threshold</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.models.assessment_models.AssessmentVersion.where">
+<code class="sig-name descname">where</code><a class="headerlink" href="#makeReports.models.assessment_models.AssessmentVersion.where" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Model field:</strong> location of assessment</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

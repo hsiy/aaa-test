@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Recover Degree Program</h3>
+Check the box to un-archive the degree program.
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Recover Degree Program</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

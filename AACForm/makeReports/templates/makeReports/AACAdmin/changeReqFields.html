@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>Change Required Fields</h3>
+Check which fields are required in order for faculty to submit a report.
+An AAC member may always manually submit reports, regardless of the settings.
+<form method="post" class="form col-6" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Update</button>
+    {% endbuttons %}
+</form>
+{% endblock %}

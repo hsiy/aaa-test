@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h3>All Reports</h3>
+<div class="row">
+  <div class="col-6">
+    <form action="{% url 'makeReports:search-reports' %}" type="get">
+      <h3>Search:</h3>
+      You can use as many or few fields as desired<br>
+      <div class="form-group"><label for="year">Ending Year of Academic Year (e.g. 2019 for 2018-2019 academic
+          year):</label><input id="year" type="text" class="form-control" name="year"></div>
+      <div class="form-group"><label for="submitted">Submitted: </label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="submitted" id="s1" value="S">
+          <label class="form-check-label" for="s1">Only submitted</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="submitted" id="s2" value="nS">
+          <label class="form-check-label" for="s2">Only not submitted</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="submitted" id="s3" value="both" checked="checked">
+          <label class="form-check-label" for="s3">All</label>
+        </div>
+      </div>
+      <div class="form-group"><label for="graded">Reviewed: </label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="graded" id="g1" value="S">
+          <label class="form-check-label" for="g1">Only reviewed</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="graded" id="g2" value="nS" >
+          <label class="form-check-label" for="g2">Only not reviewed</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="graded" id="g3" value="both" checked="checked">
+          <label class="form-check-label" for="g3">All</label>
+        </div>
+      </div>
+      <div class="form-group"><label for="college">College:</label><input id="college" type="text" class="form-control"
+          name="college"></div>
+      <div class="form-group"><label for="dept">Department:</label><input id="dept" type="text" class="form-control"
+          name="dept"></div>
+      <div class="form-group"><label for="dP">Degree program:</label><input id="dP" type="text" class="form-control"
+          name="dP"></div>
+      <button id="sub" type="submit" class="btn btn-primary" style="margin-top:1em">Search</button><br>
+    </form>
+  </div>
+  <div class="col-4">
+    <h5>Data Analysis</h5>
+    <a role="button" class="btn btn-primary" href="{% url 'makeReports:graphing' %}">Historical Graphs</a>
+    <a role="button" class="btn btn-primary" href="{% url 'makeReports:csv-mang' %}">Download CSV of Assessment Data</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <ul class="list-group">
+      <h4>Reports</h4>
+      {% for rpt in object_list %}
+      <li class="list-group-item col-10">
+        <div class="row">
+          <div class="col">
+            <p style="font-weight:bold;">{{rpt.degreeProgram}}</p>
+            <p>Report for academic year {{rpt.year|add:"-1"}}-{{rpt.year}}</p>
+          </div>
+          <div class="col">
+              <a role="button" class="btn btn-danger float-right"
+              href="{% url 'makeReports:delete-rpt' pk=rpt.pk %}">Delete</a>
+            <a role="button" class="btn btn-primary float-right"
+              href="{% url 'makeReports:view-rpt' pk=rpt.pk %}">View</a>
+            {% if not rpt.submitted %}
+            <a role="button" class="btn btn-primary float-right"
+              href="{% url 'makeReports:manual-submit-rpt' pk=rpt.pk %}">Manually Submit</a>
+            <a  role="button" class="btn btn-primary float-right" href="{% url 'makeReports:rpt-first-page' pk=rpt.pk %}">Modify</a>
+            {% endif %}
+            {% if rpt.rubric.complete %}
+            <a role="button" class="btn btn-primary float-right"
+              href="{% url 'makeReports:rpt-feedback' report=rpt.pk %}">Your Feedback</a>
+            {% endif %}
+            {% if rpt.submitted %}
+            <a role="button" class="btn btn-primary float-right"
+              href="{% url 'makeReports:ret-rept' pk=rpt.pk %}">Return for Revisions</a>
+            {% endif %}
+            {% if rpt.submitted and not rpt.rubric.complete %}
+            <a role="button" class="btn btn-primary float-right"
+              href="{% url 'makeReports:grade-entry' report=rpt.pk %}">Review</a> 
+            {% endif %}
+          </div>
+
+        </div>
+      </li>
+      {% empty %}
+      No reports matching query.
+      {% endfor %}
+    </ul>
+    {% endblock %}
+  </div>
+</div>

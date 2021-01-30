@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.views.helperFunctions.csvExport module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.views.helperFunctions.csvExport module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.views.helperFunctions.csvExport module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.views.helperFunctions.csvExport.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.views.helperFunctions.csvExport">
+<span id="makereports-views-helperfunctions-csvexport-module"></span><h1>makeReports.views.helperFunctions.csvExport module<a class="headerlink" href="#module-makeReports.views.helperFunctions.csvExport" title="Permalink to this headline">¶</a></h1>
+<p>Generic class to export data into CSV
+Lightly modified from <a class="reference external" href="https://github.com/benkonrath/django-csv-export-view/blob/master/csv_export/views.py">https://github.com/benkonrath/django-csv-export-view/blob/master/csv_export/views.py</a>
+In order to upgrade python and Django version</p>
+<dl class="class">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.views.helperFunctions.csvExport.</code><code class="sig-name descname">CSVExportView</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.MultipleObjectMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.base.View</span></code></p>
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.allow_empty">
+<code class="sig-name descname">allow_empty</code><em class="property"> = True</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.allow_empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.context_object_name">
+<code class="sig-name descname">context_object_name</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.exclude">
+<code class="sig-name descname">exclude</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.exclude" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.fields">
+<code class="sig-name descname">fields</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.filename">
+<code class="sig-name descname">filename</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get_csv_writer_fmtparams">
+<code class="sig-name descname">get_csv_writer_fmtparams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get_csv_writer_fmtparams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get_field_value">
+<code class="sig-name descname">get_field_value</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get_field_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if a custom value or behaviour is required for specific fields.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get_fields">
+<code class="sig-name descname">get_fields</code><span class="sig-paren">(</span><em class="sig-param">queryset</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if a dynamic fields are required.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get_filename">
+<code class="sig-name descname">get_filename</code><span class="sig-paren">(</span><em class="sig-param">queryset</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if a dynamic filename is required.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.get_header_name">
+<code class="sig-name descname">get_header_name</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.get_header_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override if a custom value or behaviour is required for specific fields.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.header">
+<code class="sig-name descname">header</code><em class="property"> = True</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.header" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.page_kwarg">
+<code class="sig-name descname">page_kwarg</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.page_kwarg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.paginate_by">
+<code class="sig-name descname">paginate_by</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.paginate_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.paginator_class">
+<code class="sig-name descname">paginator_class</code><em class="property"> = None</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.paginator_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.views.helperFunctions.csvExport.CSVExportView.specify_separator">
+<code class="sig-name descname">specify_separator</code><em class="property"> = True</em><a class="headerlink" href="#makeReports.views.helperFunctions.csvExport.CSVExportView.specify_separator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

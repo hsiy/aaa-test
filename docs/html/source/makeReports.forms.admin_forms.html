@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>makeReports.forms.admin_forms module &mdash; AAC Application Form 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AAC Application Form
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">makeReports.forms.admin_forms module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AAC Application Form</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>makeReports.forms.admin_forms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/makeReports.forms.admin_forms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-makeReports.forms.admin_forms">
+<span id="makereports-forms-admin-forms-module"></span><h1>makeReports.forms.admin_forms module<a class="headerlink" href="#module-makeReports.forms.admin_forms" title="Permalink to this headline">¶</a></h1>
+<p>This file contains forms to administer the website</p>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">AnnouncementForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.forms.cleaners.html#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create announcement by AAC</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Announcement (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code>: Expiration (<code class="xref py py-class docutils literal notranslate"><span class="pre">DateField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, widgets, and fields for use by the ModelForm superclass to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['text', 'expiration']</em><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Announcement" title="makeReports.models.aac_models.Announcement"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.aac_models.Announcement</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'expiration': &lt;django.forms.widgets.SelectDateWidget object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.AnnouncementForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 2000</em><a class="headerlink" href="#makeReports.forms.admin_forms.AnnouncementForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateDPByDept</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create degree program where department is given</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code>: Level (<code class="xref py py-class docutils literal notranslate"><span class="pre">TypedChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cycle</span></code>: Number of years between automatically assigned reports (put 0 or leave blank if there is no regular cycle) (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startingYear</span></code>: The first year report is assigned for cycle (leave blank if no cycle) (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model, fields, labels, and widgets for the ModelForm superclass
+to use to make a form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['name', 'level', 'cycle', 'startingYear']</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.Meta.labels">
+<code class="sig-name descname">labels</code><em class="property"> = {'cycle': 'Number of years between automatically assigned reports (put 0 or leave blank if there is no regular cycle)', 'level': 'Level', 'name': 'Name', 'startingYear': 'The first year report is assigned for cycle (leave blank if no cycle)'}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.Meta.labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.DegreeProgram" title="makeReports.models.aac_models.DegreeProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.aac_models.DegreeProgram</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'cycle': &lt;django.forms.widgets.NumberInput object&gt;, 'level': &lt;django.forms.widgets.Select object&gt;, 'name': &lt;django.forms.widgets.TextInput object&gt;, 'startingYear': &lt;django.forms.widgets.NumberInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDPByDept.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDPByDept.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateDepartmentForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new department</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">college</span></code>: College (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, fields, and widgets for use by the ModelForm superclass</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['name', 'college']</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.aac_models.Department</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'college': &lt;django.forms.widgets.Select object&gt;, 'name': &lt;django.forms.widgets.TextInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the form and sets possible colleges to only those which are active</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateDepartmentForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateDepartmentForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateReportByDPForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create report where degree program is already picked</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code>: Year (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, fields and widgets for the ModelForm superclass to
+use to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['year']</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'year': &lt;django.forms.widgets.NumberInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form and sets rubric options</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDPForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDPForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">CreateReportByDept</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new report via a link that already gives department (but not degree program)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code>: Year (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">degreeProgram</span></code>: Degree Program (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, fields, labels, and widgets for the superclass ModelForm
+to use to build the form.</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['year', 'degreeProgram']</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.Meta.labels">
+<code class="sig-name descname">labels</code><em class="property"> = {'degreeProgram': 'Degree Program'}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.Meta.labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.basic_models.html#makeReports.models.basic_models.Report" title="makeReports.models.basic_models.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.basic_models.Report</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'degreeProgram': &lt;django.forms.widgets.Select object&gt;, 'year': &lt;django.forms.widgets.NumberInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes form, sets the degree program options by the keyword argument and sets rubric options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>dept</strong> (<a class="reference internal" href="makeReports.models.aac_models.html#makeReports.models.aac_models.Department" title="makeReports.models.aac_models.Department"><em>Department</em></a>) – department object to pick degree programs from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.CreateReportByDept.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.CreateReportByDept.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GenerateReports">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">GenerateReports</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.GenerateReports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to generate reports</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code>: Year (<code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rubric</span></code>: Rubric (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.GenerateReports.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.GenerateReports.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">GradGoalEditForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.forms.cleaners.html#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create edit graduate goal, including possibly archiving it</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">active</span></code>: Active (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Goal text:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the ModelForm superclass to use to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['active', 'text']</em><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.GradGoal</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalEditForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 600</em><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalEditForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GradGoalForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">GradGoalForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="makeReports.forms.cleaners.html#makeReports.forms.cleaners.CleanSummer" title="makeReports.forms.cleaners.CleanSummer"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.forms.cleaners.CleanSummer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<p>Form to create new graduate goal</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: Goal text:  (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type and fields for the ModelForm superclass to use to build the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['text']</em><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="makeReports.models.slo_models.html#makeReports.models.slo_models.GradGoal" title="makeReports.models.slo_models.GradGoal"><code class="xref py py-class docutils literal notranslate"><span class="pre">makeReports.models.slo_models.GradGoal</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.GradGoalForm.summer_max_length">
+<code class="sig-name descname">summer_max_length</code><em class="property"> = 600</em><a class="headerlink" href="#makeReports.forms.admin_forms.GradGoalForm.summer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">MakeNewAccount</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.forms.UserCreationForm</span></code></p>
+<p>Form for the AAC to make a new account</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>: Email address (<code class="xref py py-class docutils literal notranslate"><span class="pre">EmailField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code>: Username (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password1</span></code>: Password (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password2</span></code>: Password confirmation (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isaac</span></code>: Account for AAC member? (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first_name</span></code>: First name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last_name</span></code>: Last name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">department</span></code>: Department (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">college</span></code>: College (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+</ul>
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the model type, fields, and widgets for use by the superclass ModelForm when
+creating the form</p>
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['email', 'username', 'password1', 'password2', 'isaac', 'first_name', 'last_name']</em><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.models.User</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.Meta.widgets">
+<code class="sig-name descname">widgets</code><em class="property"> = {'email': &lt;django.forms.widgets.EmailInput object&gt;, 'first_name': &lt;django.forms.widgets.TextInput object&gt;, 'last_name': &lt;django.forms.widgets.TextInput object&gt;, 'password1': &lt;django.forms.widgets.PasswordInput object&gt;, 'password2': &lt;django.forms.widgets.PasswordInput object&gt;, 'username': &lt;django.forms.widgets.TextInput object&gt;}</em><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.Meta.widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.is_valid">
+<code class="sig-name descname">is_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the form has no errors, or False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.MakeNewAccount.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">commit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.MakeNewAccount.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upon creating a new user, both the Django User type and custom profile type must be created</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>commit</strong> (<em>bool</em>) – whether to actually save user to database</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>user and profile created</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>user, profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.RequiredReportFieldsForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">RequiredReportFieldsForm</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.RequiredReportFieldsForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to change which fields are required to submit a report</p>
+<p><strong>Form fields:</strong></p>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.RequiredReportFieldsForm.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.RequiredReportFieldsForm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the form fields from the list in POSSIBLE_REQS (from choices)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.RequiredReportFieldsForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.RequiredReportFieldsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.UpdateUserForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">UpdateUserForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.UpdateUserForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update a pre-existing user by the AAC</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aac</span></code>: AAC member (<code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">department</span></code>: Department (<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChoiceField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first_name</span></code>: First Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last_name</span></code>: Last Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>: Email (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.UpdateUserForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.UpdateUserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="makeReports.forms.admin_forms.UserUpdateUserForm">
+<em class="property">class </em><code class="sig-prename descclassname">makeReports.forms.admin_forms.</code><code class="sig-name descname">UserUpdateUserForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#makeReports.forms.admin_forms.UserUpdateUserForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<p>Form to update a user by the user themselves (fewer permissions)</p>
+<p><strong>Form fields:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">first_name</span></code>: First Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last_name</span></code>: Last Name (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>: Email (<code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="makeReports.forms.admin_forms.UserUpdateUserForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#makeReports.forms.admin_forms.UserUpdateUserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Emma Dargy, Sarah McCarty, and David Ream
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
