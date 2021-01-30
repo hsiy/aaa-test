@@ -26,7 +26,7 @@ django-weasyprint==0.5.5
 djangorestframework==3.10.3
 docutils==0.15.2
 google-api-python-client==1.7.11
-google-auth==1.6.3
+google-auth==1.24.0
 google-auth-httplib2==0.0.3
 google-auth-oauthlib==0.4.0
 gunicorn==20.0.4
