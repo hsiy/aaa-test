@@ -20,7 +20,7 @@ git+git://github.com/beknightedresearch/django-googledrive-storage@master
 django-nose==1.4.6
 django-summernote==0.8.11.6
 django-weasyprint==0.5.5
-djangorestframework==3.10.3
+djangorestframework==3.12.2
 docutils==0.15.2
 google-api-python-client==1.7.11
 google-auth==1.24.0
