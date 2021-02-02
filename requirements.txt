@@ -47,7 +47,7 @@ pandas==0.25.3
 parsimonious==0.7.0
 Pillow==7.0.0
 psycopg2==2.8.3
-pyasn1==0.4.7
+pyasn1==0.4.8
 pyasn1-modules==0.2.6
 pycparser==2.19
 pydot==1.4.1
